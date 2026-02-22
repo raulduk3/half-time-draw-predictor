@@ -86,6 +86,10 @@ class EloRatingSystem:
             return 0.0, 1.0
         return 0.5, 0.5
 
+    def _result_score(self, hg: int, ag: int) -> Tuple[float, float]:
+        """Generic result → (home_score, away_score). Same logic as HT."""
+        return self._ht_result_score(hg, ag)
+
     def _update(self, home_team: str, away_team: str,
                 hthg: int, htag: int, date: pd.Timestamp) -> Tuple[float, float]:
         """
@@ -127,11 +131,16 @@ class EloRatingSystem:
         Builds a logistic regression to map Elo features → P(HT draw).
 
         df must have: HomeTeam, AwayTeam, HTHG, HTAG, Date.
+        Rows where HTHG/HTAG are NaN but FTHG/FTAG are available will use
+        FT result as a proxy for rating updates (but are NOT used to calibrate
+        the logit, since we have no HT outcome to train against).
         """
-        df = df.dropna(subset=["HomeTeam", "AwayTeam", "HTHG", "HTAG", "Date"]).copy()
+        df = df.dropna(subset=["HomeTeam", "AwayTeam", "Date"]).copy()
         df = df.sort_values("Date").reset_index(drop=True)
 
-        # Process matches, storing pre-match features
+        # Separate: rows with HT data (used for logit calibration)
+        has_ht = df["HTHG"].notna() & df["HTAG"].notna()
+
         elo_diffs  = []
         home_probs = []
         y_draw     = []
@@ -140,21 +149,32 @@ class EloRatingSystem:
         self.history_ = {}
 
         for _, row in df.iterrows():
-            home  = row["HomeTeam"]
-            away  = row["AwayTeam"]
-            hthg  = int(row["HTHG"])
-            htag  = int(row["HTAG"])
-            date  = row["Date"]
+            home = row["HomeTeam"]
+            away = row["AwayTeam"]
+            date = row["Date"]
 
             r_home = self._get_rating(home)
             r_away = self._get_rating(away)
             diff   = r_home + self.home_adv - r_away
 
-            elo_diffs.append(diff)
-            home_probs.append(self._expected(r_home + self.home_adv, r_away))
-            y_draw.append(1 if hthg == htag else 0)
+            ht_available = pd.notna(row.get("HTHG")) and pd.notna(row.get("HTAG"))
+            ft_available = pd.notna(row.get("FTHG")) and pd.notna(row.get("FTAG"))
 
-            self._update(home, away, hthg, htag, date)
+            if ht_available:
+                hthg = int(row["HTHG"])
+                htag = int(row["HTAG"])
+                # Collect for logit calibration
+                elo_diffs.append(diff)
+                home_probs.append(self._expected(r_home + self.home_adv, r_away))
+                y_draw.append(1 if hthg == htag else 0)
+                self._update(home, away, hthg, htag, date)
+            elif ft_available:
+                # FT-only leagues (e.g. MLS): update ratings using FT result as proxy
+                # These rows do NOT feed into logit calibration
+                fthg = int(row["FTHG"])
+                ftag = int(row["FTAG"])
+                self._update(home, away, fthg, ftag, date)
+            # else: skip (no result available)
 
         elo_diffs  = np.array(elo_diffs)
         home_probs = np.array(home_probs)
@@ -169,7 +189,9 @@ class EloRatingSystem:
         self.train_preds_ = train_preds
 
         train_auc = roc_auc_score(y_draw, train_preds) if len(set(y_draw)) > 1 else 0.5
-        print(f"    Elo fitted on {len(df):,} matches  |  "
+        n_ht = int(has_ht.sum())
+        n_ft = len(df) - n_ht
+        print(f"    Elo fitted on {n_ht:,} HT matches + {n_ft:,} FT-proxy matches  |  "
               f"K={self.k}  home_adv={self.home_adv}  |  "
               f"train logit AUC={train_auc:.4f}")
 
@@ -200,17 +222,23 @@ class EloRatingSystem:
         up to the boundary.
 
         df must have: HomeTeam, AwayTeam.
+        Applies fuzzy team-name matching when exact lookup fails.
         """
         if not self.fitted_:
             return np.full(len(df), 0.42)
+
+        from src.utils import resolve_team_name
+        known = list(self.ratings_.keys())
 
         elo_diffs  = []
         home_probs = []
 
         for _, row in df.iterrows():
-            home  = row.get("HomeTeam", "")
-            away  = row.get("AwayTeam", "")
-            r_h, r_a = self._get_pre_match_ratings(home, away)
+            home = row.get("HomeTeam", "")
+            away = row.get("AwayTeam", "")
+            h = home if home in self.ratings_ else (resolve_team_name(home, known) or home)
+            a = away if away in self.ratings_ else (resolve_team_name(away, known) or away)
+            r_h, r_a = self._get_pre_match_ratings(h, a)
             diff = r_h + self.home_adv - r_a
             elo_diffs.append(diff)
             home_probs.append(self._expected(r_h + self.home_adv, r_a))
@@ -219,10 +247,17 @@ class EloRatingSystem:
         return self.logit_.predict_proba(X)[:, 1]
 
     def predict_draw_single(self, home_team: str, away_team: str) -> float:
-        """Predict P(HT draw) for a single match using current ratings."""
+        """
+        Predict P(HT draw) for a single match using current ratings.
+        Falls back to fuzzy name matching when exact team lookup fails.
+        """
         if not self.fitted_:
             return 0.42
-        r_h, r_a = self._get_pre_match_ratings(home_team, away_team)
+        from src.utils import resolve_team_name
+        known = list(self.ratings_.keys())
+        h = home_team if home_team in self.ratings_ else (resolve_team_name(home_team, known) or home_team)
+        a = away_team if away_team in self.ratings_ else (resolve_team_name(away_team, known) or away_team)
+        r_h, r_a = self._get_pre_match_ratings(h, a)
         diff     = r_h + self.home_adv - r_a
         hp       = self._expected(r_h + self.home_adv, r_a)
         X = self._make_features(np.array([diff]), np.array([hp]))
@@ -233,30 +268,74 @@ class EloRatingSystem:
         Walk through df chronologically, making predictions BEFORE updating.
         Useful for getting proper temporal predictions on train+val+test data.
 
-        df must have: HomeTeam, AwayTeam, HTHG, HTAG, Date.
+        df must have: HomeTeam, AwayTeam, Date.
+        HTHG/HTAG used when available; falls back to FTHG/FTAG for FT-only rows.
         """
         df = df.sort_values("Date").reset_index(drop=True)
         elo_diffs  = []
         home_probs = []
 
         for _, row in df.iterrows():
-            home  = row["HomeTeam"]
-            away  = row["AwayTeam"]
-            hthg  = int(row.get("HTHG", 0))
-            htag  = int(row.get("HTAG", 0))
-            date  = row["Date"]
+            home = row["HomeTeam"]
+            away = row["AwayTeam"]
+            date = row["Date"]
 
             r_h, r_a = self._get_pre_match_ratings(home, away)
             diff = r_h + self.home_adv - r_a
             elo_diffs.append(diff)
             home_probs.append(self._expected(r_h + self.home_adv, r_a))
 
-            # Update only if score is available
-            if not (np.isnan(hthg) or np.isnan(htag)):
-                self._update(home, away, int(hthg), int(htag), date)
+            # Update using HT score if available, else FT proxy
+            ht_ok = pd.notna(row.get("HTHG")) and pd.notna(row.get("HTAG"))
+            ft_ok = pd.notna(row.get("FTHG")) and pd.notna(row.get("FTAG"))
+            if ht_ok:
+                self._update(home, away, int(row["HTHG"]), int(row["HTAG"]), date)
+            elif ft_ok:
+                self._update(home, away, int(row["FTHG"]), int(row["FTAG"]), date)
 
         X = self._make_features(np.array(elo_diffs), np.array(home_probs))
         return self.logit_.predict_proba(X)[:, 1]
+
+    def extend_ratings(self, df: pd.DataFrame) -> "EloRatingSystem":
+        """
+        Replay additional matches to update team ratings WITHOUT retraining
+        the logistic meta-learner.  Use this to fold in FT-only leagues
+        (e.g. MLS) after the model has already been fitted on European data.
+
+        df must have: HomeTeam, AwayTeam, Date.
+        Uses HTHG/HTAG when available; falls back to FTHG/FTAG for FT-only rows.
+        New teams are initialised at self.initial_rating automatically.
+        """
+        df = df.dropna(subset=["HomeTeam", "AwayTeam", "Date"]).copy()
+        df = df.sort_values("Date").reset_index(drop=True)
+
+        n_new, n_updated = 0, 0
+        for _, row in df.iterrows():
+            home = row["HomeTeam"]
+            away = row["AwayTeam"]
+            date = row["Date"]
+
+            ht_ok = pd.notna(row.get("HTHG")) and pd.notna(row.get("HTAG"))
+            ft_ok = pd.notna(row.get("FTHG")) and pd.notna(row.get("FTAG"))
+
+            if ht_ok:
+                was_new = home not in self.ratings_ or away not in self.ratings_
+                self._update(home, away, int(row["HTHG"]), int(row["HTAG"]), date)
+            elif ft_ok:
+                was_new = home not in self.ratings_ or away not in self.ratings_
+                self._update(home, away, int(row["FTHG"]), int(row["FTAG"]), date)
+            else:
+                continue
+
+            if was_new:
+                n_new += 1
+            else:
+                n_updated += 1
+
+        print(f"    Elo.extend_ratings: processed {len(df):,} matches  "
+              f"(new teams: {n_new}, updated: {n_updated}, "
+              f"total teams: {len(self.ratings_):,})")
+        return self
 
     def get_top_rated(self, n: int = 20, league_filter: Optional[str] = None) -> pd.DataFrame:
         """Return top-rated teams sorted by current rating."""

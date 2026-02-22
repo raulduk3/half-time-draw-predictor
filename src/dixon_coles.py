@@ -88,6 +88,10 @@ class DixonColes:
         self.fitted_: bool = False
         self.league_: str = ""
         self.train_draw_rate_: float = 0.42
+        # Scale factor applied to lambda/mu at prediction time.
+        # Set to 0.45 for FT-only leagues (e.g. MLS) so that Poisson means
+        # are calibrated to half-time scoring rates (HT goals ≈ 0.45 × FT goals).
+        self.ht_scale_: float = 1.0
 
     def _decode(self, x: np.ndarray) -> Tuple[np.ndarray, np.ndarray, float, float]:
         """Decode parameter vector → (attack, defense, home_adv, rho)."""
@@ -115,11 +119,23 @@ class DixonColes:
         )
         return -np.sum(weights * ll)
 
-    def fit(self, df: pd.DataFrame) -> "DixonColes":
+    def fit(self, df: pd.DataFrame, use_ft_fallback: bool = False) -> "DixonColes":
         """
         Fit on a DataFrame with columns: HomeTeam, AwayTeam, HTHG, HTAG, Date.
         Temporal ordering: uses match Date to compute time-decay weights.
+
+        If use_ft_fallback=True and HTHG/HTAG are missing, uses FTHG/FTAG as
+        a proxy (for FT-only leagues like MLS). The model will capture team
+        attack/defence strengths but draw probabilities will reflect FT rates.
         """
+        if use_ft_fallback:
+            # For FT-only leagues: use FTHG/FTAG where HTHG/HTAG unavailable
+            df = df.dropna(subset=["HomeTeam", "AwayTeam", "Date"]).copy()
+            has_ht = df["HTHG"].notna() & df["HTAG"].notna()
+            has_ft = df["FTHG"].notna() & df["FTAG"].notna()
+            df.loc[~has_ht & has_ft, "HTHG"] = df.loc[~has_ht & has_ft, "FTHG"]
+            df.loc[~has_ht & has_ft, "HTAG"] = df.loc[~has_ht & has_ft, "FTAG"]
+
         df = df.dropna(subset=["HomeTeam", "AwayTeam", "HTHG", "HTAG", "Date"]).copy()
         df = df.sort_values("Date").reset_index(drop=True)
 
@@ -197,8 +213,9 @@ class DixonColes:
         hi = self.team_idx_[home_team]
         ai = self.team_idx_[away_team]
 
-        lam = float(np.exp(attack[hi] + defense[ai] + home_adv))
-        mu  = float(np.exp(attack[ai] + defense[hi]))
+        scale = getattr(self, "ht_scale_", 1.0)
+        lam = float(np.exp(attack[hi] + defense[ai] + home_adv)) * scale
+        mu  = float(np.exp(attack[ai] + defense[hi])) * scale
         mg  = max_goals or self.max_goals
 
         p_draw = 0.0
@@ -218,8 +235,9 @@ class DixonColes:
         attack, defense, home_adv, rho = self._decode(self.params_)
         hi = self.team_idx_[home_team]
         ai = self.team_idx_[away_team]
-        lam = float(np.exp(attack[hi] + defense[ai] + home_adv))
-        mu  = float(np.exp(attack[ai] + defense[hi]))
+        scale = getattr(self, "ht_scale_", 1.0)
+        lam = float(np.exp(attack[hi] + defense[ai] + home_adv)) * scale
+        mu  = float(np.exp(attack[ai] + defense[hi])) * scale
 
         mat = np.zeros((max_goals + 1, max_goals + 1))
         for h in range(max_goals + 1):
@@ -254,33 +272,55 @@ class DixonColesEnsemble:
         self.league_models_: Dict[str, DixonColes] = {}
         self.global_draw_rate_: float = 0.42
 
-    def fit(self, df: pd.DataFrame, min_matches: int = 50) -> "DixonColesEnsemble":
+    def fit(self, df: pd.DataFrame, min_matches: int = 50,
+            ft_only_leagues: Optional[List[str]] = None) -> "DixonColesEnsemble":
         """
         Fit per-league models.
 
         Parameters
         ----------
         df : DataFrame with HomeTeam, AwayTeam, HTHG, HTAG, Date, league.
+             Rows without HTHG/HTAG are automatically handled via FT fallback
+             for leagues listed in ft_only_leagues.
         min_matches : leagues with fewer matches are skipped.
+        ft_only_leagues : list of league codes that have no HT data; these use
+                          FTHG/FTAG as a proxy for goal scoring patterns.
         """
-        df = df.dropna(subset=["HomeTeam", "AwayTeam", "HTHG", "HTAG", "Date"]).copy()
-        self.global_draw_rate_ = (df["HTHG"] == df["HTAG"]).mean()
+        # For global draw rate, use only rows with real HT data
+        ht_df = df.dropna(subset=["HomeTeam", "AwayTeam", "HTHG", "HTAG", "Date"]).copy()
+        self.global_draw_rate_ = (ht_df["HTHG"] == ht_df["HTAG"]).mean()
 
+        ft_only = set(ft_only_leagues or [])
         leagues = df["league"].unique() if "league" in df.columns else ["default"]
 
         fitted, skipped = 0, 0
         for league in leagues:
             sub = df[df["league"] == league] if "league" in df.columns else df
-            if len(sub) < min_matches:
+            is_ft_only = league in ft_only
+
+            # For FT-only leagues, count valid rows differently
+            if is_ft_only:
+                valid_sub = sub[sub["FTHG"].notna() & sub["FTAG"].notna()]
+            else:
+                valid_sub = sub[sub["HTHG"].notna() & sub["HTAG"].notna()]
+
+            if len(valid_sub) < min_matches:
                 skipped += 1
                 continue
-            print(f"    Fitting Dixon-Coles: {league:30s}  n={len(sub):6,}", end="")
+
+            tag = " [FT-proxy]" if is_ft_only else ""
+            print(f"    Fitting Dixon-Coles: {league:30s}  n={len(valid_sub):6,}{tag}", end="")
             try:
                 model = DixonColes(xi=self.xi, max_goals=self.max_goals)
-                model.fit(sub)
+                model.fit(sub, use_ft_fallback=is_ft_only)
                 model.league_ = league
+                # For FT-only leagues, scale Poisson means to HT-equivalent rates
+                # (HT goals ≈ 0.45 × FT goals).
+                if is_ft_only:
+                    model.ht_scale_ = 0.45
                 self.league_models_[league] = model
-                print(f"  rho={model.rho_:.3f}  home_adv={model.home_adv_:.3f}")
+                ht_note = f"  ht_scale={model.ht_scale_:.2f}" if is_ft_only else ""
+                print(f"  rho={model.rho_:.3f}  home_adv={model.home_adv_:.3f}{ht_note}")
                 fitted += 1
             except Exception as e:
                 print(f"  FAILED: {e}")
@@ -292,36 +332,78 @@ class DixonColesEnsemble:
     def predict_draw(self, df: pd.DataFrame) -> np.ndarray:
         """
         Predict P(HT draw) for each row. Returns array of shape (n,).
-        Looks up the correct league model per row.
+        Looks up the correct league model per row, with fuzzy team-name fallback.
         """
+        from src.utils import resolve_team_name
         probs = np.full(len(df), self.global_draw_rate_)
 
         for i, row in df.iterrows():
             league = row.get("league", None)
             home   = row.get("HomeTeam", "")
             away   = row.get("AwayTeam", "")
+            idx    = df.index.get_loc(i)
 
             if league and league in self.league_models_:
                 model = self.league_models_[league]
+                # Try exact, then fuzzy within league model
+                h = home if home in model.team_idx_ else (resolve_team_name(home, model.teams_) or "")
+                a = away if away in model.team_idx_ else (resolve_team_name(away, model.teams_) or "")
+                if h and a:
+                    probs[idx] = model.predict_draw_proba(h, a)
+                else:
+                    probs[idx] = model.train_draw_rate_
             elif not league and len(self.league_models_) == 1:
                 model = next(iter(self.league_models_.values()))
+                probs[idx] = model.predict_draw_proba(home, away)
             else:
-                continue
-
-            probs[df.index.get_loc(i)] = model.predict_draw_proba(home, away)
+                # No league specified — try exact match across all league models first
+                found = False
+                for model in self.league_models_.values():
+                    if home in model.team_idx_ and away in model.team_idx_:
+                        probs[idx] = model.predict_draw_proba(home, away)
+                        found = True
+                        break
+                if not found:
+                    # Fuzzy match across all league models
+                    for model in self.league_models_.values():
+                        h = resolve_team_name(home, model.teams_)
+                        a = resolve_team_name(away, model.teams_)
+                        if h and a:
+                            probs[idx] = model.predict_draw_proba(h, a)
+                            break
 
         return probs
 
     def predict_draw_single(self, home_team: str, away_team: str,
                             league: Optional[str] = None) -> float:
-        """Predict P(HT draw) for a single match."""
-        if league and league in self.league_models_:
-            return self.league_models_[league].predict_draw_proba(home_team, away_team)
+        """
+        Predict P(HT draw) for a single match.
+        Falls back to fuzzy team-name matching when exact lookup fails.
+        """
+        from src.utils import resolve_team_name
 
-        # Try all leagues for this team pair
+        def _lookup(model: DixonColes, home: str, away: str) -> Optional[float]:
+            all_teams = model.teams_
+            h = resolve_team_name(home, all_teams) if home not in model.team_idx_ else home
+            a = resolve_team_name(away, all_teams) if away not in model.team_idx_ else away
+            if h and a:
+                return model.predict_draw_proba(h, a)
+            return None
+
+        if league and league in self.league_models_:
+            p = _lookup(self.league_models_[league], home_team, away_team)
+            return p if p is not None else self.global_draw_rate_
+
+        # Try exact match first across all leagues
         for model in self.league_models_.values():
             if home_team in model.team_idx_ and away_team in model.team_idx_:
                 return model.predict_draw_proba(home_team, away_team)
+
+        # Fuzzy match across all leagues
+        for model in self.league_models_.values():
+            p = _lookup(model, home_team, away_team)
+            if p is not None:
+                return p
 
         return self.global_draw_rate_
 

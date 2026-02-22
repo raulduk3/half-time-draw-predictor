@@ -33,11 +33,15 @@ from sklearn.metrics import roc_auc_score, brier_score_loss, log_loss
 warnings.filterwarnings("ignore")
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-MEGA_PARQUET = Path("data/processed/mega_dataset.parquet")
+MEGA_PARQUET    = Path("data/processed/mega_dataset_v2.parquet")  # expanded with MLS/MEX
+MEGA_PARQUET_V1 = Path("data/processed/mega_dataset.parquet")     # fallback
 RAW_DIR      = Path("data/raw")
 MEGA_MODELS  = Path("models/mega")
 OUT_DIR      = Path("models/v2")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+# Leagues that have only FT data (no HTHG/HTAG available)
+FT_ONLY_LEAGUES = ["USA_MLS", "MEX_LigaMX"]
 
 # ── Imports (project) ─────────────────────────────────────────────────────────
 import sys
@@ -56,11 +60,18 @@ print("=" * 72)
 # 1. LOAD MEGA DATASET + TEMPORAL SPLIT
 # ─────────────────────────────────────────────────────────────────────────────
 print("\n[1] Loading mega dataset...")
-df = pd.read_parquet(MEGA_PARQUET)
-df = df.dropna(subset=["HTHG", "HTAG"]).sort_values("Date").reset_index(drop=True)
+
+p = MEGA_PARQUET if MEGA_PARQUET.exists() else MEGA_PARQUET_V1
+full_df = pd.read_parquet(p).sort_values("Date").reset_index(drop=True)
+print(f"  Loaded {len(full_df):,} rows from {p.name}")
+ft_only_mask = full_df["league"].isin(FT_ONLY_LEAGUES)
+print(f"  FT-only rows (MLS/MEX): {ft_only_mask.sum():,}")
 
 TODAY = pd.Timestamp("2026-02-22")
-df = df[df["Date"] <= TODAY].copy()
+full_df = full_df[full_df["Date"] <= TODAY].copy()
+
+# HT-only subset — used for temporal split, targets, XGB/LGB, evaluation
+df = full_df.dropna(subset=["HTHG", "HTAG"]).sort_values("Date").reset_index(drop=True)
 
 n         = len(df)
 train_end = int(0.70 * n)
@@ -70,13 +81,20 @@ train_df = df.iloc[:train_end].copy()
 val_df   = df.iloc[train_end:val_end].copy()
 test_df  = df.iloc[val_end:].copy()
 
+# Full training slice (includes FT-only rows) — for DC and Elo
+TRAIN_CUTOFF = train_df["Date"].max()
+full_train_df = full_df[full_df["Date"] <= TRAIN_CUTOFF].copy()
+print(f"  Full train slice (HT+FT rows): {len(full_train_df):,} "
+      f"(HT: {full_train_df['HTHG'].notna().sum():,}, "
+      f"FT-only: {full_train_df['ft_only'].eq(True).sum() if 'ft_only' in full_train_df.columns else 0:,})")
+
 y_train = (train_df["HTHG"] == train_df["HTAG"]).astype(int).values
 y_val   = (val_df["HTHG"] == val_df["HTAG"]).astype(int).values
 y_test  = (test_df["HTHG"] == test_df["HTAG"]).astype(int).values
 
 GLOBAL_DRAW_RATE = float(y_train.mean())
 
-print(f"  Total rows:  {n:,}")
+print(f"  HT-only rows: {n:,}")
 print(f"  Train:  {len(train_df):,}  {train_df['Date'].min().date()} → {train_df['Date'].max().date()}")
 print(f"  Val:    {len(val_df):,}  {val_df['Date'].min().date()} → {val_df['Date'].max().date()}")
 print(f"  Test:   {len(test_df):,}  {test_df['Date'].min().date()} → {test_df['Date'].max().date()}")
@@ -141,9 +159,9 @@ except Exception as e:
 # ─────────────────────────────────────────────────────────────────────────────
 # 3. FIT DIXON-COLES
 # ─────────────────────────────────────────────────────────────────────────────
-print("\n[3] Fitting Dixon-Coles per-league on training set...")
+print("\n[3] Fitting Dixon-Coles per-league on training set (incl. FT-proxy for MLS/MEX)...")
 dc = DixonColesEnsemble(xi=0.003)
-dc.fit(train_df, min_matches=30)
+dc.fit(full_train_df, min_matches=30, ft_only_leagues=FT_ONLY_LEAGUES)
 dc.save(str(OUT_DIR / "dixon_coles.pkl"))
 
 dc_val_preds  = dc.predict_draw(val_df)
@@ -169,9 +187,9 @@ else:
     best_k = 32
     print("  Using default K=32")
 
-# Fit Elo on full training set
+# Fit Elo on full training set (including FT-proxy rows for MLS/MEX teams)
 elo = EloRatingSystem(k=best_k, home_adv=50)
-elo.fit(train_df)
+elo.fit(full_train_df)
 
 # Get val/test predictions (Elo has seen all train data, predict from current state)
 elo_val_preds  = elo.predict_draw(val_df)
@@ -453,9 +471,11 @@ print(f"  Saved models/v2/ensemble_metrics.json")
 print("\n[11] Example predictions (see predict_match.py for full output):")
 
 examples = [
-    ("Leeds United",   "Sheffield Utd",  "E1", "M Dean"),
-    ("Sunderland",     "Coventry",       "E1", None),
-    ("Man City",       "Liverpool",      "E0", None),
+    ("Leeds United",   "Sheffield Utd",  "E1",       "M Dean"),
+    ("Sunderland",     "Coventry",       "E1",       None),
+    ("Man City",       "Liverpool",      "E0",       None),
+    ("LA Galaxy",      "NYCFC",          "USA_MLS",  None),
+    ("Club America",   "Chivas",         "MEX_LigaMX", None),
 ]
 
 for home, away, league, ref in examples:

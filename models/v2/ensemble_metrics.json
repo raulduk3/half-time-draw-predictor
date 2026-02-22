@@ -4,55 +4,55 @@
     "n_train": 135545,
     "n_val": 29045,
     "n_test": 29047,
-    "draw_rate": 0.4272160537091003,
+    "draw_rate": 0.4272234313327677,
     "train_end_date": "2018-08-14",
     "val_end_date": "2022-04-23",
     "test_end_date": "2026-02-18"
   },
   "val_signal_aucs": {
-    "dixon_coles": 0.5234222578458009,
-    "elo": 0.521951465558901,
-    "xgb": 0.549406040650869,
-    "lgb": 0.5475727534864494,
-    "market_consensus": 0.548532753773952
+    "dixon_coles": 0.5232813002298117,
+    "elo": 0.521503003892176,
+    "xgb": 0.5492849853348368,
+    "lgb": 0.5477198227606758,
+    "market_consensus": 0.5483289537681519
   },
   "test_results": {
     "dixon-coles": {
-      "test_auc": 0.51439,
-      "test_brier": 0.24782
+      "test_auc": 0.51498,
+      "test_brier": 0.2478
     },
     "elo": {
-      "test_auc": 0.5236,
+      "test_auc": 0.52335,
       "test_brier": 0.24109
     },
     "xgboost_(mega)": {
-      "test_auc": 0.55339,
-      "test_brier": 0.23921
+      "test_auc": 0.55369,
+      "test_brier": 0.2392
     },
     "lightgbm_(mega)": {
-      "test_auc": 0.54786,
-      "test_brier": 0.2396
+      "test_auc": 0.54743,
+      "test_brier": 0.23963
     },
     "market_consensus": {
-      "test_auc": 0.55649,
+      "test_auc": 0.55671,
       "test_brier": 0.26098
     },
     "b365_baseline": {
-      "test_auc": 0.55649,
+      "test_auc": 0.55671,
       "test_brier": 0.26098
     },
     "ensemble_v2": {
-      "test_auc": 0.55312,
-      "test_brier": 0.2392
+      "test_auc": 0.55179,
+      "test_brier": 0.23918
     }
   },
   "meta_learner_weights": {
-    "dixon_coles": 0.33663874860953724,
-    "elo": 0.0688511129215101,
-    "xgb": 1.466073535042515,
-    "lgb": 1.2347319745390801,
-    "market_consensus": 1.724210594220117,
-    "referee_adj": -1.0247728382368877
+    "dixon_coles": 0.4143296556344989,
+    "elo": -0.7488496464287517,
+    "xgb": 1.580026135331412,
+    "lgb": 1.2203033176715459,
+    "market_consensus": 1.7500576408799755,
+    "referee_adj": -0.7637836197154536
   },
   "submodel_paths": {
     "weights_path": "models/v2/ensemble_weights.pkl",

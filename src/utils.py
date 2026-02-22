@@ -1,11 +1,67 @@
 """
 General utility functions for the soccer ML project.
 """
+import difflib
 import pandas as pd
 import numpy as np
 from pathlib import Path
 import json
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
+
+def _team_acronym(name: str) -> str:
+    """Return uppercase acronym of significant words (len > 1) in a team name."""
+    skip = {"fc", "cf", "sc", "ac", "utd", "united", "city", "the", "de", "la", "el"}
+    words = name.lower().split()
+    letters = [w[0] for w in words if w not in skip and len(w) > 1]
+    return "".join(letters).upper()
+
+
+def resolve_team_name(query: str, known_teams: List[str],
+                      cutoff: float = 0.5) -> Optional[str]:
+    """
+    Find the best matching team name from a list of known teams.
+
+    Strategy (in order):
+      1. Exact match
+      2. Case-insensitive exact match
+      3. Acronym match (e.g. 'NYCFC' → 'New York City FC' → 'New York City')
+      4. Best fuzzy match via difflib (SequenceMatcher ratio >= cutoff)
+
+    Returns None if no match is found above the cutoff.
+    """
+    if not query or not known_teams:
+        return None
+
+    # 1. Exact
+    if query in known_teams:
+        return query
+
+    # 2. Case-insensitive exact
+    q_lower = query.lower()
+    for t in known_teams:
+        if t.lower() == q_lower:
+            return t
+
+    # 3. Acronym match: check if query (upper) matches acronym of any known team
+    q_upper = query.upper().replace(" ", "")
+    for t in known_teams:
+        if _team_acronym(t) == q_upper:
+            return t
+    # Also try acronym without 'FC'/'SC' suffix in query
+    q_stripped = q_upper.rstrip("FC").rstrip("SC")
+    if q_stripped and q_stripped != q_upper:
+        for t in known_teams:
+            if _team_acronym(t) == q_stripped:
+                return t
+
+    # 4. Fuzzy (difflib) — case-insensitive
+    lower_map = {t.lower(): t for t in known_teams}
+    matches = difflib.get_close_matches(q_lower, list(lower_map.keys()), n=1, cutoff=cutoff)
+    if matches:
+        return lower_map[matches[0]]
+
+    return None
+
 
 def load_raw_data(data_dir: str = "data/raw") -> pd.DataFrame:
     """
