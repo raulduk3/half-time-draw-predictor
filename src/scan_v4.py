@@ -29,6 +29,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -109,7 +110,7 @@ def fetch_fdco_fixtures(url: str = FDCO_URL) -> List[Dict]:
 
     # Filter to future matches
     df = df[df["Date"].notna()].copy()
-    df = df[df["Date"] >= TOMORROW].copy()
+    df = df[df["Date"] >= TODAY].copy()
 
     if len(df) == 0:
         print("  No upcoming fixtures found after date filtering.")
@@ -139,7 +140,7 @@ def fetch_fdco_fixtures(url: str = FDCO_URL) -> List[Dict]:
             "date":   str(row["Date"].date()),
         })
 
-    print(f"  Fetched {len(fixtures)} upcoming fixtures with odds from football-data.co.uk")
+    print(f"  Fetched {len(fixtures)} upcoming fixtures with odds from football-data.co.uk", file=sys.stderr)
     return fixtures
 
 
@@ -169,7 +170,7 @@ def load_fixtures_from_csv(csv_path: str) -> List[Dict]:
                 continue
         else:
             df["date"] = pd.to_datetime(df["date"], errors="coerce")
-        df = df[df["date"].notna() & (df["date"] >= TOMORROW)].copy()
+        df = df[df["date"].notna() & (df["date"] >= TODAY)].copy()
         if len(df) == 0:
             print("  No upcoming fixtures found (all dates in the past or unparseable).")
             return []
@@ -185,7 +186,7 @@ def run_scan(
     """Run V4 predictor on all fixtures, return sorted results."""
     from src.predict_v4 import V4Predictor
 
-    print("Loading V4 predictor...")
+    print("Loading V4 predictor...", file=sys.stderr)
     predictor = V4Predictor.load(paths_file=paths_file)
 
     results = []
@@ -322,19 +323,24 @@ def main():
     parser.add_argument("--show-pass", action="store_true",
                         help="Show matches with negative edge (PASS) too")
     parser.add_argument("--paths",    default="models/v4/v4_paths.json")
+    parser.add_argument("--json",     action="store_true",
+                        help="Output results as JSON (machine-readable)")
     args = parser.parse_args()
+
+    # Route diagnostics to stderr when --json is set
+    _log = sys.stderr if args.json else sys.stdout
 
     fixtures = []
 
     if args.demo:
-        print("  Running demo with example matches...")
+        print("  Running demo with example matches...", file=_log)
         fixtures = DEMO_FIXTURES
 
     elif not args.no_fetch and not args.fixtures and not args.match:
         # Default: fetch live
         fixtures = fetch_fdco_fixtures()
         if not fixtures:
-            print("  Falling back to demo mode (no live fixtures available).")
+            print("  Falling back to demo mode (no live fixtures available).", file=_log)
             fixtures = DEMO_FIXTURES
 
     if args.fixtures:
@@ -361,7 +367,11 @@ def main():
 
     min_edge = 0.0 if args.show_pass else args.min_edge
     results  = run_scan(fixtures=fixtures, paths_file=args.paths, min_edge=min_edge)
-    print_scan_results(results, min_edge=min_edge)
+
+    if args.json:
+        print(json.dumps(results, indent=2))
+    else:
+        print_scan_results(results, min_edge=min_edge)
 
 
 if __name__ == "__main__":

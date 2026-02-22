@@ -3,4 +3,21 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 *.egg-info/
+
+# Raw data (large, downloadable)
+data/raw/
 data/raw_all/
+
+# Processed data & bets
+data/processed/
+data/bets.json
+
+# Models — only track V4 manifests
+models/*
+!models/v4/
+models/v4/*
+!models/v4/v4_paths.json
+!models/v4/v4_metrics.json
+
+# Conda env
+env.yaml

@@ -156,8 +156,17 @@ class V4Predictor:
             p.mega_df = pd.read_parquet(mdp)
             p.mega_df["Date"] = pd.to_datetime(p.mega_df["Date"])
             p.mega_df = p.mega_df.sort_values("Date").reset_index(drop=True)
+            freshness = p.data_freshness()
+            if freshness:
+                print(f"  Dataset up to: {freshness.date()}", file=sys.stderr)
 
         return p
+
+    def data_freshness(self) -> Optional[pd.Timestamp]:
+        """Return the date of the most recent match in the mega dataset."""
+        if self.mega_df is None or len(self.mega_df) == 0:
+            return None
+        return self.mega_df["Date"].max()
 
     # ── Form lookup ───────────────────────────────────────────────────────────
 
@@ -195,6 +204,9 @@ class V4Predictor:
             try:
                 days = (pd.Timestamp.today().normalize() - pd.to_datetime(latest["Date"])).days
                 result[f"{prefix}days_since_last"] = float(max(0, days))
+                if days > 7:
+                    last_date = pd.to_datetime(latest["Date"]).date()
+                    print(f"  ⚠️  Form data for {team_name} is {days} days old (last match: {last_date})", file=sys.stderr)
             except Exception:
                 pass
 
@@ -430,6 +442,8 @@ Examples:
     parser.add_argument("--referee", default=None, help="Referee name (optional)")
     parser.add_argument("--paths",   default="models/v4/v4_paths.json",
                         help="Paths manifest file (default: models/v4/v4_paths.json)")
+    parser.add_argument("--json",    action="store_true",
+                        help="Output result as JSON instead of pretty-print")
     args = parser.parse_args()
 
     # Parse odds
@@ -446,7 +460,7 @@ Examples:
     else:
         parser.error("Provide odds via --odds H/D/A  OR  --b365h X --b365d X --b365a X")
 
-    print("Loading V4 predictor...")
+    print("Loading V4 predictor...", file=sys.stderr)
     predictor = V4Predictor.load(paths_file=args.paths)
 
     result = predictor.predict(
@@ -458,7 +472,11 @@ Examples:
         league    = args.league,
         referee   = args.referee,
     )
-    V4Predictor.print_result(result)
+
+    if args.json:
+        print(json.dumps(result, indent=2))
+    else:
+        V4Predictor.print_result(result)
 
 
 if __name__ == "__main__":
