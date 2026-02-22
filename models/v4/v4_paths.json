@@ -1,0 +1,17 @@
+{
+  "model_a_lr": "models/v4/model_a_lr.pkl",
+  "model_a_scaler": "models/v4/model_a_scaler.pkl",
+  "model_a_calibrator": "models/v4/model_a_calibrator.pkl",
+  "model_a_medians": "models/v4/model_a_medians.json",
+  "model_a_features": "models/v4/model_a_features.json",
+  "model_b_xgb": "models/v4/model_b_xgb.json",
+  "model_b_lgb": "models/v4/model_b_lgb.txt",
+  "model_b_calibrator": "models/v4/model_b_calibrator.pkl",
+  "model_b_medians": "models/v4/model_b_medians.json",
+  "model_b_features": "models/v4/model_b_features.json",
+  "model_b_best": "XGBoost",
+  "dc_path": "models/v4/dixon_coles.pkl",
+  "elo_path": "models/v4/elo.pkl",
+  "referee_path": "models/v4/referee_model.pkl",
+  "mega_dataset": "data/processed/mega_dataset_v2.parquet"
+}

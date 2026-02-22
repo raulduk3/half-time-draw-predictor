@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "date": "2026-02-22",
+    "home": "LA Galaxy",
+    "away": "New York City",
+    "league": "USA_MLS",
+    "ht_draw_odds": 2.25,
+    "stake": 1.0,
+    "model_a_prob": 0.401,
+    "model_b_prob": 0.385,
+    "inverted_edge": 0.0161,
+    "edge_pct": 1.61,
+    "rating": "MARGINAL",
+    "outcome": "pending",
+    "pnl": null,
+    "notes": "Backfilled: placed at +125 American (2.25 decimal) HT draw odds",
+    "added_at": "2026-02-22T00:00:00"
+  }
+]
