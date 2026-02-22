@@ -178,6 +178,85 @@ def load_fixtures_from_csv(csv_path: str) -> List[Dict]:
     return df.to_dict(orient="records")
 
 
+def _enrich_with_ht_odds(results: List[Dict]) -> List[Dict]:
+    """
+    If ODDS_API_KEY is set, fetch real HT draw odds and attach to results.
+    Adds: ht_draw_odds_real, ht_bookmaker, ht_kelly_25pct (using real odds).
+    """
+    import os
+    if not os.environ.get("ODDS_API_KEY"):
+        return results
+
+    try:
+        from src.odds_api import fetch_all_soccer_ht_odds
+        from src.predict_v4 import _kelly_fraction, _KELLY_HIT_RATES
+    except ImportError:
+        return results
+
+    print("  Fetching real HT draw odds...", file=sys.stderr)
+    ht_odds = fetch_all_soccer_ht_odds()
+    if not ht_odds:
+        return results
+
+    # Build lookup: normalize team names for matching
+    from src.utils import resolve_team_name
+    ht_lookup = {}
+    for o in ht_odds:
+        key = (o["home"].lower(), o["away"].lower())
+        ht_lookup[key] = o
+
+    matched = 0
+    for r in results:
+        home_l = r["home_team"].lower()
+        away_l = r["away_team"].lower()
+
+        # Try exact match first, then fuzzy
+        ht = ht_lookup.get((home_l, away_l))
+        if not ht:
+            # Try fuzzy matching on home team
+            ht_homes = [k[0] for k in ht_lookup]
+            from difflib import get_close_matches
+            home_match = get_close_matches(home_l, ht_homes, n=1, cutoff=0.6)
+            if home_match:
+                for key, val in ht_lookup.items():
+                    if key[0] == home_match[0]:
+                        away_match = get_close_matches(away_l, [key[1]], n=1, cutoff=0.6)
+                        if away_match:
+                            ht = val
+                            break
+
+        if ht:
+            matched += 1
+            real_odds = ht["ht_draw_odds"]
+            r["ht_draw_odds_real"] = real_odds
+            r["ht_bookmaker"] = ht["bookmaker"]
+            r["ht_best_odds"] = ht["best_ht_draw_odds"]
+            r["ht_best_bookmaker"] = ht["best_bookmaker"]
+            r["ht_n_books"] = ht["n_books"]
+
+            # Recalculate Kelly with real HT draw odds
+            edge = r["inverted_edge"]
+            if edge >= 0.05:
+                p_hit = _KELLY_HIT_RATES["strong"]
+            elif edge >= 0.03:
+                p_hit = _KELLY_HIT_RATES["value"]
+            elif edge >= 0.01:
+                p_hit = _KELLY_HIT_RATES["marginal"]
+            else:
+                p_hit = 0.0
+
+            if p_hit > 0:
+                kelly = _kelly_fraction(p_hit, real_odds)
+                r["ht_kelly_full"] = round(kelly, 4)
+                r["ht_kelly_25pct"] = round(kelly * 0.25, 4)
+            else:
+                r["ht_kelly_full"] = 0.0
+                r["ht_kelly_25pct"] = 0.0
+
+    print(f"  Matched {matched}/{len(results)} fixtures with real HT odds", file=sys.stderr)
+    return results
+
+
 def run_scan(
     fixtures:   List[Dict],
     paths_file: str   = "models/v4/v4_paths.json",
@@ -208,6 +287,10 @@ def run_scan(
 
     # Sort by inverted edge descending
     results.sort(key=lambda x: x["inverted_edge"], reverse=True)
+
+    # Enrich with real HT draw odds if API key available
+    results = _enrich_with_ht_odds(results)
+
     return results
 
 
@@ -232,11 +315,15 @@ def print_scan_results(results: List[Dict], min_edge: float = 0.0) -> None:
             print(f"  ({len(negative)} matches scanned, all with negative edge — market underpricing draws)")
         return
 
+    # Check if any results have real HT odds
+    has_ht = any("ht_draw_odds_real" in r for r in positive)
+
     # Table header
+    ht_col = "  HT-odds" if has_ht else ""
     print(f"  {'#':>2}  {'Date':>10}  {'Match':<35} {'Lg':>6}  {'D-odds':>7}  "
-          f"{'MktA':>6} {'FndB':>6} {'Edge':>7}  {'Rating':<14}")
+          f"{'MktA':>6} {'FndB':>6} {'Edge':>7}  {'Rating':<14}{ht_col}")
     print(f"  {'-'*2}  {'-'*10}  {'-'*35} {'-'*6}  {'-'*7}  "
-          f"{'-'*6} {'-'*6} {'-'*7}  {'-'*14}")
+          f"{'-'*6} {'-'*6} {'-'*7}  {'-'*14}{'  '+'-'*8 if has_ht else ''}")
 
     for i, r in enumerate(positive, 1):
         match_str = f"{r['home_team']} vs {r['away_team']}"
@@ -250,10 +337,16 @@ def print_scan_results(results: List[Dict], min_edge: float = 0.0) -> None:
         elif edge_val >= MARGINAL_EDGE: rating_display = f"★   {r['rating']}"
         else:                           rating_display = f"—   {r['rating']}"
 
+        ht_str = ""
+        if has_ht and "ht_draw_odds_real" in r:
+            ht_str = f"  {r['ht_draw_odds_real']:>7.2f}"
+        elif has_ht:
+            ht_str = "       —"
+
         print(f"  {i:>2}  {r.get('date',''):>10}  {match_str:<35} {r['league']:>6}  "
               f"{r['b365d']:>7.2f}  "
               f"{r['model_a_prob']:>6.1%} {r['model_b_prob']:>6.1%} {edge_str:>7}  "
-              f"{rating_display:<14}")
+              f"{rating_display:<14}{ht_str}")
 
     print()
 
