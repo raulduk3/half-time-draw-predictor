@@ -30,8 +30,10 @@ def compute_rolling_form(df: pd.DataFrame, window: int = 5) -> pd.DataFrame:
     for col in form_cols:
         df_copy[col] = np.nan
     
-    # Get all unique teams
-    all_teams = sorted(set(df_copy['HomeTeam'].unique()) | set(df_copy['AwayTeam'].unique()))
+    # Get all unique teams (excluding NaN values)
+    home_teams = set(df_copy['HomeTeam'].dropna().unique())
+    away_teams = set(df_copy['AwayTeam'].dropna().unique())
+    all_teams = sorted(home_teams | away_teams)
     
     print(f"Computing rolling form for {len(all_teams)} teams over {len(df_copy)} matches...")
     

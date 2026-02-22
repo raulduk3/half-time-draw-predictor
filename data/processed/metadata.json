@@ -1,9 +1,9 @@
 {
-  "creation_date": "2025-11-13T22:30:57.293701",
-  "num_matches": 10115,
+  "creation_date": "2026-02-22T00:46:04.275372",
+  "num_matches": 10497,
   "date_range": {
     "start": "2005-01-10T00:00:00",
-    "end": "2025-12-09T00:00:00"
+    "end": "2026-11-02T00:00:00"
   },
   "features": [
     "home_gf_r5",
@@ -21,11 +21,11 @@
   ],
   "target": "y_ht_draw",
   "target_distribution": {
-    "draw_rate": 0.42807711319822045,
-    "total_draws": 4330
+    "draw_rate": 0.42650281032676,
+    "total_draws": 4477
   },
   "data_quality": {
-    "missing_values": 258,
-    "duplicates": 0
+    "missing_values": 264,
+    "duplicates": 179
   }
 }
