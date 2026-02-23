@@ -181,9 +181,9 @@ class V4Predictor:
             return {}
 
         if as_home:
-            rows = self.mega_df[self.mega_df["HomeTeam"] == resolved].tail(5)
+            rows = self.mega_df[self.mega_df["HomeTeam"] == resolved]
         else:
-            rows = self.mega_df[self.mega_df["AwayTeam"] == resolved].tail(5)
+            rows = self.mega_df[self.mega_df["AwayTeam"] == resolved]
 
         if len(rows) == 0:
             return {}

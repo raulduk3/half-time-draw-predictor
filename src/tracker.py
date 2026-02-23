@@ -238,12 +238,14 @@ def get_stats() -> Dict:
 def list_bets(
     status: str = "all",
     n_last: Optional[int] = None,
-) -> None:
+) -> List[Dict]:
     """
-    Display bets as a formatted table.
+    Display bets as a formatted table and return the list.
 
     status: 'all' | 'pending' | 'resolved'
     n_last: show only the last N bets
+
+    Returns list of matching bet dicts.
     """
     bets = _load_bets()
 
@@ -257,7 +259,7 @@ def list_bets(
 
     if not bets:
         print(f"  No {status} bets found.")
-        return
+        return []
 
     print(f"\n  {'ID':>4}  {'Date':>10}  {'Match':<35} {'Lg':>6}  "
           f"{'Odds':>6}  {'Edge':>6}  {'Rating':>12}  {'Outcome':>8}  {'PnL':>8}")
@@ -294,6 +296,8 @@ def list_bets(
         print(f"  Resolved: {len(resolved)} bets  |  "
               f"Wins: {n_wins}/{len(resolved)} ({n_wins/len(resolved):.1%})  |  "
               f"PnL: {total_pnl:+.4f}  |  ROI: {roi:+.1%}")
+
+    return bets
 
 
 def print_stats() -> None:

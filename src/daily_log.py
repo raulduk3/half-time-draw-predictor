@@ -220,10 +220,13 @@ def get_summary() -> Dict:
 
         hits = sum(1 for p in tier_preds if p.get("ht_draw_actual"))
         n = len(tier_preds)
-        avg_odds = np.mean([p.get("b365d", 3.0) for p in tier_preds])
+        # Prefer real HT odds when available, fall back to B365D (FT proxy)
+        def _get_odds(p):
+            return p.get("ht_draw_odds_real") or p.get("b365d", 3.0)
+        avg_odds = np.mean([_get_odds(p) for p in tier_preds])
 
-        # Flat bet ROI
-        returns = sum(p.get("b365d", 3.0) for p in tier_preds if p.get("ht_draw_actual"))
+        # Flat bet ROI (using best available odds)
+        returns = sum(_get_odds(p) for p in tier_preds if p.get("ht_draw_actual"))
         roi = (returns - n) / n if n > 0 else 0
 
         tiers[tier_name] = {

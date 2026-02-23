@@ -97,15 +97,15 @@ def fetch_fdco_fixtures(url: str = FDCO_URL) -> List[Dict]:
         print("  Warning: no Date column in fixtures CSV")
         return []
 
-    parsed = []
+    date_parsed = False
     for fmt in ["%d/%m/%Y", "%d/%m/%y", "%Y-%m-%d"]:
         try:
             df["Date"] = pd.to_datetime(df["Date"], format=fmt, errors="raise")
-            parsed = True
+            date_parsed = True
             break
         except Exception:
             continue
-    if not parsed:
+    if not date_parsed:
         df["Date"] = pd.to_datetime(df["Date"], infer_datetime_format=True, errors="coerce")
 
     # Filter to future matches

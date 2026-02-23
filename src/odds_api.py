@@ -31,10 +31,20 @@ import json
 import os
 import sys
 import urllib.request
+from pathlib import Path
 from typing import Dict, List, Optional
 
 API_HOST = "https://api.the-odds-api.com"
 HT_MARKET = "h2h_3_way_h1"   # 1st Half 3-Way Result
+
+# Auto-load .env if present (so ODDS_API_KEY is available without sourcing)
+_env_file = Path(__file__).parent.parent / ".env"
+if _env_file.exists():
+    for line in _env_file.read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, v = line.split("=", 1)
+            os.environ.setdefault(k.strip(), v.strip())
 
 # Map the-odds-api sport keys to our internal league codes
 SPORT_TO_LEAGUE = {

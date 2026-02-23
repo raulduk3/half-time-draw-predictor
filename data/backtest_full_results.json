@@ -1,0 +1,103 @@
+{
+  "STRONG VALUE (>=5%)": {
+    "n": 825,
+    "hits": 398,
+    "hit_rate": 0.4824,
+    "avg_odds": 3.06,
+    "roi": 0.4752,
+    "ev_per_dollar": 0.4763
+  },
+  "VALUE (3-5%)": {
+    "n": 3139,
+    "hits": 1427,
+    "hit_rate": 0.4546,
+    "avg_odds": 3.2,
+    "roi": 0.4476,
+    "ev_per_dollar": 0.455
+  },
+  "MARGINAL (1-3%)": {
+    "n": 7813,
+    "hits": 3378,
+    "hit_rate": 0.4324,
+    "avg_odds": 3.34,
+    "roi": 0.4414,
+    "ev_per_dollar": 0.4456
+  },
+  "NEUTRAL (-1 to 1%)": {
+    "n": 8323,
+    "hits": 3411,
+    "hit_rate": 0.4098,
+    "avg_odds": 3.53,
+    "roi": 0.4427,
+    "ev_per_dollar": 0.4479
+  },
+  "ANTI-VALUE (<-1%)": {
+    "n": 9736,
+    "hits": 3510,
+    "hit_rate": 0.3605,
+    "avg_odds": 4.58,
+    "roi": 0.5901,
+    "ev_per_dollar": 0.6501
+  },
+  "bootstrap_STRONG VALUE": {
+    "n": 825,
+    "mean_roi": 0.4754,
+    "ci_lower": 0.3736,
+    "ci_upper": 0.5777,
+    "p_profit": 1.0
+  },
+  "bootstrap_VALUE+": {
+    "n": 3964,
+    "mean_roi": 0.4532,
+    "ci_lower": 0.4047,
+    "ci_upper": 0.5033,
+    "p_profit": 1.0
+  },
+  "time_stability": {
+    "2022H1": {
+      "n": 41,
+      "hit_rate": 0.463,
+      "roi": 0.3888
+    },
+    "2022H2": {
+      "n": 93,
+      "hit_rate": 0.538,
+      "roi": 0.6868
+    },
+    "2023H1": {
+      "n": 138,
+      "hit_rate": 0.428,
+      "roi": 0.307
+    },
+    "2023H2": {
+      "n": 86,
+      "hit_rate": 0.512,
+      "roi": 0.6131
+    },
+    "2024H1": {
+      "n": 114,
+      "hit_rate": 0.535,
+      "roi": 0.6278
+    },
+    "2024H2": {
+      "n": 105,
+      "hit_rate": 0.381,
+      "roi": 0.1374
+    },
+    "2025H1": {
+      "n": 131,
+      "hit_rate": 0.511,
+      "roi": 0.5308
+    },
+    "2025H2": {
+      "n": 69,
+      "hit_rate": 0.464,
+      "roi": 0.4503
+    },
+    "2026H1": {
+      "n": 48,
+      "hit_rate": 0.542,
+      "roi": 0.6371
+    }
+  }
+}
