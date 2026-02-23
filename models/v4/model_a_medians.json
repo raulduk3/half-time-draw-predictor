@@ -1,5 +1,9 @@
 {
   "log_home_win_odds": 0.7884573603642703,
   "log_draw_odds": 1.2237754316221157,
-  "log_away_win_odds": 1.1939224684724346
+  "log_away_win_odds": 1.1939224684724346,
+  "log_ps_home": 0.8109302162163288,
+  "log_ps_draw": 1.2669476034873244,
+  "log_ps_away": 1.252762968495368,
+  "odds_spread_draw": 0.25
 }

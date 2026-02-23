@@ -1,5 +1,9 @@
 [
   "log_home_win_odds",
   "log_draw_odds",
-  "log_away_win_odds"
+  "log_away_win_odds",
+  "log_ps_home",
+  "log_ps_draw",
+  "log_ps_away",
+  "odds_spread_draw"
 ]

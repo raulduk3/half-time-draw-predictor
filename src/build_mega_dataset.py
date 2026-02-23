@@ -253,7 +253,10 @@ def load_and_process_all_data():
 
     # Optional columns to grab if available
     optional_cols = ['FTHG', 'FTAG', 'HS', 'AS', 'HST', 'AST', 'HC', 'AC',
-                     'HF', 'AF', 'HY', 'AY', 'HR', 'AR', 'B365H', 'B365D', 'B365A']
+                     'HF', 'AF', 'HY', 'AY', 'HR', 'AR', 'B365H', 'B365D', 'B365A',
+                     'PSH', 'PSD', 'PSA', 'MaxH', 'MaxD', 'MaxA', 'AvgH', 'AvgD', 'AvgA',
+                     'BWH', 'BWD', 'BWA', 'IWH', 'IWD', 'IWA', 'WHH', 'WHD', 'WHA',
+                     'Referee']
 
     # Stats to compute rolling averages for
     rolling_stats = ['HS', 'AS', 'HST', 'AST', 'HC', 'AC', 'HF', 'AF', 'HY', 'AY', 'HR', 'AR']

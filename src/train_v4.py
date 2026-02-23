@@ -74,15 +74,28 @@ PLOTS_DIR.mkdir(parents=True, exist_ok=True)
 TARGET    = "y_ht_draw"
 TODAY     = pd.Timestamp("2026-02-22")
 
-MODEL_A_FEATURES = ["log_home_win_odds", "log_draw_odds", "log_away_win_odds"]
-ODDS_KEYWORDS    = ["odds", "PSC", "MaxC", "AvgC", "BFEC"]
+MODEL_A_FEATURES = [
+    "log_home_win_odds", "log_draw_odds", "log_away_win_odds",
+    # Pinnacle log-odds (sharpest book, lowest vig)
+    "log_ps_home", "log_ps_draw", "log_ps_away",
+    # Market average log-odds (consensus across books)
+    "log_avg_home", "log_avg_draw", "log_avg_away",
+    # Multi-book disagreement signal
+    "odds_spread_draw",
+]
+ODDS_KEYWORDS    = ["odds", "PSC", "MaxC", "AvgC", "BFEC", "log_ps_", "log_avg_", "odds_spread"]
+# Raw odds columns to exclude from Model B candidate features
+RAW_ODDS_COLS    = {
+    "B365H", "B365D", "B365A", "PSH", "PSD", "PSA",
+    "MaxH", "MaxD", "MaxA", "AvgH", "AvgD", "AvgA",
+    "BWH", "BWD", "BWA", "IWH", "IWD", "IWA", "WHH", "WHD", "WHA",
+}
 EXCLUDE_COLS     = {
     "Date", "HomeTeam", "AwayTeam", "HTHG", "HTAG", "FTHG", "FTAG",
     "HS", "AS", "HST", "AST", "HC", "AC", "HF", "AF", "HY", "AY", "HR", "AR",
-    "B365H", "B365D", "B365A",
     "league", "season", "country", "league_tier", "league_name",
-    TARGET, "ft_only",
-}
+    TARGET, "ft_only", "Referee",
+} | RAW_ODDS_COLS
 COVERAGE_THRESHOLD = 0.55
 
 # ── Banner ─────────────────────────────────────────────────────────────────────
@@ -103,6 +116,38 @@ df = df.sort_values("Date").reset_index(drop=True)
 print(f"    Shape: {df.shape}   HT draw rate: {df[TARGET].mean():.1%}")
 print(f"    Date range: {df['Date'].min().date()} → {df['Date'].max().date()}")
 print(f"    Leagues: {df['league'].nunique() if 'league' in df.columns else 'N/A'}")
+
+# Engineer Model A features from multiple bookmakers
+print("\n[1b] Engineering multi-bookmaker features...")
+# B365 log-odds (always available)
+for col, src in [("log_home_win_odds", "B365H"), ("log_draw_odds", "B365D"), ("log_away_win_odds", "B365A")]:
+    if col not in df.columns and src in df.columns:
+        df[col] = np.log(df[src].clip(lower=1.01))
+
+# Pinnacle log-odds
+for col, src in [("log_ps_home", "PSH"), ("log_ps_draw", "PSD"), ("log_ps_away", "PSA")]:
+    if src in df.columns:
+        df[col] = np.log(df[src].clip(lower=1.01))
+
+# Market average log-odds
+for col, src in [("log_avg_home", "AvgH"), ("log_avg_draw", "AvgD"), ("log_avg_away", "AvgA")]:
+    if src in df.columns:
+        df[col] = np.log(df[src].clip(lower=1.01))
+
+# Multi-book disagreement: spread between max and min draw odds across available books
+draw_cols = [c for c in ["B365D", "PSD", "BWD", "IWD", "WHD"] if c in df.columns]
+if len(draw_cols) >= 2:
+    draw_matrix = df[draw_cols]
+    df["odds_spread_draw"] = draw_matrix.max(axis=1) - draw_matrix.min(axis=1)
+    print(f"    odds_spread_draw: computed from {len(draw_cols)} books ({draw_cols})")
+
+# Report coverage
+for f in MODEL_A_FEATURES:
+    if f in df.columns:
+        n = df[f].notna().sum()
+        print(f"    {f}: {n} ({n/len(df)*100:.0f}%)")
+    else:
+        print(f"    {f}: MISSING")
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 2. FEATURE CLASSIFICATION
@@ -214,6 +259,14 @@ print(f"      ({len(model_b_base)} rolling stats + dc_draw_prob + elo_draw_prob 
 # 6. BUILD ARRAYS
 # ─────────────────────────────────────────────────────────────────────────────
 print("\n[6] Building feature arrays...")
+
+# Filter Model A features to those with >10% coverage in training data
+active_a_features = [f for f in MODEL_A_FEATURES if f in train_df.columns and train_df[f].notna().mean() > 0.10]
+print(f"    Model A features (active): {len(active_a_features)} of {len(MODEL_A_FEATURES)}")
+for f in active_a_features:
+    cov = train_df[f].notna().mean()
+    print(f"      {f}: {cov:.0%} coverage")
+MODEL_A_FEATURES = active_a_features
 
 train_medians_a = {c: float(train_df[c].median()) for c in MODEL_A_FEATURES}
 train_medians_b = {c: float(train_df[c].median()) for c in model_b_features}

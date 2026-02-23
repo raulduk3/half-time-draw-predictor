@@ -112,6 +112,9 @@ class V4Predictor:
 
         # Model A
         with open(paths["model_a_lr"],         "rb") as f: p.lr_a      = pickle.load(f)
+        # Patch for sklearn 1.7.x: multi_class was removed but predict_proba still references it
+        if not hasattr(p.lr_a, 'multi_class'):
+            p.lr_a.multi_class = 'auto'
         with open(paths["model_a_scaler"],      "rb") as f: p.scaler_a  = pickle.load(f)
         with open(paths["model_a_calibrator"],  "rb") as f: p.iso_a     = pickle.load(f)
         with open(paths["model_a_features"])         as f: p.feat_a    = json.load(f)
