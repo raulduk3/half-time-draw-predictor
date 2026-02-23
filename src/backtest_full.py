@@ -53,11 +53,23 @@ def run_backtest(start_date: str = "2022-04-01", end_date: str = "2026-12-31"):
     feat_a = json.load(open(paths["model_a_features"]))
     medians_a = json.load(open(paths["model_a_medians"]))
 
-    # Load Model B
-    import lightgbm as lgb
+    # Load Model B (use whichever was best in training)
+    import xgboost as xgb_lib
     feat_b = json.load(open(paths["model_b_features"]))
     medians_b = json.load(open(paths["model_b_medians"]))
-    model_b = lgb.Booster(model_file=paths["model_b_lgb"])
+    cal_a = pickle.load(open(paths["model_a_calibrator"], "rb"))
+    cal_b = pickle.load(open(paths["model_b_calibrator"], "rb"))
+    if paths.get("model_b_best", "").lower() == "xgboost":
+        bst_b = xgb_lib.Booster()
+        bst_b.load_model(paths["model_b_xgb"])
+        def predict_b(X, feat_names):
+            dmat = xgb_lib.DMatrix(X, feature_names=feat_names)
+            return bst_b.predict(dmat)
+    else:
+        import lightgbm as lgb
+        model_b_lgb = lgb.Booster(model_file=paths["model_b_lgb"])
+        def predict_b(X, feat_names):
+            return model_b_lgb.predict(X)
 
     # Split: training data (before start_date) and test data
     train_cutoff = pd.Timestamp(start_date)
@@ -70,7 +82,7 @@ def run_backtest(start_date: str = "2022-04-01", end_date: str = "2026-12-31"):
     # Pre-compute Model A for all test matches (doesn't need DC/Elo)
     X_a = test_df[feat_a].fillna(pd.Series(medians_a)).values
     X_a_scaled = scaler_a.transform(X_a)
-    test_df["prob_a"] = model_a.predict_proba(X_a_scaled)[:, 1]
+    test_df["prob_a"] = cal_a.predict(model_a.predict_proba(X_a_scaled)[:, 1])
 
     # For DC and Elo: compute using expanding window
     # Fit on all data before each match date
@@ -190,7 +202,7 @@ def run_backtest(start_date: str = "2022-04-01", end_date: str = "2026-12-31"):
             test_df[f] = medians_b.get(f, 0.0)
 
     X_b = test_df[feat_b].fillna(pd.Series(medians_b)).values
-    test_df["prob_b"] = model_b.predict(X_b)
+    test_df["prob_b"] = cal_b.predict(predict_b(X_b, feat_b))
 
     # Compute edge
     test_df["edge"] = test_df["prob_a"] - test_df["prob_b"]

@@ -97,7 +97,7 @@ print("\n[1] Loading data...")
 df = pd.read_parquet(DATA_PATH)
 df = df[df["Date"] <= TODAY].copy()
 df = df.dropna(subset=[TARGET, "B365H", "B365D", "B365A"]).copy()
-df = df[~df["ft_only"].fillna(False)].copy()   # Only rows with actual HT data
+df = df[~df["ft_only"].astype(str).isin(["True", "1"])].copy()   # Only rows with actual HT data
 df = df.sort_values("Date").reset_index(drop=True)
 
 print(f"    Shape: {df.shape}   HT draw rate: {df[TARGET].mean():.1%}")
