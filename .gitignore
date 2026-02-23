@@ -22,3 +22,4 @@ models/v4/*
 # Conda env
 env.yaml
 .env
+data/predictions/

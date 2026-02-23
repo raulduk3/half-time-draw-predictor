@@ -12,9 +12,10 @@
     "inverted_edge": 0.0161,
     "edge_pct": 1.61,
     "rating": "MARGINAL",
-    "outcome": "pending",
-    "pnl": null,
-    "notes": "Backfilled: placed at +125 American (2.25 decimal) HT draw odds",
-    "added_at": "2026-02-22T00:00:00"
+    "outcome": "loss",
+    "pnl": -1.0,
+    "notes": "Backfilled: placed at +125 American (2.25 decimal) HT draw odds | HT: Galaxy 1-0 NYCFC. Klauss 2min. FT: 1-1",
+    "added_at": "2026-02-22T00:00:00",
+    "resolved_at": "2026-02-22T21:39:24"
   }
 ]
