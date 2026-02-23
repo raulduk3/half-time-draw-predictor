@@ -105,35 +105,52 @@ def get_sport_keys() -> List[Dict]:
     return [s for s in data if s.get("group", "").lower() == "soccer"]
 
 
+def _get_events(sport_key: str) -> List[Dict]:
+    """Get list of upcoming events for a sport (free, low quota cost)."""
+    try:
+        data = _get(f"/v4/sports/{sport_key}/events")
+        return data if isinstance(data, list) else []
+    except Exception as e:
+        print(f"  ❌ Failed to fetch events for {sport_key}: {e}", file=sys.stderr)
+        return []
+
+
 def fetch_ht_odds(sport_key: str,
                   regions: str = "us,uk,eu",
                   odds_format: str = "decimal") -> List[Dict]:
     """
     Fetch real HT draw odds for a given sport.
+    Uses per-event endpoint (required for period markets like h2h_3_way_h1).
 
     Returns list of dicts with:
         home, away, commence_time, league,
         ht_home_odds, ht_draw_odds, ht_away_odds,
         bookmaker, best_ht_draw_odds, best_bookmaker
     """
-    try:
-        data = _get(f"/v4/sports/{sport_key}/odds", {
-            "regions": regions,
-            "markets": HT_MARKET,
-            "oddsFormat": odds_format,
-        })
-    except Exception as e:
-        print(f"  ❌ Failed to fetch {sport_key}: {e}", file=sys.stderr)
-        return []
-
-    if isinstance(data, dict) and "error" in data:
-        print(f"  ❌ API error: {data.get('message', data['error'])}", file=sys.stderr)
+    events = _get_events(sport_key)
+    if not events:
         return []
 
     league_code = SPORT_TO_LEAGUE.get(sport_key, sport_key)
     results = []
 
-    for event in data:
+    for event_meta in events:
+        event_id = event_meta.get("id", "")
+        if not event_id:
+            continue
+
+        try:
+            event = _get(f"/v4/sports/{sport_key}/events/{event_id}/odds", {
+                "regions": regions,
+                "markets": HT_MARKET,
+                "oddsFormat": odds_format,
+            })
+        except Exception as e:
+            continue
+
+        if not isinstance(event, dict) or "error" in event:
+            continue
+
         home = event.get("home_team", "")
         away = event.get("away_team", "")
         commence = event.get("commence_time", "")
@@ -193,23 +210,44 @@ def fetch_ht_odds(sport_key: str,
     return results
 
 
-def fetch_all_soccer_ht_odds() -> List[Dict]:
-    """Fetch HT odds for all available soccer leagues."""
+def fetch_all_soccer_ht_odds(leagues: Optional[List[str]] = None) -> List[Dict]:
+    """
+    Fetch HT odds for soccer leagues we have models for.
+    
+    NOTE: Uses ~1 API call per event (per-event endpoint required for period markets).
+    With 500/month free tier, be selective. Default: only fetches leagues in our model.
+    
+    Args:
+        leagues: Optional list of our league codes (e.g. ["E0", "SP1"]).
+                 Defaults to all mapped leagues.
+    """
     sports = get_sport_keys()
     if not sports:
         return []
 
-    all_odds = []
+    # Filter to requested leagues
+    target_sports = []
     for sport in sports:
         key = sport["key"]
         if key not in SPORT_TO_LEAGUE:
             continue
+        if leagues and SPORT_TO_LEAGUE[key] not in leagues:
+            continue
+        target_sports.append(sport)
+
+    all_odds = []
+    total_calls = 0
+    for sport in target_sports:
+        key = sport["key"]
         print(f"  Fetching {sport.get('title', key)}...", file=sys.stderr)
         odds = fetch_ht_odds(key)
         all_odds.extend(odds)
+        # Rough estimate: 1 call for events list + 1 per event
+        total_calls += 1  # events list is free or cheap
         if not odds:
-            print(f"    (no HT odds available)", file=sys.stderr)
+            print(f"    (no HT odds available yet)", file=sys.stderr)
 
+    print(f"  Total: {len(all_odds)} matches with HT odds across {len(target_sports)} leagues", file=sys.stderr)
     return all_odds
 
 
