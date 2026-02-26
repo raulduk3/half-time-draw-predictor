@@ -145,10 +145,12 @@ class RefereeModel:
         min_matches: int = 20,
         adj_cap: Tuple[float, float] = (0.6, 1.7),
         confidence_threshold: float = 0.10,
+        prior_strength: int = 30,
     ):
         self.min_matches          = min_matches
         self.adj_cap              = adj_cap
         self.confidence_threshold = confidence_threshold
+        self.prior_strength       = prior_strength
 
         self.profiles_: Dict[str, Dict] = {}
         self.global_draw_rate_: float   = 0.42
@@ -205,7 +207,7 @@ class RefereeModel:
             )
 
             # Bayesian-smoothed draw rate (weighted towards global)
-            alpha = self.min_matches  # prior strength
+            alpha = self.prior_strength  # decoupled from min_matches threshold
             smoothed_rate = (ref_draws + alpha * self.global_draw_rate_) / (n + alpha)
 
             # Adjustment factor (clipped)

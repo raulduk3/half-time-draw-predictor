@@ -204,22 +204,93 @@ for split, rate in draw_rates.items():
     print(f"  {status} {split:6s} draw rate: {rate:.3f}  (expected 0.38–0.46)")
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 4. FIT DC / ELO / REFEREE ON TRAINING DATA ONLY
+# 4. TUNE HYPERPARAMS, THEN FIT DC / ELO / REFEREE ON TRAINING DATA ONLY
 # ─────────────────────────────────────────────────────────────────────────────
-print("\n[4] Fitting DC, Elo, Referee on training data only...")
+print("\n[4] Tuning hyperparameters and fitting sub-models on training data only...")
 
 from src.dixon_coles import DixonColesEnsemble
-from src.elo import EloRatingSystem
+from src.elo import EloRatingSystem, tune_k_factor
 from src.referee_model import RefereeModel
 
-dc = DixonColesEnsemble()
+# ── 4a. Tune Elo K-factor ────────────────────────────────────────────────────
+print("\n  [4a] Tuning Elo K-factor (replay_and_predict, no look-ahead)...")
+k_res  = tune_k_factor(train_df, k_values=[8, 12, 16, 20, 24, 32, 40],
+                        train_frac=0.70, val_frac=0.30)
+best_k = int(k_res["best_k"])
+print(f"    → Using K = {best_k}")
+
+# ── 4b. Tune Dixon-Coles xi ──────────────────────────────────────────────────
+print("\n  [4b] Tuning Dixon-Coles xi on inner train split...")
+XI_CANDIDATES = [0.001, 0.002, 0.003, 0.005, 0.007]
+
+# Inner split: first 70% of train for xi fitting, last 30% for xi evaluation
+n_xi_tr  = int(len(train_df) * 0.70)
+xi_tr_df = train_df.iloc[:n_xi_tr].copy()
+xi_va_df = train_df.iloc[n_xi_tr:].copy()
+xi_y_va  = (xi_va_df["HTHG"] == xi_va_df["HTAG"]).astype(float).values
+
+best_xi, best_xi_auc = XI_CANDIDATES[1], 0.0  # default 0.002
+for xi in XI_CANDIDATES:
+    dc_xi = DixonColesEnsemble(xi=xi)
+    dc_xi.fit(xi_tr_df, ft_only_leagues=["USA_MLS", "MEX_LigaMX"])
+    xi_preds = dc_xi.predict_draw(xi_va_df)
+    valid_xi = np.isfinite(xi_preds) & (xi_preds > 0)
+    if valid_xi.sum() > 10 and len(set(xi_y_va[valid_xi])) > 1:
+        xi_auc = roc_auc_score(xi_y_va[valid_xi], xi_preds[valid_xi])
+    else:
+        xi_auc = 0.0
+    print(f"    xi={xi:.3f} → val AUC = {xi_auc:.4f}")
+    if xi_auc > best_xi_auc:
+        best_xi_auc = xi_auc
+        best_xi     = xi
+print(f"    → Using xi = {best_xi}")
+del dc_xi  # free memory
+
+# ── 4c. Leakage-free DC training features (Option A) ─────────────────────────
+# Fit on first 60% of train, predict last 40% → no look-ahead for those rows.
+# First 60%: use per-league draw rate (safest non-leaky estimate for those rows).
+print("\n  [4c] Building leakage-free DC training features (60/40 split)...")
+n_dc_split     = int(len(train_df) * 0.60)
+dc_early_tr    = train_df.iloc[:n_dc_split].copy()
+dc_early_hold  = train_df.iloc[n_dc_split:].copy()
+
+dc_early = DixonColesEnsemble(xi=best_xi)
+dc_early.fit(dc_early_tr, ft_only_leagues=["USA_MLS", "MEX_LigaMX"])
+
+train_dc_preds = np.zeros(len(train_df))
+# First 60%: use the league-specific draw rate from dc_early (no prediction possible)
+for i in range(n_dc_split):
+    row    = train_df.iloc[i]
+    league = row.get("league", None)
+    if league and league in dc_early.league_models_:
+        train_dc_preds[i] = dc_early.league_models_[league].train_draw_rate_
+    else:
+        train_dc_preds[i] = dc_early.global_draw_rate_
+# Last 40%: actual DC predictions (leakage-free since dc_early was fit on first 60%)
+holdout_dc = dc_early.predict_draw(dc_early_hold)
+train_dc_preds[n_dc_split:] = holdout_dc
+train_dc_preds = np.clip(train_dc_preds, 0.01, 0.99)
+del dc_early  # free memory
+
+# ── 4d. Fit final DC on full training data (for val/test predictions) ─────────
+print("\n  [4d] Fitting final DC on full training data...")
+dc = DixonColesEnsemble(xi=best_xi)
 dc.fit(train_df, ft_only_leagues=["USA_MLS", "MEX_LigaMX"])
-print(f"    Dixon-Coles: fitted on {len(train_df):,} training rows")
+print(f"    Dixon-Coles: fitted on {len(train_df):,} training rows  xi={best_xi}")
 
-elo = EloRatingSystem(k=16, home_adv=50)
+# ── 4e. Fit Elo + get leakage-free training features ─────────────────────────
+print("\n  [4e] Fitting Elo and building leakage-free training features...")
+elo = EloRatingSystem(k=best_k, home_adv=50)
 elo.fit(train_df)
-print(f"    Elo: fitted on {len(train_df):,} training rows")
 
+# Reset ratings then replay — each match is predicted using only PRIOR match ratings.
+# After replay, ratings_ ends at the same post-train state as after fit().
+elo.ratings_ = {}
+elo.history_ = {}
+train_elo_preds = np.clip(elo.replay_and_predict(train_df), 0.01, 0.99)
+print(f"    Elo: K={best_k}  leakage-free training features generated")
+
+# ── 4f. Fit Referee model ──────────────────────────────────────────────────────
 ref_model = RefereeModel()
 ref_model.fit(train_df)
 print(f"    Referee model: fitted")
@@ -229,25 +300,40 @@ print(f"    Referee model: fitted")
 # ─────────────────────────────────────────────────────────────────────────────
 print("\n[5] Generating DC/Elo/Referee predictions...")
 
-def add_model_b_extra(split_df: pd.DataFrame) -> pd.DataFrame:
+def add_model_b_extra(split_df: pd.DataFrame,
+                      precomputed_dc: np.ndarray = None,
+                      precomputed_elo: np.ndarray = None) -> pd.DataFrame:
     out = split_df.copy()
-    try:
-        out["dc_draw_prob"] = np.clip(dc.predict_draw(split_df), 0.01, 0.99)
-    except Exception as e:
-        print(f"    DC fallback ({e})")
-        out["dc_draw_prob"] = 0.42
-    try:
-        out["elo_draw_prob"] = np.clip(elo.predict_draw(split_df), 0.01, 0.99)
-    except Exception as e:
-        print(f"    Elo fallback ({e})")
-        out["elo_draw_prob"] = 0.42
+    # DC
+    if precomputed_dc is not None:
+        out["dc_draw_prob"] = precomputed_dc
+    else:
+        try:
+            out["dc_draw_prob"] = np.clip(dc.predict_draw(split_df), 0.01, 0.99)
+        except Exception as e:
+            print(f"    DC fallback ({e})")
+            out["dc_draw_prob"] = 0.42
+    # Elo
+    if precomputed_elo is not None:
+        out["elo_draw_prob"] = precomputed_elo
+    else:
+        try:
+            out["elo_draw_prob"] = np.clip(elo.predict_draw(split_df), 0.01, 0.99)
+        except Exception as e:
+            print(f"    Elo fallback ({e})")
+            out["elo_draw_prob"] = 0.42
+    # Referee
     try:
         out["referee_adj"] = np.clip(ref_model.predict_draw_adjustment(split_df), 0.5, 2.0)
     except Exception:
         out["referee_adj"] = 1.0
     return out
 
-train_df = add_model_b_extra(train_df)
+# Training: use leakage-free DC/Elo features built above
+train_df = add_model_b_extra(train_df,
+                              precomputed_dc=train_dc_preds,
+                              precomputed_elo=train_elo_preds)
+# Val/test: use final DC/Elo fit on full training data (correct — no leakage)
 val_df   = add_model_b_extra(val_df)
 test_df  = add_model_b_extra(test_df)
 
@@ -780,6 +866,9 @@ metrics_out = {
         "train_period": f"{train_df['Date'].min().date()} → {train_df['Date'].max().date()}",
         "val_period":   f"{val_df['Date'].min().date()} → {val_df['Date'].max().date()}",
         "test_period":  f"{test_df['Date'].min().date()} → {test_df['Date'].max().date()}",
+        "elo_best_k":   best_k,
+        "dc_best_xi":   best_xi,
+        "k_tuning":     k_res,
     },
     "market_baseline": {
         "test_auc":   float(mkt_auc),

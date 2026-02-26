@@ -359,29 +359,47 @@ class EloRatingSystem:
 
 def tune_k_factor(
     df: pd.DataFrame,
-    k_values: List[float] = [16, 20, 32, 40, 48],
+    k_values: List[float] = [8, 12, 16, 20, 24, 32, 40],
     train_frac: float = 0.70,
-    val_frac: float   = 0.15,
+    val_frac: float   = 0.30,
 ) -> Dict[str, float]:
     """
-    Grid-search K-factor on validation set. Returns best K and its AUC.
+    Grid-search K-factor using replay_and_predict for proper temporal evaluation.
+    Predictions for the validation slice are made using only prior-match ratings
+    (no look-ahead), which prevents K from being tuned on leaked information.
+    Returns best K and its AUC.
     """
     df = df.dropna(subset=["HTHG", "HTAG"]).sort_values("Date").reset_index(drop=True)
     n = len(df)
     train_end = int(train_frac * n)
     val_end   = train_end + int(val_frac * n)
 
-    train_df = df.iloc[:train_end].copy()
-    val_df   = df.iloc[train_end:val_end].copy()
+    train_sub = df.iloc[:train_end].copy()
+    val_sub   = df.iloc[train_end:val_end].copy()
+
+    # Tag rows so we can identify val predictions after replay
+    train_sub = train_sub.copy()
+    val_sub   = val_sub.copy()
+    train_sub["_split"] = "train"
+    val_sub["_split"]   = "val"
+    combined  = pd.concat([train_sub, val_sub]).sort_values("Date").reset_index(drop=True)
+    val_mask  = combined["_split"].values == "val"
+    y_val     = (combined.loc[val_mask, "HTHG"] == combined.loc[val_mask, "HTAG"]).astype(int).values
 
     results = {}
-    best_k, best_auc = 32, 0.0
+    best_k, best_auc = k_values[0], 0.0
 
     for k in k_values:
         elo = EloRatingSystem(k=k)
-        elo.fit(train_df)
-        preds = elo.predict_draw(val_df)
-        y_val = (val_df["HTHG"] == val_df["HTAG"]).astype(int).values
+        elo.fit(train_sub)          # build logit from training data
+
+        # Reset ratings so replay starts from initial state (no look-ahead)
+        elo.ratings_ = {}
+        elo.history_ = {}
+
+        # Walk through train+val chronologically, predicting before each update
+        all_preds = elo.replay_and_predict(combined)
+        preds     = all_preds[val_mask]
         auc = roc_auc_score(y_val, preds) if len(set(y_val)) > 1 else 0.5
         results[k] = auc
         print(f"    K={k:3.0f} → val AUC = {auc:.4f}")

@@ -183,7 +183,13 @@ class DixonColes:
                 obj, x0,
                 method="L-BFGS-B",
                 bounds=bounds,
-                options={"maxiter": 500, "ftol": 1e-10, "gtol": 1e-6},
+                options={"maxiter": 2000, "ftol": 1e-10, "gtol": 1e-8},
+            )
+
+        if not result.success:
+            warnings.warn(
+                f"Dixon-Coles optimization did not converge: {result.message}",
+                RuntimeWarning,
             )
 
         self.params_   = result.x
@@ -391,8 +397,9 @@ class DixonColesEnsemble:
             return None
 
         if league and league in self.league_models_:
-            p = _lookup(self.league_models_[league], home_team, away_team)
-            return p if p is not None else self.global_draw_rate_
+            model = self.league_models_[league]
+            p = _lookup(model, home_team, away_team)
+            return p if p is not None else model.train_draw_rate_
 
         # Try exact match first across all leagues
         for model in self.league_models_.values():
