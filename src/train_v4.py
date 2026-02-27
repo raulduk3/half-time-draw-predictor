@@ -51,6 +51,8 @@ np.random.seed(42)
 
 sys.path.insert(0, ".")
 
+from src.features import XG_ROLLING_FEATURES
+
 
 class _NumpyEncoder(json.JSONEncoder):
     """JSON encoder that handles numpy scalar types."""
@@ -64,7 +66,10 @@ class _NumpyEncoder(json.JSONEncoder):
         return super().default(obj)
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-DATA_PATH = Path("data/processed/mega_dataset_v2.parquet")
+# Use v3 if xG merge has been run, otherwise fall back to v2
+_V3_PATH = Path("data/processed/mega_dataset_v3.parquet")
+_V2_PATH = Path("data/processed/mega_dataset_v2.parquet")
+DATA_PATH = _V3_PATH if _V3_PATH.exists() else _V2_PATH
 OUT_DIR   = Path("models/v4")
 PLOTS_DIR = OUT_DIR / "plots"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -337,9 +342,15 @@ train_df = add_model_b_extra(train_df,
 val_df   = add_model_b_extra(val_df)
 test_df  = add_model_b_extra(test_df)
 
-model_b_features = model_b_base + ["dc_draw_prob", "elo_draw_prob", "referee_adj"]
+# Add xG rolling features to Model B (available in mega_dataset_v3+; NaN-safe via median fill)
+xg_in_data = [f for f in XG_ROLLING_FEATURES if f in df.columns]
+xg_extra   = [f for f in xg_in_data if f not in model_b_base]  # avoid duplicates
+if xg_extra:
+    print(f"    xG features added to Model B: {xg_extra}")
+model_b_features = model_b_base + xg_extra + ["dc_draw_prob", "elo_draw_prob", "referee_adj"]
 print(f"    Model B final feature count: {len(model_b_features)}")
-print(f"      ({len(model_b_base)} rolling stats + dc_draw_prob + elo_draw_prob + referee_adj)")
+print(f"      ({len(model_b_base)} rolling stats + {len(xg_extra)} xG features"
+      f" + dc_draw_prob + elo_draw_prob + referee_adj)")
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 6. BUILD ARRAYS
@@ -355,7 +366,11 @@ for f in active_a_features:
 MODEL_A_FEATURES = active_a_features
 
 train_medians_a = {c: float(train_df[c].median()) for c in MODEL_A_FEATURES}
-train_medians_b = {c: float(train_df[c].median()) for c in model_b_features}
+# xG features default to 0.0 median when entirely missing (pre-merge datasets)
+train_medians_b = {
+    c: (float(train_df[c].median()) if c in train_df.columns and train_df[c].notna().any() else 0.0)
+    for c in model_b_features
+}
 
 def build_X(split_df: pd.DataFrame, features: list, medians: dict) -> np.ndarray:
     X = np.zeros((len(split_df), len(features)), dtype=np.float32)

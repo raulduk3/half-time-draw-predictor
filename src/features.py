@@ -217,13 +217,131 @@ def transform_odds(df: pd.DataFrame) -> pd.DataFrame:
 def create_target(df: pd.DataFrame) -> pd.DataFrame:
     """
     Create the half-time draw target variable.
-    
+
     Args:
         df: DataFrame with HTHG and HTAG columns
-    
+
     Returns:
         DataFrame with y_ht_draw target column
     """
     df_copy = df.copy()
     df_copy['y_ht_draw'] = (df_copy['HTHG'] == df_copy['HTAG']).astype(int)
     return df_copy
+
+
+# ── xG rolling feature names (for reference in train_v4.py) ──────────────────
+
+XG_ROLLING_FEATURES = [
+    # Full-match xG rolling averages
+    "home_xg_r5",          # home team's avg xG over last 5 matches
+    "home_xga_r5",         # home team's avg xG against over last 5 matches
+    "home_xg_diff_r5",     # home team's avg xG differential over last 5 matches
+    "away_xg_r5",          # away team's avg xG over last 5 matches
+    "away_xga_r5",         # away team's avg xG against over last 5 matches
+    "away_xg_diff_r5",     # away team's avg xG differential over last 5 matches
+    # xG overperformance (regression signal)
+    "home_goals_minus_xg_r5",  # home team's avg goals − xG (positive = overperforming)
+    "away_goals_minus_xg_r5",  # away team's avg goals − xG
+    # First-half xG (key new feature — requires match report scraping)
+    "home_1h_xg_r5",      # home team's avg 1st-half xG over last 5 matches
+    "home_1h_xga_r5",     # home team's avg 1st-half xG against over last 5 matches
+    "away_1h_xg_r5",      # away team's avg 1st-half xG over last 5 matches
+    "away_1h_xga_r5",     # away team's avg 1st-half xG against over last 5 matches
+]
+
+
+def compute_rolling_xg_features(df: pd.DataFrame, window: int = 5) -> pd.DataFrame:
+    """
+    Compute rolling xG features per team from per-match xG columns.
+
+    Expects columns: Date, HomeTeam, AwayTeam, home_xg, away_xg.
+    Optionally uses: home_1h_xg, away_1h_xg (first-half splits).
+
+    Returns DataFrame with XG_ROLLING_FEATURES columns added.
+    Missing xG values are handled gracefully (rolling over available data only).
+    """
+    from collections import defaultdict
+
+    df_out = df.sort_values("Date").reset_index(drop=True)
+
+    has_1h = (
+        "home_1h_xg" in df_out.columns
+        and df_out["home_1h_xg"].notna().mean() > 0.01
+    )
+
+    for col in XG_ROLLING_FEATURES:
+        df_out[col] = np.nan
+
+    team_hist: dict = defaultdict(list)
+
+    def _rolling_mean(records, key):
+        vals = [
+            r[key] for r in records[-window:]
+            if not np.isnan(r.get(key, np.nan))
+        ]
+        return float(np.mean(vals)) if vals else np.nan
+
+    for idx, row in df_out.iterrows():
+        home = row["HomeTeam"]
+        away = row["AwayTeam"]
+        h_xg  = row.get("home_xg",  np.nan)
+        a_xg  = row.get("away_xg",  np.nan)
+        h1_xg = row.get("home_1h_xg", np.nan) if has_1h else np.nan
+        a1_xg = row.get("away_1h_xg", np.nan) if has_1h else np.nan
+        h_g   = row.get("FTHG", np.nan)
+        a_g   = row.get("FTAG", np.nan)
+
+        # ── Home team rolling xG ───────────────────────────────────────────────
+        h_hist = team_hist[home]
+        if h_hist:
+            hxf = _rolling_mean(h_hist, "xg_for")
+            hxa = _rolling_mean(h_hist, "xg_against")
+            df_out.at[idx, "home_xg_r5"]  = hxf
+            df_out.at[idx, "home_xga_r5"] = hxa
+            if not np.isnan(hxf) and not np.isnan(hxa):
+                df_out.at[idx, "home_xg_diff_r5"] = hxf - hxa
+            hgf = _rolling_mean(h_hist, "goals_for")
+            if not np.isnan(hgf) and not np.isnan(hxf):
+                df_out.at[idx, "home_goals_minus_xg_r5"] = hgf - hxf
+            if has_1h:
+                df_out.at[idx, "home_1h_xg_r5"]  = _rolling_mean(h_hist, "xg_1h_for")
+                df_out.at[idx, "home_1h_xga_r5"] = _rolling_mean(h_hist, "xg_1h_against")
+
+        # ── Away team rolling xG ───────────────────────────────────────────────
+        a_hist = team_hist[away]
+        if a_hist:
+            axf = _rolling_mean(a_hist, "xg_for")
+            axa = _rolling_mean(a_hist, "xg_against")
+            df_out.at[idx, "away_xg_r5"]  = axf
+            df_out.at[idx, "away_xga_r5"] = axa
+            if not np.isnan(axf) and not np.isnan(axa):
+                df_out.at[idx, "away_xg_diff_r5"] = axf - axa
+            agf = _rolling_mean(a_hist, "goals_for")
+            if not np.isnan(agf) and not np.isnan(axf):
+                df_out.at[idx, "away_goals_minus_xg_r5"] = agf - axf
+            if has_1h:
+                df_out.at[idx, "away_1h_xg_r5"]  = _rolling_mean(a_hist, "xg_1h_for")
+                df_out.at[idx, "away_1h_xga_r5"] = _rolling_mean(a_hist, "xg_1h_against")
+
+        # ── Update history (no look-ahead) ─────────────────────────────────────
+        team_hist[home].append({
+            "xg_for":       h_xg,
+            "xg_against":   a_xg,
+            "xg_1h_for":    h1_xg,
+            "xg_1h_against": a1_xg,
+            "goals_for":    h_g,
+            "goals_against": a_g,
+        })
+        team_hist[away].append({
+            "xg_for":       a_xg,
+            "xg_against":   h_xg,
+            "xg_1h_for":    a1_xg,
+            "xg_1h_against": h1_xg,
+            "goals_for":    a_g,
+            "goals_against": h_g,
+        })
+
+        if idx % 10000 == 0 and idx > 0:
+            print(f"  Rolling xG: {idx:,}/{len(df_out):,} processed...")
+
+    return df_out
