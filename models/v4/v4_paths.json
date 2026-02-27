@@ -13,5 +13,5 @@
   "dc_path": "models/v4/dixon_coles.pkl",
   "elo_path": "models/v4/elo.pkl",
   "referee_path": "models/v4/referee_model.pkl",
-  "mega_dataset": "data/processed/mega_dataset_v2.parquet"
+  "mega_dataset": "data/processed/mega_dataset_v3.parquet"
 }

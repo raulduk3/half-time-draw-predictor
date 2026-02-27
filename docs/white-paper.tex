@@ -68,7 +68,7 @@
 
 % === TITLE ===
 \begin{center}
-{\color{accent}\LARGE\bfseries Half-Time Draw Prediction:\\[4pt] Empirical Evidence of a Profitable Betting Signal}\\[12pt]
+{\color{accent}\LARGE\bfseries Half-Time Draw Prediction:\\[4pt] A Predictive Signal in European Football}\\[12pt]
 {\large Richard Alvarez}\\[4pt]
 {\color{dimgray} February 23, 2026}\\[2pt]
 {\color{dimgray}\small\href{https://github.com/raulduk3/half-time}{github.com/raulduk3/half-time}}
@@ -80,7 +80,7 @@
 % === ABSTRACT ===
 \begin{quote}
 \color{dimgray}\small
-A two-model system identifies profitable half-time draw bets across 22 European football leagues. Model A reads B365 odds (market view). Model B uses 42 non-odds features (fundamentals view). When the market prices a draw higher than fundamentals suggest, actual draws exceed market expectations. On 30,025 out-of-sample matches (Apr 2022 to Feb 2026), the ``Strong Value'' tier ($\geq$5\% edge) achieves a 48.0\% hit rate against a 40.7\% base rate on 3,340 bets. All 9 half-year periods are profitable. Bootstrap P(profit) = 100.0\% across 10,000 resamples.
+A two-model system identifies half-time draw opportunities across 22 European football leagues. Model A reads B365 odds (market view). Model B uses 42 non-odds features (fundamentals view). When the market prices a draw higher than fundamentals suggest, actual draws exceed market expectations. On 30,025 out-of-sample matches (Apr 2022 to Feb 2026), the ``Strong Value'' tier ($\geq$5\% edge) achieves a \textbf{48.0\% hit rate} against a 40.7\% base rate on 3,340 bets, with monotonic improvement across all edge tiers. All 9 half-year periods show consistent hit rates. \textbf{Important caveat:} ROI figures in this paper use full-time draw odds as a proxy for HT draw odds, which substantially inflates profitability estimates. The hit rate staircase is the primary evidence; absolute ROI remains unvalidated pending real HT odds data.
 \end{quote}
 
 \vspace{-4pt}
@@ -192,10 +192,14 @@ Value (3--5\%) & 5,803 & 42.5\% & 3.36 & +42.3\% & +0.430 \\
 \textbf{Strong Value ($\geq$5\%)} & \textbf{3,340} & \textbf{48.0\%} & \textbf{3.11} & \textbf{+48.7\%} & \textbf{+0.491} \\
 \bottomrule
 \end{tabular}
-\caption{Edge tier backtest (flat bet on B365 FT draw odds, 30,025 matches). Per-match DC/Elo.}
+\caption{Edge tier backtest (30,025 matches). Per-match DC/Elo. \textbf{ROI uses FT draw odds as proxy --- see Section 10.}}
 \end{table}
 
-\noindent\textbf{Note:} All tiers show positive ROI because B365 full-time draw odds are structurally generous. The primary evidence of model validity is the \textbf{monotonic hit rate increase} across positive edge tiers (40.7\% $\rightarrow$ 42.1\% $\rightarrow$ 42.5\% $\rightarrow$ 48.0\%).
+\noindent\colorbox{cardbg}{\parbox{\dimexpr\textwidth-2\fboxsep}{%
+\color{accent4}\textbf{Critical caveat:} ROI and EV columns use B365 full-time draw odds, not actual HT draw odds. FT draw odds (~3.0--3.5) are substantially higher than HT draw odds (~2.0--2.5), inflating all ROI figures by an estimated 30--50\%. \textbf{All tiers show positive ROI because FT odds are structurally generous --- this does not imply profitability with real HT odds.}}}
+
+\vspace{6pt}
+\noindent The primary evidence of model validity is the \textbf{monotonic hit rate increase} across positive edge tiers (40.7\% $\rightarrow$ 42.1\% $\rightarrow$ 42.5\% $\rightarrow$ 48.0\%). Hit rates are computed from outcomes alone and do not depend on odds.
 
 % === SECTION 5: TEMPORAL STABILITY ===
 \section{Temporal Stability}
@@ -223,7 +227,7 @@ Value (3--5\%) & 5,803 & 42.5\% & 3.36 & +42.3\% & +0.430 \\
 2026 H1 & 239 & 49.4\% & +51.1\% \\
 \bottomrule
 \end{tabular}
-\caption{Strong Value temporal stability. No alpha decay.}
+\caption{Strong Value temporal stability. Hit rates stable across all periods. ROI uses FT odds proxy.}
 \end{table}
 
 % === SECTION 6: STATISTICAL SIGNIFICANCE ===
@@ -248,7 +252,7 @@ Bootstrap mean & +48.70\% \\
 P(profit $>$ 0) & 100.00\% \\
 \bottomrule
 \end{tabular}
-\caption{Bootstrap statistics (10,000 resamples).}
+\caption{Bootstrap statistics (10,000 resamples). ROI uses FT odds proxy --- see Section 10.}
 \end{table}
 
 % === SECTION 7: RECENT PERFORMANCE ===
@@ -300,16 +304,25 @@ Single match prediction & " & $<$0.5s \\
 \noindent Model artifacts total 8,067 KB. Dataset: 9.2 MB (Parquet). 22 European leagues from football-data.co.uk, 1995--2026.
 
 % === SECTION 10: LIMITATIONS ===
-\section{Limitations}
+\section{Limitations and Open Questions}
 
-\begin{enumerate}[leftmargin=1.5em, itemsep=2pt]
-  \item \textbf{FT odds proxy.} Backtest uses B365 full-time draw odds. All edge tiers show positive ROI, indicating FT odds are structurally generous. The hit rate monotonic increase is the primary evidence; absolute ROI will differ with real HT odds.
-  \item \textbf{No transaction costs.} Bet availability, liquidity constraints, and bookmaker limits are not modeled.
-  \item \textbf{Prospective validation nascent.} 1 live bet placed (Feb 2026). Real HT odds collection via The Odds API began Feb 2026. Three months of prospective data with actual HT market prices will resolve the open ROI question.
+\begin{enumerate}[leftmargin=1.5em, itemsep=4pt]
+  \item \textbf{FT odds proxy inflates all ROI figures.} This is the paper's most significant limitation. The backtest calculates payouts using B365 full-time draw odds (typically 3.0--3.5), but actual HT draw bets pay substantially less (typically 2.0--2.5 at US sportsbooks). This means reported ROI of +48.7\% is \textbf{not achievable in practice}. True ROI with real HT odds is unknown and could be negative after accounting for market vig.
+  \item \textbf{Elo and Dixon-Coles default priors.} When team data is thin (e.g., promoted clubs, early season), both sub-models fall back to generic priors. The Elo model defaults to 42.0\% for many matches, reducing Model B to a single Dixon-Coles signal in those cases.
+  \item \textbf{No transaction costs.} Bet availability, liquidity constraints, bookmaker limits, and odds movement between prediction time and bet placement are not modeled.
+  \item \textbf{Prospective validation nascent.} 1 live bet placed, 3 days of tracking (Feb 2026). Real HT odds collection via The Odds API began Feb 2026. Minimum 3 months of prospective data needed to validate.
+  \item \textbf{Potential look-ahead bias.} While train/val/test splits are strictly temporal, the choice of model architecture and hyperparameter ranges was informed by knowledge of the test period's existence. A truly blind test would require data that did not exist when modeling decisions were made.
 \end{enumerate}
 
+\subsection{What Is Validated}
+The \textbf{hit rate staircase} is the paper's strongest claim. STRONG VALUE matches draw at HT 48.0\% of the time vs.\ a 40.7\% base rate, with monotonic improvement across all tiers. This ranking is computed purely from match outcomes and does not depend on odds. It is stable across all 9 half-year periods (range: 46.3\%--49.6\%).
+
+\subsection{What Is Not Yet Validated}
+Profitability. The edge may or may not survive real HT market odds and vig. Historical HT odds (2022--2026) are being collected from The Odds API to resolve this question. Updated results with real HT odds will be published as an addendum.
+
 \vspace{8pt}
-\noindent\textbf{Key open question:} What is the ROI with actual HT draw odds? The hit rate signal (48.0\% on Strong Value vs 40.7\% base) is robust. Profitability depends on available HT market prices, which will be established through prospective validation.
+\noindent\colorbox{cardbg}{\parbox{\dimexpr\textwidth-2\fboxsep}{%
+\color{accent}\textbf{Key open question:} Does the 48.0\% hit rate on STRONG VALUE produce positive ROI at real HT draw odds? At typical HT draw odds of +125 (2.25), a 48.0\% hit rate yields +8.0\% ROI before vig. At +100 (2.00), it yields -4.0\%. The answer depends on available HT market prices.}}
 
 \vspace{16pt}
 \noindent\rule{\textwidth}{0.4pt}

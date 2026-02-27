@@ -1,0 +1,799 @@
+sport,league,season,event_id,home_team,away_team,commence_time,snapshot_ts,ht_home_pinnacle,ht_draw_pinnacle,ht_away_pinnacle,ht_home_bovada,ht_draw_bovada,ht_away_bovada,ht_home_best,ht_draw_best,ht_away_best,best_book,n_books_with_ht
+soccer_epl,E0,2023-24,8dbf2bc37214721e53f15c5f91dc40bb,Luton,West Ham United,2023-09-01T19:00:00Z,2023-09-01T11:55:44Z,5.07,2.38,2.43,,,,5.07,2.38,2.43,pinnacle,4
+soccer_epl,E0,2023-24,755edca76a2b58015866ca94fa3098a7,Sheffield United,Everton,2023-09-02T11:30:00Z,2023-09-01T11:55:44Z,3.76,2.11,3.4,,,,3.76,2.11,3.4,pinnacle,5
+soccer_epl,E0,2023-24,ebed64fa704ba0dbd2edd71ae5a98738,Brentford,Bournemouth,2023-09-02T14:00:00Z,2023-09-01T11:55:44Z,2.35,2.44,5.01,,,,2.35,2.44,5.01,pinnacle,5
+soccer_epl,E0,2023-24,3d26f5af88421b00631e0f41776feeaa,Burnley,Tottenham Hotspur,2023-09-02T14:00:00Z,2023-09-01T11:55:44Z,4.22,2.51,2.51,,,,4.22,2.51,2.51,pinnacle,5
+soccer_epl,E0,2023-24,0bf5eaab77bc90e2e84788fa9cfbf32e,Chelsea,Nottingham Forest,2023-09-02T14:00:00Z,2023-09-01T11:55:44Z,1.87,2.69,7.73,,,,1.87,2.69,7.73,pinnacle,5
+soccer_epl,E0,2023-24,f38fbd8eb112d7de44a3a49be7952ca9,Manchester City,Fulham,2023-09-02T14:00:00Z,2023-09-01T11:55:44Z,1.49,3.4,13.05,,,,1.49,3.4,13.05,pinnacle,5
+soccer_epl,E0,2023-24,40147583f50480ffddbfb8729002ca6f,Brighton and Hove Albion,Newcastle United,2023-09-02T16:30:00Z,2023-09-01T11:55:44Z,3.09,2.58,3.1,,,,3.09,2.58,3.1,pinnacle,5
+soccer_epl,E0,2023-24,fe35700906f409767a8a5d7d2ba50779,Liverpool,Aston Villa,2023-09-03T13:00:00Z,2023-09-01T11:55:44Z,2.21,2.73,4.65,,,,2.21,2.73,4.65,pinnacle,5
+soccer_epl,E0,2023-24,e0f7f6510fe50a8d07df0c1a70547308,Crystal Palace,Wolverhampton Wanderers,2023-09-03T13:00:00Z,2023-09-01T11:55:44Z,2.82,2.07,5.1,,,,2.82,2.07,5.1,pinnacle,5
+soccer_epl,E0,2023-24,1908b603ac75316f28d91c691629b005,Arsenal,Manchester United,2023-09-03T15:30:00Z,2023-09-01T11:55:44Z,2.32,2.56,4.68,,,,2.32,2.56,4.68,pinnacle,5
+soccer_epl,E0,2023-24,770457b8291166c45e71dda2aedddaf7,Wolverhampton Wanderers,Liverpool,2023-09-16T11:30:00Z,2023-09-15T11:55:43Z,5.98,2.8,1.96,,,,5.98,2.8,1.96,pinnacle,5
+soccer_epl,E0,2023-24,7f9876268f7ccebe0f632c22592df4d1,Aston Villa,Crystal Palace,2023-09-16T14:00:00Z,2023-09-15T11:55:43Z,2.58,2.34,4.56,,,,2.58,2.34,4.56,pinnacle,5
+soccer_epl,E0,2023-24,bb5d02d044c717c594b307ba8a567c11,Manchester United,Brighton and Hove Albion,2023-09-16T14:00:00Z,2023-09-15T11:55:43Z,2.82,2.56,3.49,,,,2.82,2.56,3.49,pinnacle,5
+soccer_epl,E0,2023-24,d0739a58bf85f8d8fbc20e1a1bae9327,Fulham,Luton,2023-09-16T14:00:00Z,2023-09-15T11:55:43Z,2.3,2.4,5.48,,,,2.3,2.4,5.48,pinnacle,5
+soccer_epl,E0,2023-24,3f9fcae10f8ca05bb2c3647db3e520e8,West Ham United,Manchester City,2023-09-16T14:00:00Z,2023-09-15T11:55:43Z,6.15,2.63,2.03,,,,6.15,2.63,2.03,pinnacle,5
+soccer_epl,E0,2023-24,b83dd6c591ad945a4a867b1054464843,Tottenham Hotspur,Sheffield United,2023-09-16T14:00:00Z,2023-09-15T11:55:43Z,1.76,2.88,8.38,,,,1.76,2.88,8.38,pinnacle,5
+soccer_epl,E0,2023-24,9f1eb242562dcb255b515c562e4f3f04,Everton,Arsenal,2023-09-16T16:30:00Z,2023-09-01T11:55:44Z,5.43,2.55,2.08,,,,5.43,2.55,2.08,pinnacle,4
+soccer_epl,E0,2023-24,d994ed59e76e685cb4a5849228ce29b1,Newcastle United,Brentford,2023-09-16T16:30:00Z,2023-09-15T11:55:43Z,2.1,2.57,5.86,,,,2.1,2.57,5.86,pinnacle,5
+soccer_epl,E0,2023-24,4d82121b4ba66fec7574599d3272bb04,Bournemouth,Chelsea,2023-09-17T13:00:00Z,2023-09-15T11:55:43Z,4.58,2.49,2.41,,,,4.58,2.49,2.41,pinnacle,5
+soccer_epl,E0,2023-24,7fbd2fa762976aa912bf4bf239717fdd,Newcastle United,Brentford,2023-09-17T15:30:00Z,2023-09-01T11:55:44Z,2.09,2.49,5.6,,,,2.09,2.49,5.6,pinnacle,4
+soccer_epl,E0,2023-24,354c23682155246d4b0d97b2a1b1ef46,Everton,Arsenal,2023-09-17T15:30:00Z,2023-09-15T11:55:43Z,5.93,2.61,2.07,,,,5.93,2.61,2.07,pinnacle,5
+soccer_epl,E0,2023-24,e0d240a77323657c98952a74519218cd,Nottingham Forest,Burnley,2023-09-18T18:45:00Z,2023-09-15T11:55:43Z,2.85,2.31,4.01,,,,2.85,2.31,4.01,pinnacle,5
+soccer_italy_serie_a,I1,2023-24,655b596f84a8fbe67c40d677810b335c,Salernitana,Frosinone,2023-09-22T16:30:00Z,2023-09-22T11:55:44Z,3.37,2.17,3.7,,,,3.37,2.17,3.7,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,700593896c012aa07437510f04e22955,VfB Stuttgart,SV Darmstadt 98,2023-09-22T18:30:00Z,2023-09-22T11:55:44Z,1.88,2.8,7.1,,,,1.88,2.8,7.1,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,740dd3b08af51c2b93ceed860b40d823,Lecce,Genoa,2023-09-22T18:45:00Z,2023-09-22T11:55:44Z,3.33,2.1,3.96,,,,3.33,2.1,3.96,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,f8ce1bd440b8457cde26c826381e88b7,Alavés,Athletic Bilbao,2023-09-22T19:00:00Z,2023-09-22T11:55:44Z,5.04,2.0,3.02,,,,5.04,2.0,3.02,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,b4c54b563195da436c9620d1f2f78676,AS Monaco,Nice,2023-09-22T19:00:00Z,2023-09-22T11:55:44Z,2.93,2.35,3.82,,,,2.93,2.35,3.82,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,8f342c4367a8a195ece1964ed05ab920,Girona,Mallorca,2023-09-23T12:00:00Z,2023-09-22T11:55:44Z,2.81,2.04,5.34,,,,2.81,2.04,5.34,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,733b4bc2464dff47ce2c1e32528affe6,AC Milan,Hellas Verona FC,2023-09-23T13:00:00Z,2023-09-22T11:55:44Z,1.91,2.58,7.99,,,,1.91,2.58,7.99,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,c5033d044bdae85dc9c170d2a4f7a670,Augsburg,FSV Mainz 05,2023-09-23T13:30:00Z,2023-09-22T11:55:44Z,3.17,2.44,3.25,,,,3.17,2.44,3.25,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,458a6ff97af690bfa2801b416ff2e42b,Bayern Munich,VfL Bochum,2023-09-23T13:30:00Z,2023-09-22T11:55:44Z,1.36,4.15,13.06,,,,1.36,4.15,13.06,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,df49edd688a431ee62343c38dad53496,Borussia Dortmund,VfL Wolfsburg,2023-09-23T13:30:00Z,2023-09-22T11:55:44Z,2.25,2.71,4.52,,,,2.25,2.71,4.52,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,ca672c20094b6a4ad01089a5d2e0ab9a,Borussia Monchengladbach,RB Leipzig,2023-09-23T13:30:00Z,2023-09-22T11:55:44Z,4.9,2.75,2.15,,,,4.9,2.75,2.15,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,b7645ae76ee19bfb6bd44e7950f46731,Union Berlin,TSG Hoffenheim,2023-09-23T13:30:00Z,2023-09-22T11:55:44Z,2.8,2.36,3.96,,,,2.8,2.36,3.96,pinnacle,1
+soccer_epl,E0,2023-24,69ce6c2d85c6731d5d04a2181043ac9a,Crystal Palace,Fulham,2023-09-23T14:00:00Z,2023-09-22T11:55:44Z,2.77,2.22,4.48,,,,2.77,2.22,4.48,pinnacle,5
+soccer_epl,E0,2023-24,2bb1ad8d75800f87589c2a3d898da3ee,Luton,Wolverhampton Wanderers,2023-09-23T14:00:00Z,2023-09-22T11:55:44Z,3.93,2.22,3.03,,,,3.93,2.22,3.03,pinnacle,5
+soccer_epl,E0,2023-24,dd847ce1e1804f38613accf052ebfc75,Manchester City,Nottingham Forest,2023-09-23T14:00:00Z,2023-09-22T11:55:44Z,1.49,3.35,13.18,,,,1.49,3.35,13.18,pinnacle,5
+soccer_spain_la_liga,SP1,2023-24,2af2f0a394ca9e6b5d0103082d04acf7,CA Osasuna,Sevilla,2023-09-23T14:15:00Z,2023-09-22T11:55:44Z,3.53,2.06,3.77,,,,3.53,2.06,3.77,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,1e7cc2eb935be9b24952e6b6e9ca2bad,Nantes,Lorient,2023-09-23T15:00:00Z,2023-09-22T11:55:44Z,3.13,2.26,3.67,,,,3.13,2.26,3.67,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,a8ee868334a641dd08435c5d0b45983e,Sassuolo,Juventus,2023-09-23T16:00:00Z,2023-09-22T11:55:44Z,4.81,2.35,2.49,,,,4.81,2.35,2.49,pinnacle,1
+soccer_epl,E0,2023-24,a2a29539dc0215b10cc6e65d1f75d45e,Brentford,Everton,2023-09-23T16:30:00Z,2023-09-22T11:55:44Z,2.44,2.37,4.91,,,,2.44,2.37,4.91,pinnacle,5
+soccer_spain_la_liga,SP1,2023-24,fb723f372cce04985b742cddf8f07c41,Barcelona,Celta Vigo,2023-09-23T16:30:00Z,2023-09-22T11:55:44Z,1.71,2.91,8.64,,,,1.71,2.91,8.64,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,6e44197c1f22de2ed1a28bd868e257fa,Werder Bremen,FC Koln,2023-09-23T16:30:00Z,2023-09-22T11:55:44Z,3.19,2.36,3.38,,,,3.19,2.36,3.38,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,2bc7267281956fe02b245212db08cf29,Lazio,Monza,2023-09-23T18:45:00Z,2023-09-22T11:55:44Z,2.51,2.28,5.04,,,,2.51,2.28,5.04,pinnacle,1
+soccer_epl,E0,2023-24,04e4afa3695006c6ddd876af49547206,Burnley,Manchester United,2023-09-23T19:00:00Z,2023-09-22T11:55:44Z,4.64,2.56,2.34,,,,4.64,2.56,2.34,pinnacle,5
+soccer_spain_la_liga,SP1,2023-24,02b611c3f154525e41ab6aeaaa1c40f0,Almería,Valencia,2023-09-23T19:00:00Z,2023-09-22T11:55:44Z,3.72,2.21,3.19,,,,3.72,2.21,3.19,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,4fea873643ebc36c286ecb7a75dfbf4f,Brest,Lyon,2023-09-23T19:00:00Z,2023-09-22T11:55:44Z,3.14,2.46,3.26,,,,3.14,2.46,3.26,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,b00dacb807617fcc000bbda8d67ea768,Empoli,Inter Milan,2023-09-24T10:30:00Z,2023-09-22T11:55:44Z,7.42,2.75,1.86,,,,7.42,2.75,1.86,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,205cd8d341e9d5dda3d7d7e3f28ddd02,Metz,Strasbourg,2023-09-24T11:00:00Z,2023-09-22T11:55:44Z,3.69,2.16,3.35,,,,3.69,2.16,3.35,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,deb5cee30d89ac7308b53a7c702a1671,Real Sociedad,Getafe,2023-09-24T12:00:00Z,2023-09-22T11:55:44Z,2.33,2.08,7.98,,,,2.33,2.08,7.98,pinnacle,1
+soccer_epl,E0,2023-24,b33e91dedc34bd50ddd02097f933f7bc,Arsenal,Tottenham Hotspur,2023-09-24T13:00:00Z,2023-09-22T11:55:44Z,2.2,2.72,4.74,,,,2.2,2.72,4.74,pinnacle,5
+soccer_epl,E0,2023-24,74a747a8cd2ad057e7e1f432d608ce63,Chelsea,Aston Villa,2023-09-24T13:00:00Z,2023-09-22T11:55:44Z,2.54,2.45,4.32,,,,2.54,2.45,4.32,pinnacle,5
+soccer_epl,E0,2023-24,73f6f4db270424113488eef28af56751,Brighton and Hove Albion,Bournemouth,2023-09-24T13:00:00Z,2023-09-22T11:55:44Z,1.85,2.96,6.32,,,,1.85,2.96,6.32,pinnacle,5
+soccer_epl,E0,2023-24,9cd2dab20828bbf6ccd694853f2c5215,Liverpool,West Ham United,2023-09-24T13:00:00Z,2023-09-22T11:55:44Z,1.9,2.86,6.25,,,,1.9,2.86,6.25,pinnacle,5
+soccer_italy_serie_a,I1,2023-24,5d2f2f28c6f7a0905eb7c372885bbc66,Atalanta BC,Cagliari,2023-09-24T13:00:00Z,2023-09-22T11:55:44Z,1.93,2.62,7.28,,,,1.93,2.62,7.28,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,eeb0c91b729048c44b82313b21645d79,Udinese,Fiorentina,2023-09-24T13:00:00Z,2023-09-22T11:55:44Z,3.87,2.2,3.12,,,,3.87,2.2,3.12,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,666ebf834f88204413a38aa68da4c7a1,Le Havre,Clermont,2023-09-24T13:00:00Z,2023-09-22T11:55:44Z,3.31,2.15,3.75,,,,3.31,2.15,3.75,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,522f9863e3a020bb1393ced9fba6b4c1,RC Lens,Toulouse,2023-09-24T13:00:00Z,2023-09-22T11:55:44Z,2.31,2.41,5.32,,,,2.31,2.41,5.32,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,24b7fbd6382b55f8237060d1048fe45a,Bayer Leverkusen,FC Heidenheim,2023-09-24T13:30:00Z,2023-09-22T11:55:44Z,1.62,3.26,8.29,,,,1.62,3.26,8.29,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,597242c12cfd4fc2082f2bb4ea459784,Rayo Vallecano,Villarreal,2023-09-24T14:15:00Z,2023-09-22T11:55:44Z,3.2,2.37,3.34,,,,3.2,2.37,3.34,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,d48efcb124c678d9376a7e364fde826f,Montpellier,Rennes,2023-09-24T15:05:00Z,2023-09-22T11:55:44Z,3.26,2.39,3.24,,,,3.26,2.39,3.24,pinnacle,1
+soccer_epl,E0,2023-24,8210c0ad84e05ca0c1d6e008d5d2c274,Sheffield United,Newcastle United,2023-09-24T15:30:00Z,2023-09-22T11:55:44Z,6.5,2.62,2.0,,,,6.5,2.62,2.0,pinnacle,5
+soccer_germany_bundesliga,D1,2023-24,d9457bff975d2d6f27753a706a5205f8,Eintracht Frankfurt,SC Freiburg,2023-09-24T15:30:00Z,2023-09-22T11:55:44Z,2.84,2.31,4.01,,,,2.84,2.31,4.01,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,2145f0e115f6cd3d0d88fb5388a409a6,Bologna,Napoli,2023-09-24T16:00:00Z,2023-09-22T11:55:44Z,4.57,2.26,2.69,,,,4.57,2.26,2.69,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,74af2c9326fe1c0baa7b9a689eb0b66e,Real Betis,Cádiz CF,2023-09-24T16:30:00Z,2023-09-22T11:55:44Z,2.61,2.18,5.19,,,,2.61,2.18,5.19,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,379ae720a07cefcb0a374ef36f033dc5,Las Palmas,Granada CF,2023-09-24T16:30:00Z,2023-09-22T11:55:44Z,2.81,2.18,4.54,,,,2.81,2.18,4.54,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,549cc2b3beca9138da3efba7ec6e25ba,Torino,AS Roma,2023-09-24T18:45:00Z,2023-09-22T11:55:44Z,3.84,2.0,3.63,,,,3.84,2.0,3.63,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,1b8154ba015ca07829bf75d95f2591b6,Paris Saint Germain,Marseille,2023-09-24T18:45:00Z,2023-09-22T11:55:44Z,2.21,2.64,4.92,,,,2.21,2.64,4.92,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,c0d85aa36f10bc7ed6be94e26ab87838,Atlético Madrid,Real Madrid,2023-09-24T19:00:00Z,2023-09-22T11:55:44Z,3.69,2.12,3.42,,,,3.69,2.12,3.42,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,7ccb91bc0a4f81a6c992456434015117,Sevilla,Almería,2023-09-26T17:00:00Z,2023-09-22T11:55:44Z,2.02,2.54,5.89,,,,2.02,2.54,5.89,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,1fc76cdc027106d6c95f8b84b08cc538,Juventus,Lecce,2023-09-26T18:45:00Z,2023-09-22T11:55:44Z,1.99,2.39,7.16,,,,1.99,2.39,7.16,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,fa2999ca7e4edf93efe69da1a217d91e,Lille,Stade de Reims,2023-09-26T19:00:00Z,2023-09-22T11:55:44Z,2.59,2.46,3.8,,,,2.59,2.46,3.8,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,a897dc37f6b8cfab656ab04a48ca5e86,Mallorca,Barcelona,2023-09-26T19:30:00Z,2023-09-22T11:55:44Z,5.48,2.3,2.28,,,,5.48,2.3,2.28,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,0535394c5ff731fe0d22a45e193f6814,Hellas Verona FC,Atalanta BC,2023-09-27T16:30:00Z,2023-09-22T11:55:44Z,4.93,2.36,2.32,,,,4.93,2.36,2.32,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,c4b050eb4cdb224b12f3ba696b8b3f22,Empoli,Salernitana,2023-09-27T16:30:00Z,2023-09-22T11:55:44Z,2.83,2.25,3.89,,,,2.83,2.25,3.89,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,223ef8e876c644ce0484e952f62b2d0c,Athletic Bilbao,Getafe,2023-09-27T17:00:00Z,2023-09-22T11:55:44Z,2.3,2.11,6.65,,,,2.3,2.11,6.65,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,76e465483b576e9ae880a010e0f9b037,Villarreal,Girona,2023-09-27T17:00:00Z,2023-09-22T11:55:44Z,2.67,2.42,3.75,,,,2.67,2.42,3.75,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,d6727be84b5f0dcefd7b7ca5acc061f5,Inter Milan,Sassuolo,2023-09-27T18:45:00Z,2023-09-22T11:55:44Z,1.78,2.9,6.45,,,,1.78,2.9,6.45,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,2d9264e482c8270fd8a242f8bef09d3a,Lazio,Torino,2023-09-27T18:45:00Z,2023-09-22T11:55:44Z,2.66,2.17,4.55,,,,2.66,2.17,4.55,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,0051193ba2487e8a6078cc0a42553999,Napoli,Udinese,2023-09-27T18:45:00Z,2023-09-22T11:55:44Z,1.83,2.58,7.77,,,,1.83,2.58,7.77,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,0867e0272f8be73f260366a156cfb2ed,Cádiz CF,Rayo Vallecano,2023-09-27T19:30:00Z,2023-09-22T11:55:44Z,3.22,2.07,3.81,,,,3.22,2.07,3.81,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,dd36f04b8b6b415266888d611bdfa351,Valencia,Real Sociedad,2023-09-27T19:30:00Z,2023-09-22T11:55:44Z,3.46,2.01,3.7,,,,3.46,2.01,3.7,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,bd4ca360d7ed9701ae9d3ee1d7ad52cd,Monza,Bologna,2023-09-28T16:30:00Z,2023-09-22T11:55:44Z,3.12,2.2,3.56,,,,3.12,2.2,3.56,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,02896fae04ac26a53e36f7cab062261f,CA Osasuna,Atlético Madrid,2023-09-28T19:30:00Z,2023-09-22T11:55:44Z,3.7,2.18,3.06,,,,3.7,2.18,3.06,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,e254b3b8c2262b5317d202cae6d2112d,TSG Hoffenheim,Borussia Dortmund,2023-09-29T18:30:00Z,2023-09-29T11:55:42Z,3.52,2.75,2.64,,,,3.52,2.75,2.64,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,1c7f6d634fc0b2c381ac5fd61353da14,Barcelona,Sevilla,2023-09-29T19:00:00Z,2023-09-29T11:55:42Z,1.89,2.82,6.8,,,,1.89,2.82,6.8,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,f4c0b8685d4ec35f4f3a49e477373721,Strasbourg,RC Lens,2023-09-29T19:00:00Z,2023-09-29T11:55:42Z,4.28,2.24,2.86,,,,4.28,2.24,2.86,pinnacle,1
+soccer_epl,E0,2023-24,9d35082081b6450749fb6f1cc908f57b,Aston Villa,Brighton and Hove Albion,2023-09-30T11:30:00Z,2023-09-29T11:55:42Z,3.14,2.61,3.03,,,,3.14,2.61,3.03,pinnacle,5
+soccer_spain_la_liga,SP1,2023-24,5cb267df928c3500cfc7cea68c9ff22b,Getafe,Villarreal,2023-09-30T12:00:00Z,2023-09-29T11:55:42Z,3.61,2.18,3.35,,,,3.61,2.18,3.35,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,02b9662e81d39856f3282a46a59512f9,Lecce,Napoli,2023-09-30T13:00:00Z,2023-09-29T11:55:42Z,5.23,2.28,2.48,,,,5.23,2.28,2.48,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,16eed4eba566b5090bd140c691cb9a8f,FSV Mainz 05,Bayer Leverkusen,2023-09-30T13:30:00Z,2023-09-29T11:55:42Z,5.47,2.7,2.08,,,,5.47,2.7,2.08,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,4ba9881339e46e78aa7438f28be99fc3,VfL Bochum,Borussia Monchengladbach,2023-09-30T13:30:00Z,2023-09-29T11:55:42Z,2.91,2.5,3.46,,,,2.91,2.5,3.46,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,d281f8fee3c201eda4f9c9e2b3b9463a,VfL Wolfsburg,Eintracht Frankfurt,2023-09-30T13:30:00Z,2023-09-29T11:55:42Z,2.82,2.28,4.17,,,,2.82,2.28,4.17,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,ce0458a23e3d656c5e719e9955cc1de0,FC Heidenheim,Union Berlin,2023-09-30T13:30:00Z,2023-09-29T11:55:42Z,3.76,2.36,2.91,,,,3.76,2.36,2.91,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,b7438a1de455b51b64b235ac002066be,FC Koln,VfB Stuttgart,2023-09-30T13:30:00Z,2023-09-29T11:55:42Z,3.38,2.42,3.08,,,,3.38,2.42,3.08,pinnacle,1
+soccer_epl,E0,2023-24,7d4220e8bf528f818408301b517fbee8,Bournemouth,Arsenal,2023-09-30T14:00:00Z,2023-09-29T11:55:42Z,5.11,2.69,2.14,,,,5.11,2.69,2.14,pinnacle,5
+soccer_epl,E0,2023-24,bf0182d3f58394917fe1d87dd5d46fb0,Newcastle United,Burnley,2023-09-30T14:00:00Z,2023-09-29T11:55:42Z,1.79,2.87,7.75,,,,1.79,2.87,7.75,pinnacle,5
+soccer_epl,E0,2023-24,2ffa0cbab18cafdc6ec18e225b27fc18,Manchester United,Crystal Palace,2023-09-30T14:00:00Z,2023-09-29T11:55:42Z,2.16,2.47,5.97,,,,2.16,2.47,5.97,pinnacle,5
+soccer_epl,E0,2023-24,e573c7cf0a99cdc038d519a5b63520c0,Everton,Luton,2023-09-30T14:00:00Z,2023-09-29T11:55:42Z,2.26,2.32,6.22,,,,2.26,2.32,6.22,pinnacle,5
+soccer_epl,E0,2023-24,822f82f91ad92eb7dc3667ef2625bc16,Wolverhampton Wanderers,Manchester City,2023-09-30T14:00:00Z,2023-09-29T11:55:42Z,7.85,2.82,1.81,,,,7.85,2.82,1.81,pinnacle,5
+soccer_epl,E0,2023-24,c1d930d000d60dec48b06ccd2ce5a9d7,West Ham United,Sheffield United,2023-09-30T14:00:00Z,2023-09-29T11:55:42Z,1.99,2.63,6.54,,,,1.99,2.63,6.54,pinnacle,5
+soccer_spain_la_liga,SP1,2023-24,23047f82e5aa61afb2d568a19f226b58,Rayo Vallecano,Mallorca,2023-09-30T14:15:00Z,2023-09-29T11:55:42Z,3.01,2.03,4.78,,,,3.01,2.03,4.78,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,3bef5b839bd24fdfcf78a779988f30d7,Clermont,Paris Saint Germain,2023-09-30T15:00:00Z,2023-09-29T11:55:42Z,6.45,2.64,1.99,,,,6.45,2.64,1.99,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,8e25e14a520ad2e140ee2e0fb4531b45,AC Milan,Lazio,2023-09-30T16:00:00Z,2023-09-29T11:55:42Z,2.45,2.26,5.42,,,,2.45,2.26,5.42,pinnacle,1
+soccer_epl,E0,2023-24,37aed7a71cd72642860be7e3947000ea,Tottenham Hotspur,Liverpool,2023-09-30T16:30:00Z,2023-09-29T11:55:42Z,3.36,2.71,2.73,,,,3.36,2.71,2.73,pinnacle,5
+soccer_spain_la_liga,SP1,2023-24,a90d9320733df49c1c162acbc73e701e,Girona,Real Madrid,2023-09-30T16:30:00Z,2023-09-29T11:55:42Z,4.03,2.5,2.6,,,,4.03,2.5,2.6,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,031bdd9f91324ef74631e5f4d5cb12a5,RB Leipzig,Bayern Munich,2023-09-30T16:30:00Z,2023-09-29T11:55:42Z,4.02,2.69,2.42,,,,4.02,2.69,2.42,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,5893421ecc4e0a8cb02866d9b16fe91d,Salernitana,Inter Milan,2023-09-30T18:45:00Z,2023-09-29T11:55:42Z,7.37,2.67,1.9,,,,7.37,2.67,1.9,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,7b71b38cb81d50657cf8043df4131b9f,Real Sociedad,Athletic Bilbao,2023-09-30T19:00:00Z,2023-09-29T11:55:42Z,3.07,2.04,4.57,,,,3.07,2.04,4.57,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,b94bceec4c2e337fd8566efd352079ff,AS Monaco,Marseille,2023-09-30T19:00:00Z,2023-09-29T11:55:42Z,2.82,2.54,3.51,,,,2.82,2.54,3.51,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,032360b0ec0fe057bf328e772b2b6753,Bologna,Empoli,2023-10-01T10:30:00Z,2023-09-29T11:55:42Z,2.3,2.34,5.46,,,,2.3,2.34,5.46,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,2acf9cebcf9ccdb2c9e58d90d028b837,Stade de Reims,Lyon,2023-10-01T11:00:00Z,2023-09-29T11:55:42Z,2.68,2.46,3.95,,,,2.68,2.46,3.95,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,e5b83f9cc318a32998a5c0ad27be8e69,Almería,Granada CF,2023-10-01T12:00:00Z,2023-09-29T11:55:42Z,2.54,2.39,4.49,,,,2.54,2.39,4.49,pinnacle,1
+soccer_epl,E0,2023-24,d808239f478b81bbbd8afc914dcdc548,Nottingham Forest,Brentford,2023-10-01T13:00:00Z,2023-09-29T11:55:42Z,3.53,2.19,3.4,,,,3.53,2.19,3.4,pinnacle,5
+soccer_italy_serie_a,I1,2023-24,5ca016e5bb58a49f3be7632046b07da9,Udinese,Genoa,2023-10-01T13:00:00Z,2023-09-29T11:55:42Z,3.12,2.1,4.04,,,,3.12,2.1,4.04,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,f6fb06bebdbf9ffbc27c7d912da7f4a9,Nice,Brest,2023-10-01T13:00:00Z,2023-09-29T11:55:42Z,2.45,2.32,5.12,,,,2.45,2.32,5.12,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,3fcf3acfa3c01493237e15f0a278268c,Le Havre,Lille,2023-10-01T13:00:00Z,2023-09-29T11:55:42Z,4.71,2.2,2.72,,,,4.71,2.2,2.72,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,bb89708595d1aec1a7b82337b1987843,Toulouse,Metz,2023-10-01T13:00:00Z,2023-09-29T11:55:42Z,2.82,2.25,4.26,,,,2.82,2.25,4.26,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,bd96140653b2e610742d0d1217b1a718,SV Darmstadt 98,Werder Bremen,2023-10-01T13:30:00Z,2023-09-29T11:55:42Z,3.42,2.39,3.1,,,,3.42,2.39,3.1,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,9894c22a49d3309c88098b07c6d612c6,Alavés,CA Osasuna,2023-10-01T14:15:00Z,2023-09-29T11:55:42Z,3.61,2.01,3.86,,,,3.61,2.01,3.86,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,fd1761d7efefc51fcce47c8dd7c1cec3,Lorient,Montpellier,2023-10-01T15:05:00Z,2023-09-29T11:55:42Z,3.6,2.36,3.01,,,,3.6,2.36,3.01,pinnacle,1
+soccer_germany_bundesliga,D1,2023-24,d7b724a93f4d2b08bd09ef397b8bf3b2,SC Freiburg,Augsburg,2023-10-01T15:30:00Z,2023-09-29T11:55:42Z,2.3,2.53,4.9,,,,2.3,2.53,4.9,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,c491424a6d4fd986ed5b5f6928947e75,Atalanta BC,Juventus,2023-10-01T16:00:00Z,2023-09-29T11:55:42Z,3.21,2.24,3.49,,,,3.21,2.24,3.49,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,fac4d163d31210600738fa236299bd43,AS Roma,Frosinone,2023-10-01T18:45:00Z,2023-09-29T11:55:42Z,2.04,2.45,7.25,,,,2.04,2.45,7.25,pinnacle,1
+soccer_france_ligue_one,F1,2023-24,43c431929c0124de59f5d0637066a60a,Rennes,Nantes,2023-10-01T18:45:00Z,2023-09-29T11:55:42Z,2.07,2.59,5.98,,,,2.07,2.59,5.98,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,49cf5c70c46f647e532196de11bd489b,Atlético Madrid,Cádiz CF,2023-10-01T19:00:00Z,2023-09-29T11:55:42Z,1.87,2.58,7.91,,,,1.87,2.58,7.91,pinnacle,1
+soccer_spain_la_liga,SP1,2023-24,02e6b2d9fb606f89f4d5c68efdaeb55d,Real Betis,Valencia,2023-10-01T19:00:00Z,2023-09-29T11:55:42Z,3.11,2.14,4.09,,,,3.11,2.14,4.09,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,84c83eb0d9ffc2efa24471afbb2acd6a,Torino,Hellas Verona FC,2023-10-02T16:30:00Z,2023-09-29T11:55:42Z,2.64,2.12,5.42,,,,2.64,2.12,5.42,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,1995a66738c835a7c78544024a45db37,Sassuolo,Monza,2023-10-02T16:30:00Z,2023-09-29T11:55:42Z,2.86,2.51,3.51,,,,2.86,2.51,3.51,pinnacle,1
+soccer_italy_serie_a,I1,2023-24,23a5ce8f5ae44ad71cc81b9d9a305d6c,Fiorentina,Cagliari,2023-10-02T18:45:00Z,2023-09-29T11:55:42Z,2.07,2.45,7.0,,,,2.07,2.45,7.0,pinnacle,1
+soccer_epl,E0,2023-24,7bc7e53ac44c6bd3cbe692b0d46e76fe,Fulham,Chelsea,2023-10-02T19:00:00Z,2023-09-29T11:55:42Z,4.37,2.28,2.73,,,,4.37,2.28,2.73,pinnacle,5
+soccer_epl,E0,2023-24,9f4f001dc58bafb310fbb76738560171,Wolverhampton Wanderers,Manchester United,2024-02-01T20:15:00Z,2024-01-26T11:55:38Z,3.42,2.34,3.12,,,,3.42,2.34,3.12,pinnacle,4
+soccer_epl,E0,2023-24,7cecd4a9afb2d25c3e3567421631163b,West Ham United,Bournemouth,2024-02-01T19:30:00Z,2024-01-26T11:55:38Z,2.97,2.41,3.47,,,,2.97,2.41,3.47,pinnacle,4
+soccer_epl,E0,2023-24,ca67d4a4fc8e44f2e7b25187091f22de,Liverpool,Chelsea,2024-01-31T20:15:00Z,2024-01-26T11:55:38Z,2.21,2.67,4.82,,,,2.21,2.67,4.82,pinnacle,4
+soccer_epl,E0,2023-24,38114fddda1c87093a2309cf16af4011,Tottenham Hotspur,Brentford,2024-01-31T19:30:00Z,2024-01-26T11:55:38Z,2.26,2.65,4.66,,,,2.26,2.65,4.66,pinnacle,4
+soccer_epl,E0,2023-24,0c2662c6791685237d6d631ccfe077d0,Manchester City,Burnley,2024-01-31T19:30:00Z,2024-01-26T11:55:38Z,1.42,3.66,15.04,,,,1.42,3.66,15.04,pinnacle,4
+soccer_epl,E0,2023-24,51da79a6fce2914b546f7c4923821e0f,Aston Villa,Newcastle United,2024-01-30T20:15:00Z,2024-01-26T11:55:38Z,2.46,2.61,4.1,,,,2.46,2.61,4.1,pinnacle,4
+soccer_epl,E0,2023-24,634182b023f514378a3d0a745282309a,Crystal Palace,Sheffield United,2024-01-30T20:00:00Z,2024-01-26T11:55:38Z,2.42,2.24,5.7,,,,2.42,2.24,5.7,pinnacle,4
+soccer_epl,E0,2023-24,b0068c9e9615f2a7e110b5a84da76eb6,Luton,Brighton and Hove Albion,2024-01-30T19:45:00Z,2024-01-26T11:55:38Z,5.08,2.55,2.24,,,,5.08,2.55,2.24,pinnacle,4
+soccer_epl,E0,2023-24,ab623abc911b1ebd34e6f2608fbd4769,Fulham,Everton,2024-01-30T19:45:00Z,2024-01-26T11:55:38Z,3.2,2.26,3.61,,,,3.2,2.26,3.61,pinnacle,4
+soccer_epl,E0,2023-24,6b42aaa26bb8a754ca45b50437b60c68,Nottingham Forest,Arsenal,2024-01-30T19:30:00Z,2024-01-26T11:55:38Z,6.92,2.6,1.97,,,,6.92,2.6,1.97,pinnacle,4
+soccer_spain_la_liga,SP1,2025-26,7a8e8e30174af5cd99d1a3977365674e,Real Madrid,Getafe,2026-03-02T20:00:00Z,2026-02-20T11:55:38Z,1.82,2.52,8.69,1.83,2.5,8.5,1.82,2.52,8.69,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,5f57fcb3b100f74da86f4e00f9747782,Udinese,Fiorentina,2026-03-02T19:45:00Z,2026-02-20T11:55:38Z,3.81,2.18,2.98,3.75,2.17,2.95,3.81,2.18,2.98,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,0af2377098db74c6fed12ba38c0a5b07,Pisa,Bologna,2026-03-02T17:30:00Z,2026-02-20T11:55:38Z,4.53,2.18,2.65,4.5,2.17,2.64,4.53,2.18,2.65,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,b0bd795f41f7e38066c384fc06c0d2c9,Girona,Celta Vigo,2026-03-01T20:00:00Z,2026-02-20T11:55:38Z,3.3,2.22,3.31,3.25,2.21,3.25,3.3,2.22,3.31,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,6418e6d889c87bfb146ff959d151a5ed,AS Roma,Juventus,2026-03-01T19:45:00Z,2026-02-20T11:55:38Z,3.51,2.09,3.41,3.45,2.08,3.35,3.51,2.09,3.41,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,764459bdd187e964c6832c94d510c351,Marseille,Lyon,2026-03-01T19:45:00Z,2026-02-20T11:55:38Z,2.43,2.4,4.38,2.42,2.39,4.35,2.43,2.4,4.38,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,cffd15b39852f0ac374672ebca6f3442,Hamburger SV,RB Leipzig,2026-03-01T18:30:00Z,2026-02-20T11:55:38Z,3.71,2.49,2.61,3.65,2.47,2.59,3.71,2.49,2.61,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,9f99b0651c79184ea471389aa02dcb2b,Real Betis,Sevilla,2026-03-01T17:30:00Z,2026-02-20T11:55:38Z,2.46,2.26,4.81,2.45,2.25,4.75,2.46,2.26,4.81,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,5e01a088ad9df492f8ebce7c6c381bcc,Torino,Lazio,2026-03-01T17:00:00Z,2026-02-20T11:55:38Z,3.47,2.03,3.61,3.45,2.02,3.6,3.47,2.03,3.61,pinnacle,8
+soccer_epl,E0,2025-26,9471be41334d79e0e85fda9feb065bfa,Arsenal,Chelsea,2026-03-01T16:30:00Z,2026-02-20T11:55:38Z,2.21,2.4,5.31,2.2,2.39,5.25,2.21,2.4,5.31,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,2c9fea6f93167b0899ba0610d1f7baf5,Eintracht Frankfurt,SC Freiburg,2026-03-01T16:30:00Z,2026-02-20T11:55:38Z,2.96,2.32,3.49,2.93,2.31,3.45,2.96,2.32,3.49,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,e97833cccfb2e4af02143db6117efaff,Lorient,Auxerre,2026-03-01T16:15:00Z,2026-02-20T11:55:38Z,2.8,2.1,4.47,2.78,2.09,4.45,2.8,2.1,4.47,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,fbcc6b169a918655ebaecbb2c5dc05b8,Metz,Brest,2026-03-01T16:15:00Z,2026-02-20T11:55:38Z,3.9,2.27,2.79,3.85,2.26,2.76,3.9,2.27,2.79,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,96eae391138e2cb3256be2d5c586bab8,Lille,Nantes,2026-03-01T16:15:00Z,2026-02-20T11:55:38Z,1.92,2.53,6.99,1.91,2.53,6.75,1.92,2.53,6.99,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,4572b3ecf6129e2d1258f19f9e582513,Valencia,CA Osasuna,2026-03-01T15:15:00Z,2026-02-20T11:55:38Z,2.8,2.15,4.26,2.78,2.14,4.2,2.8,2.15,4.26,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,31f34af2bfc41270df30ca86fe4b5be5,VfB Stuttgart,VfL Wolfsburg,2026-03-01T14:30:00Z,2026-02-20T11:55:38Z,1.97,2.74,5.42,1.96,2.73,5.4,1.97,2.74,5.42,pinnacle,8
+soccer_epl,E0,2025-26,b0e5c780eac6e73974f5d023b9a7f17b,Brighton and Hove Albion,Nottingham Forest,2026-03-01T14:00:00Z,2026-02-20T11:55:38Z,2.67,2.32,3.98,2.66,2.31,3.95,2.67,2.32,3.98,pinnacle,9
+soccer_epl,E0,2025-26,17717f1dec1142342e08b89ec57dafa8,Manchester United,Crystal Palace,2026-03-01T14:00:00Z,2026-02-20T11:55:38Z,,,,,,,2.07,2.45,5.0,betrivers,7
+soccer_epl,E0,2025-26,c9a6fecd9a75e1db00f4a2aa82e0b69e,Fulham,Tottenham Hotspur,2026-03-01T14:00:00Z,2026-02-20T11:55:38Z,2.96,2.31,3.52,2.93,2.29,3.5,2.96,2.31,3.52,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,1b4ac51d5175f966f00ce3763fd74217,Sassuolo,Atalanta BC,2026-03-01T14:00:00Z,2026-02-20T11:55:38Z,4.37,2.31,2.54,4.3,2.3,2.52,4.37,2.31,2.54,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,a35a9181ba08069940280f3196cd9b9e,Paris FC,Nice,2026-03-01T14:00:00Z,2026-02-20T11:55:38Z,2.99,2.28,3.53,2.95,2.27,3.5,2.99,2.28,3.53,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,c7ee80d393226bca42d44b515ab389d2,Elche CF,Espanyol,2026-03-01T13:00:00Z,2026-02-20T11:55:38Z,3.07,2.15,3.76,3.05,2.14,3.7,3.07,2.15,3.76,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,2a6d88b49e4fddc1e4c8a1b59a0ba314,Cremonese,AC Milan,2026-03-01T11:30:00Z,2026-02-20T11:55:38Z,6.3,2.35,2.11,6.25,2.34,2.1,6.3,2.35,2.11,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,cf41f75aa4744d16b2faad86717d3578,Le Havre,Paris Saint Germain,2026-02-28T20:05:00Z,2026-02-20T11:55:38Z,7.85,2.92,1.67,7.75,2.93,1.68,7.75,2.93,1.68,bovada,8
+soccer_spain_la_liga,SP1,2025-26,fd3ae36fd3fb354f938f590a05a88a4a,Oviedo,Atlético Madrid,2026-02-28T20:00:00Z,2026-02-20T11:55:38Z,6.82,2.3,2.09,6.75,2.3,2.07,6.82,2.3,2.09,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,00a3e05beb516bb7fcb3ab33dbf26df6,Inter Milan,Genoa,2026-02-28T19:45:00Z,2026-02-20T11:55:38Z,1.75,2.64,9.09,1.75,2.64,9.0,1.62,2.65,9.0,fanduel,8
+soccer_france_ligue_one,F1,2025-26,2f70c593f215deb0f2b7268cb324c341,AS Monaco,Angers,2026-02-28T18:00:00Z,2026-02-20T11:55:38Z,2.0,2.52,6.22,1.99,2.51,6.0,2.0,2.52,6.22,pinnacle,8
+soccer_epl,E0,2025-26,300862b165c77b6fe6c3fccf717aba1e,Leeds United,Manchester City,2026-02-28T17:30:00Z,2026-02-20T11:55:38Z,,,,,,,4.75,2.48,2.08,betrivers,7
+soccer_spain_la_liga,SP1,2025-26,282ba94e32f3c25eba80783e539aeba4,Mallorca,Real Sociedad,2026-02-28T17:30:00Z,2026-02-20T11:55:38Z,3.65,2.19,3.08,3.8,2.18,2.93,3.65,2.19,3.08,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,70d22dc01e0961848d24e1c4b6273cd5,Borussia Dortmund,Bayern Munich,2026-02-28T17:30:00Z,2026-02-20T11:55:38Z,4.32,2.82,2.13,4.25,2.8,2.12,4.32,2.82,2.13,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,e97afd7d8628369b4d3f86ecd8f742a9,Hellas Verona,Napoli,2026-02-28T17:00:00Z,2026-02-20T11:55:38Z,6.8,2.17,2.22,6.75,2.16,2.21,6.8,2.17,2.22,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,08aed1585e915a7a7952346433dc652c,Rennes,Toulouse,2026-02-28T16:00:00Z,2026-02-20T11:55:38Z,2.99,2.21,3.72,2.95,2.2,3.7,2.99,2.21,3.72,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,d10fec8e548e16b82cc15a3045e5d78e,Barcelona,Villarreal,2026-02-28T15:15:00Z,2026-02-20T11:55:38Z,1.65,3.18,6.83,1.66,3.15,6.75,1.65,3.18,6.83,pinnacle,8
+soccer_epl,E0,2025-26,c31face07c72bd0418f18dc032764cea,Burnley,Brentford,2026-02-28T15:00:00Z,2026-02-20T11:55:38Z,4.62,2.34,2.42,4.6,2.33,2.41,4.62,2.34,2.42,pinnacle,9
+soccer_epl,E0,2025-26,5eeaa47bfb416d8b2a5f25cf16731cb2,Newcastle United,Everton,2026-02-28T15:00:00Z,2026-02-20T11:55:38Z,2.31,2.41,4.79,2.3,2.4,4.75,2.31,2.41,4.79,pinnacle,9
+soccer_epl,E0,2025-26,466f3df43a6647947e4fb9cab6657d80,Liverpool,West Ham United,2026-02-28T15:00:00Z,2026-02-20T11:55:38Z,1.76,2.88,6.94,1.76,2.88,6.75,1.71,2.9,6.1,betrivers,9
+soccer_germany_bundesliga,D1,2025-26,d9df5eb265d106ecc1c55222ab74835a,Werder Bremen,1. FC Heidenheim,2026-02-28T14:30:00Z,2026-02-20T11:55:38Z,2.27,2.44,4.82,2.26,2.43,4.8,2.27,2.44,4.82,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,0983639c88c17dc404f40493856de2f3,Bayer Leverkusen,FSV Mainz 05,2026-02-28T14:30:00Z,2026-02-20T11:55:38Z,2.12,2.55,5.17,2.11,2.54,5.15,2.12,2.55,5.17,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,21bb5e33c98fe8ef48239ed92ac437f3,Borussia Monchengladbach,Union Berlin,2026-02-28T14:30:00Z,2026-02-20T11:55:38Z,3.15,2.19,3.54,3.12,2.18,3.5,3.15,2.19,3.54,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,749c8e0f5836e6ffa8ab1b8e0507f4ad,TSG Hoffenheim,FC St. Pauli,2026-02-28T14:30:00Z,2026-02-20T11:55:38Z,2.1,2.45,5.79,2.09,2.44,5.75,2.1,2.45,5.79,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,e54612bb8dd4852d1f2ec47f03e463a0,Como,Lecce,2026-02-28T14:00:00Z,2026-02-20T11:55:38Z,2.0,2.31,7.87,2.0,2.31,7.75,1.93,2.33,7.0,betrivers,8
+soccer_spain_la_liga,SP1,2025-26,0fcde674ecb2f5c2afb404aa795b420c,Rayo Vallecano,Athletic Bilbao,2026-02-28T13:00:00Z,2026-02-20T11:55:38Z,3.37,2.06,3.65,3.35,2.05,3.6,3.37,2.06,3.65,pinnacle,8
+soccer_epl,E0,2025-26,621cff11a60f850184fc515327f29a11,Bournemouth,Sunderland,2026-02-28T12:30:00Z,2026-02-20T11:55:38Z,2.39,2.34,4.71,2.38,2.33,4.7,2.39,2.34,4.71,pinnacle,9
+soccer_epl,E0,2025-26,b9ade3f715e4c344543f672014bc2188,Wolverhampton Wanderers,Aston Villa,2026-02-27T20:00:00Z,2026-02-20T11:55:38Z,4.32,2.35,2.5,4.3,2.34,2.49,4.32,2.35,2.5,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,4ddb575bb8f6c3fc923a8dd4d4d589e3,Levante,Alavés,2026-02-27T20:00:00Z,2026-02-20T11:55:38Z,3.39,2.07,3.59,3.35,2.06,3.55,3.39,2.07,3.59,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,fe9cd96f1d17ed487447bd9db20fa722,Parma,Cagliari,2026-02-27T19:45:00Z,2026-02-20T11:55:38Z,3.28,2.05,3.79,3.25,2.04,3.75,3.28,2.05,3.79,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,8c070c7f40ca48c29b7d12a167c0f868,Strasbourg,RC Lens,2026-02-27T19:45:00Z,2026-02-20T11:55:38Z,3.22,2.44,2.99,3.2,2.42,2.95,3.22,2.44,2.99,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,d9b3ed22927b274eb15f772fc4739572,Augsburg,1. FC Köln,2026-02-27T19:30:00Z,2026-02-20T11:55:38Z,2.87,2.35,3.55,2.85,2.34,3.5,2.87,2.35,3.55,pinnacle,8
+soccer_epl,E0,2025-26,b2dfd255beca9618d6796a7e79a4b398,Everton,Manchester United,2026-02-23T20:00:00Z,2026-02-20T11:55:38Z,4.08,2.42,2.62,3.95,2.37,2.57,4.08,2.42,2.62,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,9097a0f152f61b59e12205c9d59fbbf0,Alavés,Girona,2026-02-23T20:00:00Z,2026-02-20T11:55:38Z,3.06,2.06,4.37,3.0,2.02,4.25,3.06,2.06,4.37,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,1d1f8018be08d8fab122e83a9985428d,Bologna,Udinese,2026-02-23T19:45:00Z,2026-02-20T11:55:38Z,2.6,2.22,4.9,2.55,2.18,4.75,2.6,2.22,4.9,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,e8771285712107ffede5eec187ec5cb9,Fiorentina,Pisa,2026-02-23T17:30:00Z,2026-02-20T11:55:38Z,2.31,2.38,5.35,2.26,2.33,5.2,2.31,2.38,5.35,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,a0b6c2518eeb71097ffccd5560297748,Villarreal,Valencia,2026-02-22T20:00:00Z,2026-02-20T11:55:38Z,2.36,2.38,5.05,2.31,2.34,4.9,2.36,2.38,5.05,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,a3218d0df388e01ef98db3c1e38a0a35,AS Roma,Cremonese,2026-02-22T19:45:00Z,2026-02-20T11:55:38Z,1.89,2.44,9.5,1.86,2.4,9.0,1.89,2.44,9.5,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,df4e77e84622fa3c875673bef9ec07d7,Strasbourg,Lyon,2026-02-22T19:45:00Z,2026-02-20T11:55:38Z,2.99,2.35,3.58,2.9,2.31,3.45,2.99,2.35,3.58,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,f4e8c1055e346f16977dd0be892e66cf,1. FC Heidenheim,VfB Stuttgart,2026-02-22T18:30:00Z,2026-02-20T11:55:38Z,4.87,2.63,2.2,4.75,2.58,2.16,4.87,2.63,2.2,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,118eea2269b7b7809563d36a2a1441cc,Celta Vigo,Mallorca,2026-02-22T17:30:00Z,2026-02-20T11:55:38Z,2.54,2.2,5.18,2.41,2.18,5.3,2.54,2.2,5.18,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,b732f025e7b480aef45ddf40a48363c2,Real Betis,Rayo Vallecano,2026-02-22T17:00:00Z,2026-02-13T11:55:37Z,,,,,,,2.4,2.15,4.5,fanduel,2
+soccer_italy_serie_a,I1,2025-26,d114309ad5d5b202acbde1fb58f02b12,AC Milan,Parma,2026-02-22T17:00:00Z,2026-02-20T11:55:38Z,1.81,2.61,9.23,1.78,2.56,8.75,1.81,2.61,9.23,pinnacle,9
+soccer_epl,E0,2025-26,ea3c0df9b0c96cc6a4c80022bbf85720,Tottenham Hotspur,Arsenal,2026-02-22T16:30:00Z,2026-02-20T11:55:38Z,6.07,2.5,2.1,5.75,2.45,2.06,6.07,2.5,2.1,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,785fc35a610e4866ede7353ef50dbfb8,FC St. Pauli,Werder Bremen,2026-02-22T16:30:00Z,2026-02-20T11:55:38Z,3.56,2.11,3.51,3.45,2.07,3.4,3.56,2.11,3.51,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,dbbddf877962f8edfdfb1cf29a8b4883,Angers,Lille,2026-02-22T16:15:00Z,2026-02-20T11:55:38Z,4.83,2.25,2.58,4.7,2.2,2.53,4.83,2.25,2.58,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,9f459166d94654e0b6e7b41969ab15e7,Nantes,Le Havre,2026-02-22T16:15:00Z,2026-02-20T11:55:38Z,3.16,2.18,3.79,3.05,2.14,3.7,3.16,2.18,3.79,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,882aeff9d961da4004e44404bd1da464,Nice,Lorient,2026-02-22T16:15:00Z,2026-02-20T11:55:38Z,2.72,2.34,4.09,2.66,2.29,4.0,2.72,2.34,4.09,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,4e541f90c0569a790c4cd2603b2e6597,Barcelona,Levante,2026-02-22T15:15:00Z,2026-02-20T11:55:38Z,1.38,4.01,13.37,1.37,3.9,12.0,1.38,4.01,13.37,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,8c1d506c08f740edce7fe50153c9658c,SC Freiburg,Borussia Monchengladbach,2026-02-22T14:30:00Z,2026-02-20T11:55:38Z,2.54,2.37,4.48,2.48,2.32,4.35,2.54,2.37,4.48,pinnacle,9
+soccer_epl,E0,2025-26,0674c077e5225c0795ebb7866e06ac4c,Crystal Palace,Wolverhampton Wanderers,2026-02-22T14:00:00Z,2026-02-20T11:55:38Z,2.28,2.35,5.66,2.22,2.32,5.5,2.28,2.35,5.66,pinnacle,10
+soccer_epl,E0,2025-26,9da0932d1255c3f7d4156ec7730ffa75,Sunderland,Fulham,2026-02-22T14:00:00Z,2026-02-20T11:55:38Z,3.4,2.17,3.51,3.3,2.13,3.4,3.4,2.17,3.51,pinnacle,10
+soccer_epl,E0,2025-26,55754da4f841e3997e766dd7ff5eafe2,Nottingham Forest,Liverpool,2026-02-22T14:00:00Z,2026-02-20T11:55:38Z,4.56,2.45,2.43,4.4,2.4,2.38,4.56,2.45,2.43,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,945ceafe73da002fa0f144dc1e45730b,Atalanta BC,Napoli,2026-02-22T14:00:00Z,2026-02-20T11:55:38Z,3.1,2.18,3.86,3.0,2.14,3.75,3.1,2.18,3.86,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,ad9041db2d23857e328d4103051c8a50,Auxerre,Rennes,2026-02-22T14:00:00Z,2026-02-20T11:55:38Z,3.62,2.31,3.04,3.5,2.26,2.95,3.62,2.31,3.04,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,c7be8a213c6ec0a7de9334770652a868,Getafe,Sevilla,2026-02-22T13:00:00Z,2026-02-20T11:55:38Z,3.43,1.93,4.35,3.35,1.89,4.25,3.43,1.93,4.35,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,d1aaa8dcce6e511af9c79c1b0c780ca3,Genoa,Torino,2026-02-22T11:30:00Z,2026-02-20T11:55:38Z,2.97,2.08,4.47,2.9,2.04,4.35,2.97,2.08,4.47,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,d9d29555efc7a85277a73ef62ada3485,Paris Saint Germain,Metz,2026-02-21T20:05:00Z,2026-02-20T11:55:38Z,1.42,3.77,12.27,1.42,3.65,11.0,1.42,3.77,12.27,pinnacle,9
+soccer_epl,E0,2025-26,cf641a7ccfddaeccd926ca123d72a4b5,Manchester City,Newcastle United,2026-02-21T20:00:00Z,2026-02-20T11:55:38Z,2.0,2.75,5.66,1.96,2.69,5.5,2.0,2.75,5.66,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,eb20861615b18b9121ed8f1924d73d1d,Atlético Madrid,Espanyol,2026-02-21T20:00:00Z,2026-02-20T11:55:38Z,2.06,2.42,7.0,2.02,2.38,6.75,2.06,2.42,7.0,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,1786db94c290d2acd9a16e7d6374ed40,Cagliari,Lazio,2026-02-21T19:45:00Z,2026-02-20T11:55:38Z,4.19,2.07,3.13,4.1,2.03,3.05,4.19,2.07,3.13,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,c347a4944285c846c09f5ae28bec04ff,Toulouse,Paris FC,2026-02-21T18:00:00Z,2026-02-20T11:55:38Z,2.56,2.19,5.18,2.51,2.15,5.05,2.56,2.19,5.18,pinnacle,9
+soccer_epl,E0,2025-26,13c335daab252110beaa73f1dbf3ae1f,West Ham United,Bournemouth,2026-02-21T17:30:00Z,2026-02-20T11:55:38Z,3.01,2.49,3.27,2.95,2.44,3.2,3.01,2.49,3.27,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,ab6d9add47b5ff1a48e801d59a5dc32b,CA Osasuna,Real Madrid,2026-02-21T17:30:00Z,2026-02-20T11:55:38Z,5.04,2.5,2.27,4.9,2.44,2.23,5.04,2.5,2.27,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,b525bfb94a7e90857cc26c2c77d4b3c2,RB Leipzig,Borussia Dortmund,2026-02-21T17:30:00Z,2026-02-20T11:55:38Z,2.66,2.66,3.48,2.6,2.61,3.4,2.66,2.66,3.48,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,e22102caca23e00b15a82a2f83fc943a,Lecce,Inter Milan,2026-02-21T17:00:00Z,2026-02-20T11:55:38Z,8.19,2.37,2.0,7.75,2.33,1.97,8.19,2.37,2.0,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,5a0b91c834ffef608f8a6fcaa6c7ac15,RC Lens,AS Monaco,2026-02-21T16:00:00Z,2026-02-20T11:55:38Z,2.16,2.71,4.79,2.11,2.64,4.75,2.16,2.71,4.79,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,bec8ac5dbb8413877b1b707f10d3552e,Real Betis,Rayo Vallecano,2026-02-21T15:15:00Z,2026-02-20T11:55:38Z,2.49,2.32,4.82,2.44,2.27,4.7,2.49,2.32,4.82,pinnacle,8
+soccer_epl,E0,2025-26,121455e2f00d446f83bf2939263ff388,Aston Villa,Leeds United,2026-02-21T15:00:00Z,2026-02-20T11:55:38Z,2.46,2.35,4.81,2.41,2.3,4.7,2.46,2.35,4.81,pinnacle,9
+soccer_epl,E0,2025-26,f38e853e6d4accab249a51501f2806ef,Brentford,Brighton and Hove Albion,2026-02-21T15:00:00Z,2026-02-20T11:55:38Z,2.67,2.39,4.06,2.6,2.34,4.0,2.67,2.39,4.06,pinnacle,9
+soccer_epl,E0,2025-26,7b0c7dd2f5e825fc904d669a946e3a74,Chelsea,Burnley,2026-02-21T15:00:00Z,2026-02-20T11:55:38Z,1.58,3.14,10.02,1.57,3.1,9.75,1.58,3.14,10.02,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,24218df1523d0e4f1d04c1a0c83625db,1. FC Köln,TSG Hoffenheim,2026-02-21T14:30:00Z,2026-02-20T11:55:38Z,3.81,2.53,2.62,3.7,2.48,2.57,3.81,2.53,2.62,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,8fd26b3e8f957f563b639a0215f3014c,VfL Wolfsburg,Augsburg,2026-02-21T14:30:00Z,2026-02-20T11:55:38Z,2.6,2.44,4.09,2.56,2.39,3.95,2.6,2.44,4.09,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,f2e43bd491e3c658d6e503b9df8c2134,Union Berlin,Bayer Leverkusen,2026-02-21T14:30:00Z,2026-02-20T11:55:38Z,3.64,2.29,3.06,3.45,2.24,3.05,3.64,2.29,3.06,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,ac72453779184c0c6e7ef4ebc744eeda,Bayern Munich,Eintracht Frankfurt,2026-02-21T14:30:00Z,2026-02-20T11:55:38Z,1.45,3.82,9.98,1.44,3.75,9.75,1.45,3.82,9.98,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,bda3b46e2de11f37bd238683779150ee,Juventus,Como,2026-02-21T14:00:00Z,2026-02-20T11:55:38Z,2.74,2.24,4.37,2.63,2.2,4.4,2.74,2.24,4.37,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,8b4aea0990424b25c81e75a1a70058ba,Real Sociedad,Oviedo,2026-02-21T13:00:00Z,2026-02-20T11:55:38Z,2.04,2.39,7.44,2.04,2.33,7.0,2.04,2.39,7.44,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,e2662ebe62f3a7b3501683765de9d00b,Athletic Bilbao,Elche CF,2026-02-20T20:00:00Z,2026-02-20T11:55:38Z,2.34,2.33,5.44,2.29,2.28,5.3,2.34,2.33,5.44,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,b3ead2624bcb7542fc1dfe4b9f8a74d0,Sassuolo,Hellas Verona,2026-02-20T19:45:00Z,2026-02-20T11:55:38Z,2.41,2.18,5.97,2.46,2.13,5.35,2.41,2.18,5.97,pinnacle,10
+soccer_france_ligue_one,F1,2025-26,f44d7a7a3b323735e467f2ebb9b81d0d,Brest,Marseille,2026-02-20T19:45:00Z,2026-02-20T11:55:38Z,4.26,2.43,2.54,4.1,2.38,2.5,4.26,2.43,2.54,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,0f21378f96bf08eb9dfcc103aaceb14e,FSV Mainz 05,Hamburger SV,2026-02-20T19:30:00Z,2026-02-20T11:55:38Z,2.67,2.41,4.0,2.58,2.3,4.15,2.67,2.41,4.0,pinnacle,9
+soccer_epl,E0,2025-26,5b648e6c89d56257cb38abb4a76cee72,Wolverhampton Wanderers,Arsenal,2026-02-18T20:00:00Z,2026-02-13T11:55:37Z,9.27,2.72,1.76,8.75,2.67,1.74,9.27,2.72,1.76,pinnacle,10
+soccer_italy_serie_a,I1,2025-26,b0759fedb5a0c7208e4609add8f40a3e,AC Milan,Como,2026-02-18T19:45:00Z,2026-02-13T11:55:37Z,3.1,2.15,3.74,3.05,2.14,3.7,3.2,2.17,3.38,gtbets,8
+soccer_spain_la_liga,SP1,2025-26,4c25653c0ba02f04fbf530c66ecc0a57,Levante,Villarreal,2026-02-18T19:00:00Z,2026-02-13T11:55:37Z,4.15,2.45,2.46,4.15,2.45,2.46,4.15,2.45,2.46,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,ecfe4b713917bd15ed5f5730d5de0f51,Girona,Barcelona,2026-02-16T20:00:00Z,2026-02-13T11:55:37Z,6.34,3.07,1.79,6.0,3.0,1.76,6.34,3.07,1.79,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,396c310119a1392a3bb2b76e39c1d1bf,Cagliari,Lecce,2026-02-16T19:45:00Z,2026-02-13T11:55:37Z,2.96,2.02,4.81,2.88,1.98,4.7,2.96,2.02,4.81,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,6fe99394fb94560e4e225bc12861e09d,Mallorca,Real Betis,2026-02-15T20:00:00Z,2026-02-13T11:55:37Z,3.7,2.24,3.1,3.6,2.2,3.0,3.7,2.24,3.1,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,62ab1b4f892baf5001873b1ddd293780,Napoli,AS Roma,2026-02-15T19:45:00Z,2026-02-13T11:55:37Z,3.1,2.04,4.39,3.0,2.0,4.25,3.1,2.04,4.39,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,b47073d3a4e3926344776109287d0f38,Levante,Valencia,2026-02-15T17:30:00Z,2026-02-13T11:55:37Z,3.34,2.23,3.44,3.25,2.18,3.35,3.34,2.23,3.44,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,97e17775d6d93e02bca9e2c2b31527cc,Torino,Bologna,2026-02-15T17:00:00Z,2026-02-13T11:55:37Z,3.8,2.21,3.09,3.7,2.17,3.0,3.8,2.21,3.09,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,f53435cbf05897f7fa29d24d72be2cdf,RB Leipzig,VfL Wolfsburg,2026-02-15T16:30:00Z,2026-02-13T11:55:37Z,1.99,2.78,5.62,1.95,2.72,5.45,1.82,2.85,5.3,betrivers,9
+soccer_france_ligue_one,F1,2025-26,390af8a2888e906a83a5701660aec3e7,Metz,Auxerre,2026-02-15T16:15:00Z,2026-02-13T11:55:37Z,3.57,2.15,3.4,3.45,2.11,3.3,3.57,2.15,3.4,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,f4d85cb43fbf8b84473c09b585c700a7,AS Monaco,Nantes,2026-02-15T16:00:00Z,2026-02-06T11:55:38Z,,,,,,,1.83,2.65,4.8,draftkings,2
+soccer_france_ligue_one,F1,2025-26,fdbc54a62aee18d435e9f889c40f16f6,Lorient,Angers,2026-02-15T16:00:00Z,2026-02-13T11:55:37Z,2.64,2.15,5.13,2.63,2.15,5.15,2.64,2.15,5.13,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,c15dec953e6c99a5085256f7f4aaf75b,Lille,Brest,2026-02-15T16:00:00Z,2026-02-06T11:55:38Z,,,,,,,2.2,2.25,4.3,draftkings,2
+soccer_france_ligue_one,F1,2025-26,c6e825c183fe55c906bee5ae6ba9e89f,Le Havre,Toulouse,2026-02-15T16:00:00Z,2026-02-13T11:55:37Z,4.07,2.14,3.07,3.9,2.1,3.0,4.07,2.14,3.07,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,aa97ffea9b4c2cfbc411ead2c999c8ee,Lyon,Nice,2026-02-15T16:00:00Z,2026-02-13T11:55:37Z,2.15,2.5,5.66,2.11,2.45,5.5,2.15,2.5,5.66,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,920d3c526d2cb36f044d5883ee313496,Marseille,Strasbourg,2026-02-15T16:00:00Z,2026-02-06T11:55:38Z,,,,,,,2.1,2.4,4.1,draftkings,2
+soccer_france_ligue_one,F1,2025-26,b2415b97ec508554959e3f6c41a53c62,Paris FC,RC Lens,2026-02-15T16:00:00Z,2026-02-06T11:55:38Z,,,,,,,4.0,2.25,2.25,draftkings,2
+soccer_france_ligue_one,F1,2025-26,93f91feb0062e73133840abebaeb1e1d,Rennes,Paris Saint Germain,2026-02-15T16:00:00Z,2026-02-06T11:55:38Z,,,,,,,4.6,2.7,1.83,draftkings,2
+soccer_spain_la_liga,SP1,2025-26,05e0face40ccf9207a78ee7e87009625,Getafe,Villarreal,2026-02-15T15:15:00Z,2026-02-13T11:55:37Z,4.33,2.05,3.1,4.2,2.01,3.05,4.33,2.05,3.1,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,d47b4e6ac9d92c9d00b3c01b790a2b82,Augsburg,1. FC Heidenheim,2026-02-15T14:30:00Z,2026-02-13T11:55:37Z,2.48,2.44,4.41,2.35,2.39,4.55,2.48,2.44,4.41,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,a5b65d77cd063f260438df410059a3dd,Cremonese,Genoa,2026-02-15T14:00:00Z,2026-02-13T11:55:37Z,4.06,2.02,3.33,3.95,1.98,3.25,4.06,2.02,3.33,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,cbc34052b78f4fc88025ef42a9eeb8d6,Parma,Hellas Verona,2026-02-15T14:00:00Z,2026-02-13T11:55:37Z,3.07,2.05,4.41,3.0,2.01,4.3,3.07,2.05,4.41,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,b5085cc1ac313f645a18bbc9ac58d7df,Oviedo,Athletic Bilbao,2026-02-15T13:00:00Z,2026-02-13T11:55:37Z,4.34,2.09,3.02,4.35,2.09,3.0,4.34,2.09,3.02,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,5a16e02af0972172c53e8888aebdd48a,Udinese,Sassuolo,2026-02-15T11:30:00Z,2026-02-13T11:55:37Z,3.1,2.14,4.02,2.95,2.1,4.0,3.1,2.14,4.02,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,0219223ca388dcdcad4ff5e39dc54ee0,Paris FC,RC Lens,2026-02-14T20:05:00Z,2026-02-13T11:55:37Z,4.64,2.36,2.5,4.5,2.31,2.45,4.64,2.36,2.5,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,4af168e6dec5053e6c6fcd493546cf8f,Real Madrid,Real Sociedad,2026-02-14T20:00:00Z,2026-02-13T11:55:37Z,1.81,2.86,7.21,1.78,2.8,6.75,1.81,2.86,7.21,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,19e715ad4a9b60c42b6d3eec90dddfdd,Inter Milan,Juventus,2026-02-14T19:45:00Z,2026-02-13T11:55:37Z,2.61,2.31,4.49,2.55,2.26,4.35,2.61,2.31,4.49,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,52871a2ce5e1b9aef5c1448351e96d08,Lille,Brest,2026-02-14T18:00:00Z,2026-02-13T11:55:37Z,2.38,2.35,5.15,2.34,2.3,5.0,2.38,2.35,5.15,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,d12a72bdf185d250bac4f827fc470d36,Sevilla,Alavés,2026-02-14T17:30:00Z,2026-02-13T11:55:37Z,2.94,2.06,4.65,2.88,2.02,4.5,2.94,2.06,4.65,pinnacle,7
+soccer_germany_bundesliga,D1,2025-26,0bb792a96e75e5c798cd1faa8fc935b6,VfB Stuttgart,1. FC Köln,2026-02-14T17:30:00Z,2026-02-13T11:55:37Z,1.93,2.74,6.34,1.89,2.69,6.0,1.93,2.74,6.34,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,a4a58d7ec8acd4186e9f7356d5f3f2b3,Lazio,Atalanta BC,2026-02-14T17:00:00Z,2026-02-13T11:55:37Z,4.21,2.2,2.88,4.25,2.2,2.83,4.21,2.2,2.88,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,df1af479216a7af219c8d0118d0549c5,Marseille,Strasbourg,2026-02-14T16:00:00Z,2026-02-13T11:55:37Z,2.3,2.56,4.7,2.22,2.5,4.75,2.3,2.56,4.7,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,5da3aabbca16750dd654f6a340f1e721,Rayo Vallecano,Atlético Madrid,2026-02-14T15:15:00Z,2026-02-13T11:55:37Z,5.2,2.23,2.5,5.0,2.19,2.47,5.2,2.23,2.5,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,e54d0f45d59a64cf336d772d653890d9,Bayer Leverkusen,FC St. Pauli,2026-02-14T14:30:00Z,2026-02-13T11:55:37Z,2.02,2.48,6.91,1.99,2.44,6.5,2.02,2.48,6.91,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,cb18bd83faa97d63130a1737e3d625f4,Werder Bremen,Bayern Munich,2026-02-14T14:30:00Z,2026-02-13T11:55:37Z,7.27,3.21,1.67,7.0,3.15,1.65,7.27,3.21,1.67,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,b7b537fc62572829b1de31f22a3ac11f,Eintracht Frankfurt,Borussia Monchengladbach,2026-02-14T14:30:00Z,2026-02-13T11:55:37Z,2.57,2.43,4.19,2.47,2.39,4.2,2.57,2.43,4.19,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,c7832eaf06ab73105b79f55d3cf99bb5,Hamburger SV,Union Berlin,2026-02-14T14:30:00Z,2026-02-13T11:55:37Z,3.27,2.19,3.61,3.2,2.15,3.5,3.27,2.19,3.61,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,e132f4dd86f9da694fc3c0a83a930a6a,TSG Hoffenheim,SC Freiburg,2026-02-14T14:30:00Z,2026-02-13T11:55:37Z,2.31,2.51,4.79,2.22,2.46,4.85,2.31,2.51,4.79,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,adac2e38c3d33aa5e38bdae85d55c53e,Como,Fiorentina,2026-02-14T14:00:00Z,2026-02-13T11:55:37Z,2.33,2.43,4.99,2.29,2.38,4.85,2.33,2.43,4.99,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,8208dd3ed6a779b719a2bf7893b2832c,Espanyol,Celta Vigo,2026-02-14T13:00:00Z,2026-02-13T11:55:37Z,3.24,2.15,3.75,3.12,2.11,3.7,3.24,2.15,3.75,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,7d84847ed704fe95d8c58302009833e2,AS Monaco,Nantes,2026-02-13T20:05:00Z,2026-02-13T11:55:37Z,1.93,2.79,6.35,1.9,2.68,6.0,1.93,2.79,6.35,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,c520accddd186a9c4e35f07e316dfe49,Elche CF,CA Osasuna,2026-02-13T20:00:00Z,2026-02-13T11:55:37Z,3.5,2.2,3.4,3.4,2.13,3.3,3.5,2.2,3.4,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,388f80ebfbf19ee68d444d4998706b02,Pisa,AC Milan,2026-02-13T19:45:00Z,2026-02-13T11:55:37Z,6.66,2.27,2.24,6.25,2.22,2.19,6.66,2.27,2.24,pinnacle,10
+soccer_germany_bundesliga,D1,2025-26,ab62744707630bc0412b1dae110d26d0,Borussia Dortmund,FSV Mainz 05,2026-02-13T19:30:00Z,2026-02-13T11:55:37Z,2.16,2.54,5.58,2.03,2.62,5.3,2.03,2.62,5.3,bovada,9
+soccer_france_ligue_one,F1,2025-26,5856fbce9085932767b8ca3189a38977,Rennes,Paris Saint Germain,2026-02-13T18:00:00Z,2026-02-13T11:55:37Z,5.9,2.97,1.88,5.75,2.95,1.78,5.9,2.97,1.88,pinnacle,9
+soccer_epl,E0,2025-26,c05ca60866c3224a6fa96c81a0eef68f,Brentford,Arsenal,2026-02-12T20:00:00Z,2026-02-06T11:55:38Z,5.19,2.35,2.28,5.15,2.34,2.27,5.19,2.35,2.28,pinnacle,7
+soccer_epl,E0,2025-26,34bd80d2295adf2b26ae146f65f226be,Sunderland,Liverpool,2026-02-11T20:15:00Z,2026-02-06T11:55:38Z,5.32,2.41,2.2,5.3,2.4,2.19,5.32,2.41,2.2,pinnacle,7
+soccer_epl,E0,2025-26,6eb455fd4d99ec4ccae4ec842f2f34fb,Aston Villa,Brighton and Hove Albion,2026-02-11T19:30:00Z,2026-02-06T11:55:38Z,2.46,2.38,4.36,2.45,2.37,4.3,2.46,2.38,4.36,pinnacle,7
+soccer_epl,E0,2025-26,0668597268dc436be07072656aeeebb6,Crystal Palace,Burnley,2026-02-11T19:30:00Z,2026-02-06T11:55:38Z,2.36,2.24,5.33,2.34,2.23,5.35,2.12,2.3,5.4,betrivers,7
+soccer_epl,E0,2025-26,a02f032d38dce8c9449394eef35c9992,Manchester City,Fulham,2026-02-11T19:30:00Z,2026-02-06T11:55:38Z,1.8,2.75,7.07,1.8,2.75,7.0,1.8,2.75,7.07,pinnacle,7
+soccer_epl,E0,2025-26,f32339e73cc54282b92a96ab5ab00488,Nottingham Forest,Wolverhampton Wanderers,2026-02-11T19:30:00Z,2026-02-06T11:55:38Z,2.28,2.26,5.65,2.27,2.25,5.6,2.28,2.26,5.65,pinnacle,7
+soccer_epl,E0,2025-26,e52ffec43cce1bd9cea0f0ef8e9a0b7b,West Ham United,Manchester United,2026-02-10T20:15:00Z,2026-02-06T11:55:38Z,4.04,2.49,2.46,4.0,2.48,2.45,4.04,2.49,2.46,pinnacle,7
+soccer_epl,E0,2025-26,5b5fa92a38c5a46da05ac81d003f6f1e,Everton,Bournemouth,2026-02-10T19:30:00Z,2026-02-06T11:55:38Z,2.98,2.29,3.52,2.95,2.28,3.5,2.98,2.29,3.52,pinnacle,7
+soccer_epl,E0,2025-26,72774f6fb55af274c4982bcb62d4a765,Chelsea,Leeds United,2026-02-10T19:30:00Z,2026-02-06T11:55:38Z,2.08,2.52,5.56,2.07,2.51,5.5,2.08,2.52,5.56,pinnacle,7
+soccer_epl,E0,2025-26,7dbe188ba5a5b8a16e8d293c2afe1274,Tottenham Hotspur,Newcastle United,2026-02-10T19:30:00Z,2026-02-06T11:55:38Z,3.21,2.36,3.13,3.15,2.34,3.1,3.21,2.36,3.13,pinnacle,7
+soccer_spain_la_liga,SP1,2025-26,22a216118b8325c12e1ff39834357585,Villarreal,Espanyol,2026-02-09T20:00:00Z,2026-02-06T11:55:38Z,2.28,2.46,5.12,2.24,2.41,5.0,2.28,2.46,5.12,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,c046ca0acb5130bf84bba2eba5e7af96,AS Roma,Cagliari,2026-02-09T19:45:00Z,2026-02-06T11:55:38Z,2.03,2.36,7.93,1.98,2.33,7.75,2.03,2.36,7.93,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,9cee975eada097f88cc9d1bd623b2224,Atalanta BC,Cremonese,2026-02-09T17:30:00Z,2026-02-06T11:55:38Z,1.85,2.6,8.48,1.81,2.58,8.25,1.85,2.6,8.48,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,786f2c1dd6b7fe49957f61e054cd8694,Valencia,Real Madrid,2026-02-08T20:00:00Z,2026-02-06T11:55:38Z,5.91,2.6,2.06,5.75,2.55,2.02,4.8,2.6,1.95,coral,8
+soccer_italy_serie_a,I1,2025-26,b8471d4a11ea8dd2f1906a0cc4739ed2,Juventus,Lazio,2026-02-08T19:45:00Z,2026-02-06T11:55:38Z,2.05,2.31,8.19,2.02,2.27,7.75,2.05,2.31,8.19,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,3c39464be39e78e0f08f2440fcc0d5ca,Paris Saint Germain,Marseille,2026-02-08T19:45:00Z,2026-02-06T11:55:38Z,,,,1.83,2.8,6.25,1.83,2.83,5.79,gtbets,8
+soccer_spain_la_liga,SP1,2025-26,733de1f705729ec7489111d044644089,Atlético Madrid,Real Betis,2026-02-08T17:30:00Z,2026-02-06T11:55:38Z,2.1,2.46,6.37,2.09,2.39,6.0,1.95,2.5,5.25,draftkings,8
+soccer_italy_serie_a,I1,2025-26,5a6ce15d3167ed66f8b321562b4db6a2,Sassuolo,Inter Milan,2026-02-08T17:00:00Z,2026-02-06T11:55:38Z,6.85,2.49,2.02,6.5,2.45,1.99,6.1,2.5,1.88,betrivers,9
+soccer_epl,E0,2025-26,e526c157d950230afb02bc6534fbaf82,Liverpool,Manchester City,2026-02-08T16:30:00Z,2026-02-06T11:55:38Z,2.97,2.49,3.34,2.9,2.44,3.25,2.97,2.49,3.34,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,1b592f771631959832bb50164ddee65d,Bayern Munich,TSG Hoffenheim,2026-02-08T16:30:00Z,2026-02-06T11:55:38Z,1.61,3.38,7.5,1.59,3.35,7.25,1.57,3.4,5.75,draftkings,9
+soccer_france_ligue_one,F1,2025-26,ea1bf7c7176334fc35f322cd2cae57d6,Angers,Toulouse,2026-02-08T16:15:00Z,2026-02-06T11:55:38Z,4.32,2.07,3.06,4.25,2.04,2.95,4.32,2.07,3.06,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,90bf0f94ef464e1eff4bae38846a47a6,Auxerre,Paris FC,2026-02-08T16:15:00Z,2026-02-06T11:55:38Z,3.22,2.15,3.78,3.15,2.11,3.7,3.22,2.15,3.78,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,ce0423fe1b1fde4d1f697d3b734a8e8c,Le Havre,Strasbourg,2026-02-08T16:15:00Z,2026-02-06T11:55:38Z,4.78,2.3,2.53,4.55,2.24,2.52,4.78,2.3,2.53,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,be73ff266e80d9f4b3c9a60b6c424a54,Athletic Bilbao,Levante,2026-02-08T15:15:00Z,2026-02-06T11:55:38Z,2.23,2.33,6.14,2.19,2.28,5.75,2.23,2.33,6.14,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,5589fa9d8d767a0fbb17e8bb533d13ea,1. FC Köln,RB Leipzig,2026-02-08T14:30:00Z,2026-02-06T11:55:38Z,3.71,2.62,2.59,3.6,2.56,2.53,3.71,2.62,2.59,pinnacle,9
+soccer_epl,E0,2025-26,a7f9683fe58c4fc6a5ac52396f279456,Brighton and Hove Albion,Crystal Palace,2026-02-08T14:00:00Z,2026-02-06T11:55:38Z,2.58,2.36,4.41,2.51,2.31,4.3,2.58,2.36,4.41,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,2163a19ef12c28e59f662f1eb4b335fb,AC Milan,Como,2026-02-08T14:00:00Z,2026-01-30T11:55:38Z,2.58,2.26,4.4,2.57,2.25,4.35,2.58,2.26,4.4,pinnacle,3
+soccer_italy_serie_a,I1,2025-26,dca70a16af51be2b8f808e2a96433d1c,Lecce,Udinese,2026-02-08T14:00:00Z,2026-02-06T11:55:38Z,4.02,1.93,3.64,3.9,1.9,3.55,4.02,1.93,3.64,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,35b3ef7dfda31f418fc3957d6ba332db,Nice,AS Monaco,2026-02-08T14:00:00Z,2026-02-06T11:55:38Z,3.57,2.59,2.68,3.45,2.54,2.62,3.57,2.59,2.68,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,a5bb85142adf2a041fd0c7d703c4fb86,Alavés,Getafe,2026-02-08T13:00:00Z,2026-02-06T11:55:38Z,3.39,1.84,4.92,3.2,1.81,5.0,3.39,1.84,4.92,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,14cea9dda59eac8cbb063c8d777171bd,Bologna,Parma,2026-02-08T11:30:00Z,2026-02-06T11:55:38Z,2.21,2.33,6.24,2.17,2.29,6.0,2.21,2.33,6.24,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,edfe36614e6a6e62028187eeccf89b71,Nantes,Lyon,2026-02-07T20:05:00Z,2026-02-06T11:55:38Z,5.36,2.34,2.34,5.2,2.3,2.3,5.36,2.34,2.34,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,afebc5dfac6fc5e833498192835363a8,Real Sociedad,Elche CF,2026-02-07T20:00:00Z,2026-02-06T11:55:38Z,2.26,2.36,5.73,2.22,2.31,5.5,2.26,2.36,5.73,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,2e80035301b91b842c2dbbf9e3fecdcb,Fiorentina,Torino,2026-02-07T19:45:00Z,2026-02-06T11:55:38Z,2.46,2.28,5.13,2.41,2.24,5.0,2.46,2.28,5.13,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,4638ea1f28a3f054d0b98f657ae2fa58,Brest,Lorient,2026-02-07T18:00:00Z,2026-02-06T11:55:38Z,2.9,2.21,4.14,2.83,2.17,4.0,2.9,2.21,4.14,pinnacle,9
+soccer_epl,E0,2025-26,5c062fe74faee27e969bdccaa3040ef5,Newcastle United,Brentford,2026-02-07T17:30:00Z,2026-02-06T11:55:38Z,2.66,2.4,4.06,2.6,2.35,3.95,2.66,2.4,4.06,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,ed325af055d0f156976702933501330f,Sevilla,Girona,2026-02-07T17:30:00Z,2026-02-06T11:55:38Z,2.8,2.25,4.19,2.68,2.21,4.2,2.8,2.25,4.19,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,44e038b462710b4c65afa8e0399479f4,Borussia Monchengladbach,Bayer Leverkusen,2026-02-07T17:30:00Z,2026-02-06T11:55:38Z,3.77,2.47,2.71,3.8,2.44,2.57,3.77,2.47,2.71,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,9e0f5cab00d1f21496136ef857386de8,Genoa,Napoli,2026-02-07T17:00:00Z,2026-02-06T11:55:38Z,5.46,2.03,2.73,5.25,1.99,2.7,5.46,2.03,2.73,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,d2c0c73ac43e5087fab4d982f9d559d5,RC Lens,Rennes,2026-02-07T16:00:00Z,2026-02-06T11:55:38Z,2.35,2.52,4.59,2.3,2.47,4.45,2.35,2.52,4.59,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,0c1f79cd30653bbc61c820184cffdcdc,Barcelona,Mallorca,2026-02-07T15:15:00Z,2026-02-06T11:55:38Z,1.47,3.61,10.94,1.45,3.55,10.75,1.47,3.61,10.94,pinnacle,8
+soccer_epl,E0,2025-26,0232baa88f2ea7539654e9f8ebd53272,Arsenal,Sunderland,2026-02-07T15:00:00Z,2026-02-06T11:55:38Z,1.68,2.67,12.64,1.66,2.64,12.0,1.57,2.7,11.0,fanduel,9
+soccer_epl,E0,2025-26,9a38c80a3bab5163166bcf10f4995e8d,Bournemouth,Aston Villa,2026-02-07T15:00:00Z,2026-02-06T11:55:38Z,3.25,2.42,3.15,3.15,2.37,3.05,3.25,2.42,3.15,pinnacle,9
+soccer_epl,E0,2025-26,8ca6a2f0fb6436b92bf3745d4ba81c54,Burnley,West Ham United,2026-02-07T15:00:00Z,2026-02-06T11:55:38Z,3.86,2.25,2.97,3.75,2.21,2.9,3.86,2.25,2.97,pinnacle,10
+soccer_epl,E0,2025-26,a6fb47d91c1bdfd7152af4938e73b4d3,Wolverhampton Wanderers,Chelsea,2026-02-07T15:00:00Z,2026-02-06T11:55:38Z,5.08,2.5,2.25,4.95,2.45,2.21,5.08,2.5,2.25,pinnacle,9
+soccer_epl,E0,2025-26,5064501681485a3db4abd297a0e775f4,Fulham,Everton,2026-02-07T15:00:00Z,2026-02-06T11:55:38Z,2.78,2.16,4.59,2.72,2.12,4.45,2.78,2.16,4.59,pinnacle,10
+soccer_germany_bundesliga,D1,2025-26,a12aa3c1df6158825b5f8c714fe686c0,1. FC Heidenheim,Hamburger SV,2026-02-07T14:30:00Z,2026-02-06T11:55:38Z,3.51,2.35,3.04,3.4,2.3,2.95,3.51,2.35,3.04,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,a30bf74fc995a556100c95334d881e3a,FSV Mainz 05,Augsburg,2026-02-07T14:30:00Z,2026-02-06T11:55:38Z,2.69,2.34,4.18,2.63,2.29,4.05,2.69,2.34,4.18,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,6bf2b7cb404b378f8ed4c1641d5940a1,VfL Wolfsburg,Borussia Dortmund,2026-02-07T14:30:00Z,2026-02-06T11:55:38Z,4.5,2.55,2.35,4.35,2.51,2.3,4.5,2.55,2.35,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,866ac1b75dbdd947624fa60d28982d74,FC St. Pauli,VfB Stuttgart,2026-02-07T14:30:00Z,2026-02-06T11:55:38Z,4.99,2.35,2.41,4.85,2.31,2.36,4.99,2.35,2.41,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,32a244cb341547ac81e9f20672cb0184,SC Freiburg,Werder Bremen,2026-02-07T14:30:00Z,2026-02-06T11:55:38Z,2.45,2.42,4.6,2.35,2.37,4.65,2.45,2.42,4.6,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,27219b591fae36fa9d3e69727abc58eb,Rayo Vallecano,Oviedo,2026-02-07T13:00:00Z,2026-02-06T11:55:38Z,2.51,2.15,5.62,2.46,2.11,5.45,2.51,2.15,5.62,pinnacle,8
+soccer_epl,E0,2025-26,78f2e11f06a4662eb94d23b6c7319238,Manchester United,Tottenham Hotspur,2026-02-07T12:30:00Z,2026-02-06T11:55:38Z,2.1,2.72,5.1,2.06,2.66,4.95,2.1,2.72,5.1,pinnacle,9
+soccer_epl,E0,2025-26,4ae3a1134fb1d10167c21bf10dff498f,Leeds United,Nottingham Forest,2026-02-06T20:00:00Z,2026-02-06T11:55:38Z,2.97,2.2,4.13,2.88,2.15,4.0,2.97,2.2,4.13,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,4e75893ed5380ba5820423e0f811af7c,Celta Vigo,CA Osasuna,2026-02-06T20:00:00Z,2026-02-06T11:55:38Z,2.7,2.17,4.93,2.63,2.12,4.75,2.7,2.17,4.93,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,e74e33aab7625d15231dca45cab2fec3,Hellas Verona,Pisa,2026-02-06T19:45:00Z,2026-02-06T11:55:38Z,3.39,2.03,4.07,2.95,2.04,4.25,2.95,2.04,4.25,bovada,10
+soccer_france_ligue_one,F1,2025-26,c245f83cfd1388a962419a501950fa46,Metz,Lille,2026-02-06T19:45:00Z,2026-02-06T11:55:38Z,5.93,2.47,2.16,5.35,2.42,2.16,5.93,2.47,2.16,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,1fff9348b53ea8e4ef4b5dcfe291e508,Union Berlin,Eintracht Frankfurt,2026-02-06T19:30:00Z,2026-02-06T11:55:38Z,2.78,2.31,4.15,2.71,2.25,4.0,2.78,2.31,4.15,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,ed80343c6ecb8c7da091ab4508a5870e,Bologna,AC Milan,2026-02-03T19:45:00Z,2026-01-30T11:55:38Z,4.16,2.24,2.83,,,,4.16,2.24,2.83,pinnacle,7
+soccer_epl,E0,2025-26,5d2c6ee96eacb9c4bcac89213bcaf304,Sunderland,Burnley,2026-02-02T20:00:00Z,2026-01-30T11:55:38Z,2.58,2.12,5.53,2.53,2.08,5.35,2.34,2.18,5.42,gtbets,8
+soccer_spain_la_liga,SP1,2025-26,fd5f816250823f7ff851c74998d534f0,Mallorca,Sevilla,2026-02-02T20:00:00Z,2026-01-30T11:55:38Z,3.16,2.13,3.94,3.05,2.09,3.85,3.16,2.13,3.94,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,49a7c3868f127dea5a06fccbd074ef70,Udinese,AS Roma,2026-02-02T19:45:00Z,2026-01-30T11:55:38Z,4.79,2.18,2.69,4.8,2.15,2.58,4.79,2.18,2.69,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,2a83052380ad26b3621d17cad9c5b0a1,Athletic Bilbao,Real Sociedad,2026-02-01T20:00:00Z,2026-01-30T11:55:38Z,3.01,2.14,4.17,2.95,2.1,4.05,3.01,2.14,4.17,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,60868b73b5084f521eda76102f6b25d6,Parma,Juventus,2026-02-01T19:45:00Z,2026-01-30T11:55:38Z,7.43,2.41,2.03,7.0,2.37,1.99,7.43,2.41,2.03,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,cafc7d65241d634bae87bdfca9180f3a,Strasbourg,Paris Saint Germain,2026-02-01T19:45:00Z,2026-01-30T11:55:38Z,5.26,2.64,2.12,5.15,2.59,2.08,5.26,2.64,2.12,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,0de14d148111d6f682e3f12044a27906,Getafe,Celta Vigo,2026-02-01T17:30:00Z,2026-01-30T11:55:38Z,3.9,1.91,3.83,3.8,1.88,3.75,3.9,1.91,3.83,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,23d0383f3cea93269e2b313c4e2015c9,Cremonese,Inter Milan,2026-02-01T17:00:00Z,2026-01-30T11:55:38Z,9.21,2.76,1.75,8.75,2.71,1.72,9.21,2.76,1.75,pinnacle,8
+soccer_epl,E0,2025-26,38a3cb5e295f55e274d589fc646cf2dd,Tottenham Hotspur,Manchester City,2026-02-01T16:30:00Z,2026-01-30T11:55:38Z,4.86,2.54,2.27,4.85,2.52,2.18,4.86,2.54,2.27,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,8fa3dc02824237543a77f8158db931cc,Borussia Dortmund,1. FC Heidenheim,2026-02-01T16:30:00Z,2026-01-30T11:55:38Z,1.61,3.08,9.49,1.6,3.0,9.25,1.61,3.08,9.49,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,bb713faa9839004d50ad2dd674259e56,Angers,Metz,2026-02-01T16:15:00Z,2026-01-30T11:55:38Z,2.8,2.2,4.37,2.74,2.16,4.25,2.8,2.2,4.37,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,c56fa2642688121dc9b33bff5ba51e05,Toulouse,Auxerre,2026-02-01T16:15:00Z,2026-01-30T11:55:38Z,2.44,2.19,5.71,2.39,2.15,5.5,2.44,2.19,5.71,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,5c05936762502e92ffc8315765d2dcf9,Nice,Brest,2026-02-01T16:15:00Z,2026-01-30T11:55:38Z,2.7,2.35,4.1,2.64,2.3,4.0,2.7,2.35,4.1,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,b676acd01af1ef72f58cfdd42e29ab25,Real Betis,Valencia,2026-02-01T15:15:00Z,2026-01-30T11:55:38Z,2.49,2.33,4.78,2.44,2.28,4.65,2.49,2.33,4.78,pinnacle,7
+soccer_germany_bundesliga,D1,2025-26,a74c3109d03d1603fe8d94f5222c9c65,VfB Stuttgart,SC Freiburg,2026-02-01T14:30:00Z,2026-01-30T11:55:38Z,2.21,2.57,5.03,2.17,2.52,4.9,2.21,2.57,5.03,pinnacle,8
+soccer_epl,E0,2025-26,9c612b05e7fc0b581b689380f7405f35,Aston Villa,Brentford,2026-02-01T14:00:00Z,2026-01-30T11:55:38Z,2.67,2.36,4.16,2.61,2.31,4.05,2.67,2.36,4.16,pinnacle,8
+soccer_epl,E0,2025-26,d2436eec6993a6e21f00887163987e87,Nottingham Forest,Crystal Palace,2026-02-01T14:00:00Z,2026-01-30T11:55:38Z,2.72,2.2,4.61,2.66,2.16,4.5,2.72,2.2,4.61,pinnacle,9
+soccer_epl,E0,2025-26,ded98b5baf6ff662af13282c2c6c7946,Manchester United,Fulham,2026-02-01T14:00:00Z,2026-01-30T11:55:38Z,2.18,2.52,5.39,2.14,2.47,5.25,2.18,2.52,5.39,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,35393f9e56c3102f7134f40c9eb47f94,Como,Atalanta BC,2026-02-01T14:00:00Z,2026-01-30T11:55:38Z,3.03,2.27,3.74,2.95,2.23,3.6,3.03,2.27,3.74,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,95490d0dabe793fb049fad344509e567,Lyon,Lille,2026-02-01T14:00:00Z,2026-01-30T11:55:38Z,2.56,2.37,4.42,2.51,2.32,4.3,2.56,2.37,4.42,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,fb96585d9e3c886a8aeac0c8266f077b,Real Madrid,Rayo Vallecano,2026-02-01T13:00:00Z,2026-01-30T11:55:38Z,1.64,3.0,9.49,1.62,2.95,9.25,1.64,3.0,9.49,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,34115607b8423bb49924870b192a4af6,Torino,Lecce,2026-02-01T11:30:00Z,2026-01-30T11:55:38Z,2.76,2.02,5.47,2.7,1.98,5.3,2.76,2.02,5.47,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,15e47eefa427d9be50aa511b64e01605,AS Monaco,Rennes,2026-01-31T20:05:00Z,2026-01-30T11:55:38Z,2.52,2.62,3.85,2.46,2.57,3.75,2.52,2.62,3.85,pinnacle,8
+soccer_epl,E0,2025-26,85b2c858725574961261f22c2b5b5d7e,Liverpool,Newcastle United,2026-01-31T20:00:00Z,2026-01-30T11:55:38Z,2.37,2.52,4.54,2.32,2.47,4.4,2.37,2.52,4.54,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,9a2145d255c469a21ee2cd5298a6dc76,Elche CF,Barcelona,2026-01-31T20:00:00Z,2026-01-30T11:55:38Z,6.7,3.07,1.76,6.5,3.0,1.74,6.7,3.07,1.76,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,8a2f061fef3092d9cb56453b1378f5d4,Cagliari,Hellas Verona,2026-01-31T19:45:00Z,2026-01-30T11:55:38Z,2.99,2.04,4.62,2.93,2.0,4.5,2.99,2.04,4.62,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,a8c768b910446b7b952e7483cb384351,Lorient,Nantes,2026-01-31T18:00:00Z,2026-01-30T11:55:38Z,2.49,2.25,5.15,2.44,2.21,5.0,2.49,2.25,5.15,pinnacle,8
+soccer_epl,E0,2025-26,a3975ce7f6fd29bb83e7eadc3f7c1b3a,Chelsea,West Ham United,2026-01-31T17:30:00Z,2026-01-30T11:55:38Z,1.97,2.68,6.22,1.94,2.62,6.0,1.97,2.68,6.22,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,4ac2dc3925144a6c11590bd1649f88ee,Levante,Atlético Madrid,2026-01-31T17:30:00Z,2026-01-30T11:55:38Z,5.71,2.46,2.18,5.5,2.41,2.14,5.71,2.46,2.18,pinnacle,7
+soccer_germany_bundesliga,D1,2025-26,ee10236188bdbabeadf9b05c2a1348f6,Hamburger SV,Bayern Munich,2026-01-31T17:30:00Z,2026-01-30T11:55:38Z,7.17,3.14,1.69,7.0,3.1,1.68,6.4,3.2,1.6,betrivers,8
+soccer_italy_serie_a,I1,2025-26,4eb2f2cca6e6f500dd3618ecbf243582,Napoli,Fiorentina,2026-01-31T17:00:00Z,2026-01-30T11:55:38Z,2.44,2.25,5.35,2.39,2.21,5.2,2.44,2.25,5.35,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,37a5035bea0ee6fcfef52b906bc5367f,Paris FC,Marseille,2026-01-31T16:00:00Z,2026-01-30T11:55:38Z,4.38,2.43,2.51,4.25,2.38,2.46,4.38,2.43,2.51,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,cfc22e4738639bde4c31507fa6e312c6,CA Osasuna,Villarreal,2026-01-31T15:15:00Z,2026-01-30T11:55:38Z,3.45,2.29,3.2,3.4,2.24,3.05,3.45,2.29,3.2,pinnacle,7
+soccer_epl,E0,2025-26,e52dc0a3276ffe7c9d3630a81b4300ca,Leeds United,Arsenal,2026-01-31T15:00:00Z,2026-01-30T11:55:38Z,6.67,2.39,2.11,6.5,2.35,2.07,6.67,2.39,2.11,pinnacle,8
+soccer_epl,E0,2025-26,b3c2ff07a6d24ca61f13c268a535c317,Wolverhampton Wanderers,Bournemouth,2026-01-31T15:00:00Z,2026-01-30T11:55:38Z,3.56,2.39,2.95,3.5,2.34,2.85,3.56,2.39,2.95,pinnacle,9
+soccer_epl,E0,2025-26,36820753efb36739a83c6e5e440827b2,Brighton and Hove Albion,Everton,2026-01-31T15:00:00Z,2026-01-30T11:55:38Z,2.54,2.32,4.64,2.48,2.28,4.5,2.54,2.32,4.64,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,591aedf1e2b3d1740c1009312fd8ccf4,Augsburg,FC St. Pauli,2026-01-31T14:30:00Z,2026-01-30T11:55:38Z,2.7,2.14,4.93,2.65,2.1,4.8,2.7,2.14,4.93,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,0cbd5c97559e408caab517617f8fa2e3,Eintracht Frankfurt,Bayer Leverkusen,2026-01-31T14:30:00Z,2026-01-30T11:55:38Z,3.51,2.56,2.75,3.4,2.51,2.69,3.51,2.56,2.75,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,0862d76505a9eafb2621d3f0d74cecd7,Werder Bremen,Borussia Monchengladbach,2026-01-31T14:30:00Z,2026-01-30T11:55:38Z,2.99,2.42,3.43,2.93,2.37,3.35,2.99,2.42,3.43,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,995ff101c107f029b09253cf7c710953,RB Leipzig,FSV Mainz 05,2026-01-31T14:30:00Z,2026-01-30T11:55:38Z,2.01,2.73,5.64,1.97,2.68,5.5,2.01,2.73,5.64,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,1eb1b1f0594d1ae7a5c44ba3413f4807,TSG Hoffenheim,Union Berlin,2026-01-31T14:30:00Z,2026-01-30T11:55:38Z,2.4,2.41,4.82,2.35,2.36,4.65,2.4,2.41,4.82,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,01260a68328c2f8d2474e4a30c50f1fd,Pisa,Sassuolo,2026-01-31T14:00:00Z,2026-01-30T11:55:38Z,3.64,2.13,3.39,3.55,2.09,3.3,3.64,2.13,3.39,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,3fe24e297bc3de61d3cda6fc3cf73ce7,Oviedo,Girona,2026-01-31T13:00:00Z,2026-01-30T11:55:38Z,3.47,2.12,3.58,3.35,2.08,3.5,3.47,2.12,3.58,pinnacle,7
+soccer_spain_la_liga,SP1,2025-26,4ef6295d306e5dd7c9bce9cd4b94e005,Espanyol,Alavés,2026-01-30T20:00:00Z,2026-01-30T11:55:38Z,2.85,1.98,5.59,2.68,2.01,5.2,2.55,2.04,4.8,betrivers,7
+soccer_italy_serie_a,I1,2025-26,128f6ef4a4bb60a9e73338195f0ea1bd,Lazio,Genoa,2026-01-30T19:45:00Z,2026-01-30T11:55:38Z,2.97,1.97,5.27,2.95,1.86,5.35,2.97,1.97,5.27,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,3969209a757cb0e25acff91f46ad9ff6,RC Lens,Le Havre,2026-01-30T19:45:00Z,2026-01-30T11:55:38Z,1.89,2.73,7.14,1.85,2.66,6.75,1.89,2.73,7.14,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,01582fc5c1eef56c7141a86e0a585c25,1. FC Köln,VfL Wolfsburg,2026-01-30T19:30:00Z,2026-01-30T11:55:38Z,2.56,2.55,4.0,2.49,2.48,3.85,2.56,2.55,4.0,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,15f13c56252cf538c2b9e93581aef302,FC St. Pauli,RB Leipzig,2026-01-27T19:30:00Z,2026-01-23T11:55:37Z,4.54,2.39,2.39,4.5,2.38,2.38,4.54,2.39,2.39,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,bd1b2719e6a4c69fcb18d81ff471283d,Werder Bremen,TSG Hoffenheim,2026-01-27T19:30:00Z,2026-01-23T11:55:37Z,3.51,2.51,2.69,3.45,2.49,2.67,3.51,2.51,2.69,pinnacle,9
+soccer_epl,E0,2025-26,e90e22b348a38af568f940b4b5d92ca6,Everton,Leeds United,2026-01-26T20:00:00Z,2026-01-23T11:55:37Z,3.18,2.15,3.84,3.1,2.11,3.75,3.18,2.15,3.84,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,4ac6cf5bfb4cef2e3a48939a6a112550,Girona,Getafe,2026-01-26T20:00:00Z,2026-01-23T11:55:37Z,2.98,1.97,5.05,2.9,1.93,4.9,2.98,1.97,5.05,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,e0f35fec256e380610e50e2d0860f4e1,Hellas Verona,Udinese,2026-01-26T19:45:00Z,2026-01-23T11:55:37Z,3.63,2.02,3.7,3.55,1.98,3.6,3.63,2.02,3.7,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,76ba4426a6a4d04532c74a44eea4c848,Alavés,Real Betis,2026-01-25T20:00:00Z,2026-01-23T11:55:37Z,3.63,2.13,3.39,3.6,2.1,3.2,3.63,2.13,3.39,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,e8fc45ec3a1b922340f62fa03a374971,AS Roma,AC Milan,2026-01-25T19:45:00Z,2026-01-23T11:55:37Z,3.36,2.15,3.61,3.25,2.1,3.55,3.36,2.15,3.61,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,87e6aa9bade1d15a02900e9dbd73d6d5,Lille,Strasbourg,2026-01-25T19:45:00Z,2026-01-23T11:55:37Z,2.67,2.36,4.15,2.55,2.32,4.15,2.67,2.36,4.15,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,016e617802dc1812996ca074d7306086,Real Sociedad,Celta Vigo,2026-01-25T17:30:00Z,2026-01-23T11:55:37Z,2.69,2.24,4.5,2.64,2.2,4.4,2.69,2.24,4.5,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,35687e2aefebca1baa98b1bc0f774d17,Juventus,Napoli,2026-01-25T17:00:00Z,2026-01-23T11:55:37Z,2.9,2.04,4.9,2.85,1.99,4.75,2.9,2.04,4.9,pinnacle,9
+soccer_epl,E0,2025-26,5d6e09834e58cd6190113f232aece005,Arsenal,Manchester United,2026-01-25T16:30:00Z,2026-01-23T11:55:37Z,2.1,2.49,6.16,2.06,2.44,5.75,2.1,2.49,6.16,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,78a72e14e5c1dbee61854658f3fe70f1,SC Freiburg,1. FC Köln,2026-01-25T16:30:00Z,2026-01-23T11:55:37Z,2.51,2.39,4.51,2.46,2.34,4.4,2.51,2.39,4.51,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,259ba4ae53e75f1718871fe49017d240,Paris FC,Angers,2026-01-25T16:15:00Z,2026-01-23T11:55:37Z,2.44,2.27,5.25,2.39,2.23,5.1,2.44,2.27,5.25,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,4e68520a4a47d11007f23dc29f08eea4,Brest,Toulouse,2026-01-25T16:15:00Z,2026-01-23T11:55:37Z,3.48,2.18,3.42,3.4,2.13,3.35,3.48,2.18,3.42,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,b12927a56bc19fb041ef8131b7610f23,Metz,Lyon,2026-01-25T16:15:00Z,2026-01-23T11:55:37Z,5.22,2.48,2.25,5.05,2.43,2.2,5.22,2.48,2.25,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,46f70d26f23b04d8f0547cb124a9d18d,Barcelona,Oviedo,2026-01-25T15:15:00Z,2026-01-23T11:55:37Z,1.36,4.04,13.72,1.36,3.95,13.0,1.36,4.04,13.72,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,3f300d6cc22952ec4914be8fe3d92463,Borussia Monchengladbach,VfB Stuttgart,2026-01-25T14:30:00Z,2026-01-23T11:55:37Z,3.44,2.57,2.79,3.35,2.52,2.72,3.44,2.57,2.79,pinnacle,9
+soccer_epl,E0,2025-26,1ca6d3d9cde3e58a39211feb9188530c,Newcastle United,Aston Villa,2026-01-25T14:00:00Z,2026-01-23T11:55:37Z,2.54,2.47,4.15,2.46,2.43,4.1,2.54,2.47,4.15,pinnacle,9
+soccer_epl,E0,2025-26,84aeb5074adb6205fcb1206830a62861,Brentford,Nottingham Forest,2026-01-25T14:00:00Z,2026-01-23T11:55:37Z,2.69,2.27,4.4,2.64,2.22,4.25,2.38,2.28,4.35,betrivers,10
+soccer_epl,E0,2025-26,4d6c0ac53b2b38aeb5bc8c8163f3f8b9,Crystal Palace,Chelsea,2026-01-25T14:00:00Z,2026-01-23T11:55:37Z,4.03,2.4,2.67,3.9,2.35,2.61,4.03,2.4,2.67,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,9668e5b753c1b8c8cdb5c5263f87b372,Atalanta BC,Parma,2026-01-25T14:00:00Z,2026-01-23T11:55:37Z,1.89,2.59,7.77,1.86,2.55,7.5,1.89,2.59,7.77,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,b27ba3c204153eae8e94a94c6c75b21b,Genoa,Bologna,2026-01-25T14:00:00Z,2026-01-23T11:55:37Z,3.88,2.06,3.37,3.75,2.02,3.3,3.88,2.06,3.37,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,798588eee18cc212f748c619f024a1d8,Nantes,Nice,2026-01-25T14:00:00Z,2026-01-23T11:55:37Z,3.54,2.37,2.99,3.45,2.32,2.93,3.54,2.37,2.99,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,6664cc513e04469013e67de10178d926,Atlético Madrid,Mallorca,2026-01-25T13:00:00Z,2026-01-23T11:55:37Z,1.73,2.75,9.81,1.71,2.69,9.5,1.73,2.75,9.81,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,4a59e59a4d82f67dc9db3fb7c53ea0e7,Sassuolo,Cremonese,2026-01-25T11:30:00Z,2026-01-23T11:55:37Z,2.55,2.21,5.08,2.5,2.17,4.95,2.55,2.21,5.08,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,98e55b8d48476f5c58e3e3e525907a7a,Marseille,RC Lens,2026-01-24T20:05:00Z,2026-01-23T11:55:37Z,2.57,2.49,4.04,2.5,2.45,3.95,2.57,2.49,4.04,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,a24e5370b8826d1b1e448493af7164c3,Villarreal,Real Madrid,2026-01-24T20:00:00Z,2026-01-23T11:55:37Z,3.73,2.62,2.57,3.6,2.57,2.52,3.73,2.62,2.57,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,251e0102e2db4573c4eb74e3d5f8dc84,Lecce,Lazio,2026-01-24T19:45:00Z,2026-01-23T11:55:37Z,5.02,2.02,2.89,4.9,1.98,2.83,5.02,2.02,2.89,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,70515793c70633c192edc4f52444db3b,Le Havre,AS Monaco,2026-01-24T18:00:00Z,2026-01-23T11:55:37Z,3.93,2.46,2.65,3.85,2.41,2.57,3.93,2.46,2.65,pinnacle,9
+soccer_epl,E0,2025-26,7f9f2414fa5b890e516960bfcb8f153d,Bournemouth,Liverpool,2026-01-24T17:30:00Z,2026-01-23T11:55:37Z,4.2,2.53,2.46,4.05,2.48,2.42,4.2,2.53,2.46,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,12fa958a04a07de7b95dbfce718db8cc,Sevilla,Athletic Bilbao,2026-01-24T17:30:00Z,2026-01-23T11:55:37Z,3.77,2.04,3.51,3.55,2.07,3.3,3.55,2.07,3.3,bovada,8
+soccer_germany_bundesliga,D1,2025-26,ef261f1adb9a34642f07c113bea16eb6,Union Berlin,Borussia Dortmund,2026-01-24T17:30:00Z,2026-01-23T11:55:37Z,4.32,2.3,2.68,4.2,2.25,2.62,4.32,2.3,2.68,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,1668d28735b6e23a585e12cc1c31b45d,Fiorentina,Cagliari,2026-01-24T17:00:00Z,2026-01-23T11:55:37Z,2.33,2.27,5.82,2.28,2.24,5.6,2.33,2.27,5.82,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,f6c5f7f92c41d6c12e55870819dd419d,Rennes,Lorient,2026-01-24T16:00:00Z,2026-01-23T11:55:37Z,2.47,2.38,4.68,2.37,2.34,4.7,2.47,2.38,4.68,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,faa776cd5170281870e980baa230156d,Valencia,Espanyol,2026-01-24T15:15:00Z,2026-01-23T11:55:37Z,3.18,2.11,3.97,3.12,2.07,3.85,2.9,2.12,3.65,betrivers,8
+soccer_epl,E0,2025-26,db78ecd9c2d10ab045a91fa64d90a172,Fulham,Brighton and Hove Albion,2026-01-24T15:00:00Z,2026-01-23T11:55:37Z,3.18,2.31,3.42,3.12,2.24,3.35,3.18,2.31,3.42,pinnacle,9
+soccer_epl,E0,2025-26,1e811fa7ead0a3e6ef920b15b2bbb95d,Burnley,Tottenham Hotspur,2026-01-24T15:00:00Z,2026-01-23T11:55:37Z,4.3,2.25,2.75,4.2,2.21,2.7,4.3,2.25,2.75,pinnacle,10
+soccer_epl,E0,2025-26,b32426b16a13c60170645be87a6b5cf5,Manchester City,Wolverhampton Wanderers,2026-01-24T15:00:00Z,2026-01-23T11:55:37Z,1.57,3.17,10.18,1.56,3.12,9.75,1.56,3.25,6.5,draftkings,9
+soccer_germany_bundesliga,D1,2025-26,a9424bfa2336811753a079d3a9e33285,1. FC Heidenheim,RB Leipzig,2026-01-24T14:30:00Z,2026-01-23T11:55:37Z,5.01,2.67,2.14,4.85,2.62,2.11,5.01,2.67,2.14,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,e9cb63d676a2f241d54090c4bcd0ccca,Bayern Munich,Augsburg,2026-01-24T14:30:00Z,2026-01-23T11:55:37Z,1.35,4.04,14.18,1.35,4.0,14.0,1.35,4.04,14.18,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,928f22cfb0e4e19d7b26f7fad7e30841,Bayer Leverkusen,Werder Bremen,2026-01-24T14:30:00Z,2026-01-23T11:55:37Z,2.07,2.71,5.31,2.03,2.66,5.15,2.07,2.71,5.31,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,3aa63ac9164cb0d7fcaa13522620d9b1,Eintracht Frankfurt,TSG Hoffenheim,2026-01-24T14:30:00Z,2026-01-23T11:55:37Z,3.37,2.56,2.85,3.2,2.5,2.83,3.37,2.56,2.85,pinnacle,6
+soccer_germany_bundesliga,D1,2025-26,cd358949d5708d2b0909fa3d5d18cbba,FSV Mainz 05,VfL Wolfsburg,2026-01-24T14:30:00Z,2026-01-23T11:55:37Z,2.94,2.38,3.59,2.88,2.33,3.5,2.94,2.38,3.59,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,04d137c94e7951ff930547e76f54cff9,Como,Torino,2026-01-24T14:00:00Z,2026-01-23T11:55:37Z,2.34,2.25,5.92,2.3,2.21,5.75,2.34,2.25,5.92,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,56556cba4837be525240fd3e4009e972,Rayo Vallecano,CA Osasuna,2026-01-24T13:00:00Z,2026-01-23T11:55:37Z,2.94,2.07,4.61,2.9,2.02,4.45,2.94,2.07,4.61,pinnacle,8
+soccer_epl,E0,2025-26,a396966205b21287109ea8cae42e44c1,West Ham United,Sunderland,2026-01-24T12:30:00Z,2026-01-23T11:55:37Z,3.24,2.14,3.79,3.15,2.09,3.7,3.24,2.14,3.79,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,23faa2755b2a07c3a0ca03bd4fc6a8e3,Levante,Elche CF,2026-01-23T20:00:00Z,2026-01-23T11:55:37Z,3.02,2.24,3.9,3.0,2.19,3.6,3.02,2.24,3.9,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,6a50431a94013e245ccd8a3bdc01dff6,Inter Milan,Pisa,2026-01-23T19:45:00Z,2026-01-23T11:55:37Z,1.53,3.22,12.42,1.5,3.05,13.0,1.53,3.22,12.42,pinnacle,10
+soccer_germany_bundesliga,D1,2025-26,98b3998b0629d9035e5aa1afeef24137,FC St. Pauli,Hamburger SV,2026-01-23T19:30:00Z,2026-01-23T11:55:37Z,3.88,1.98,3.66,3.75,1.93,3.6,3.88,1.98,3.66,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,5151344c7feddd635e13fe24d63bbddc,Auxerre,Paris Saint Germain,2026-01-23T19:00:00Z,2026-01-23T11:55:37Z,9.42,2.9,1.71,8.25,2.83,1.7,9.42,2.9,1.71,pinnacle,9
+soccer_epl,E0,2025-26,342788786c22e570ed2da53a9608113f,Brighton and Hove Albion,Bournemouth,2026-01-19T20:00:00Z,2026-01-16T11:55:37Z,2.47,2.54,4.17,2.51,2.45,3.9,2.47,2.54,4.17,pinnacle,10
+soccer_spain_la_liga,SP1,2025-26,6076a8b61a97dd15f216e348fdba88b8,Elche CF,Sevilla,2026-01-19T20:00:00Z,2026-01-16T11:55:37Z,3.06,2.18,3.94,2.95,2.14,3.85,3.06,2.18,3.94,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,e578bafd1b7879b4e3c0831f1eca8b8f,Lazio,Como,2026-01-19T19:45:00Z,2026-01-16T11:55:37Z,3.41,2.1,3.7,3.35,2.03,3.65,3.41,2.1,3.7,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,fb8869e33f590378c2782c8908d89ac4,Cremonese,Hellas Verona,2026-01-19T17:30:00Z,2026-01-16T11:55:37Z,3.25,2.08,3.98,3.15,2.05,3.85,3.25,2.08,3.98,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,3d4889892d426e9a6f98f7ff0dd775b2,Real Sociedad,Barcelona,2026-01-18T20:00:00Z,2026-01-16T11:55:37Z,5.29,2.83,2.01,4.9,2.74,2.02,5.29,2.83,2.01,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,39873448090264429546500aff311230,AC Milan,Lecce,2026-01-18T19:45:00Z,2026-01-16T11:55:37Z,1.74,2.64,11.16,1.74,2.56,10.0,1.74,2.64,11.16,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,b8268290e25d0cf4b9aa64b521c3ad5a,Lyon,Brest,2026-01-18T19:45:00Z,2026-01-16T11:55:37Z,2.2,2.45,5.6,2.14,2.42,5.5,2.2,2.45,5.6,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,691835b0e7a9385fccf0b29bd3492a08,Celta Vigo,Rayo Vallecano,2026-01-18T17:30:00Z,2026-01-16T11:55:37Z,2.74,2.16,4.72,2.68,2.12,4.6,2.74,2.16,4.72,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,833f3a993ae8d16996603ba818af71aa,Torino,AS Roma,2026-01-18T17:00:00Z,2026-01-16T11:55:37Z,4.49,2.14,2.85,4.4,2.11,2.76,4.49,2.14,2.85,pinnacle,9
+soccer_epl,E0,2025-26,80b312e80c4c6e8f267a99606665ac8c,Aston Villa,Everton,2026-01-18T16:30:00Z,2026-01-16T11:55:37Z,2.27,2.36,5.66,2.24,2.31,5.45,2.27,2.36,5.66,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,6127455e36c2c5474eeb98ba9a14834e,Augsburg,SC Freiburg,2026-01-18T16:30:00Z,2026-01-16T11:55:37Z,3.6,2.25,3.15,3.5,2.21,3.05,3.2,2.28,2.9,betrivers,9
+soccer_france_ligue_one,F1,2025-26,70790674ffb1f584124b617bbb1f3dfa,Rennes,Le Havre,2026-01-18T16:15:00Z,2026-01-16T11:55:37Z,2.22,2.44,5.55,2.18,2.39,5.4,2.22,2.44,5.55,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,0d51cc2b1f298a9974fc19f6c5692ad2,Nantes,Paris FC,2026-01-18T16:15:00Z,2026-01-16T11:55:37Z,3.74,2.19,3.17,3.75,2.13,3.05,3.74,2.19,3.17,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,5a54196ed79c9ce5e335d59a40e41a32,Atlético Madrid,Alavés,2026-01-18T15:15:00Z,2026-01-16T11:55:37Z,1.88,2.48,9.32,1.77,2.54,9.5,1.74,2.55,8.0,betrivers,7
+soccer_germany_bundesliga,D1,2025-26,baa7dbc232573c12de3b94c5126518ec,VfB Stuttgart,Union Berlin,2026-01-18T14:30:00Z,2026-01-16T11:55:37Z,2.2,2.43,5.74,2.17,2.38,5.5,2.2,2.43,5.74,pinnacle,9
+soccer_epl,E0,2025-26,e15eb2362921b16a6b6a0397ce607a11,Wolverhampton Wanderers,Newcastle United,2026-01-18T14:00:00Z,2026-01-16T11:55:37Z,4.64,2.49,2.37,4.5,2.44,2.32,4.64,2.49,2.37,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,18de9ca5efc2136cd1204211f2d36011,Bologna,Fiorentina,2026-01-18T14:00:00Z,2026-01-16T11:55:37Z,2.79,2.25,4.2,2.74,2.21,4.1,2.79,2.25,4.2,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,890935e813405256ab29af3d12eab246,Strasbourg,Metz,2026-01-18T14:00:00Z,2026-01-16T11:55:37Z,2.02,2.62,6.1,1.98,2.57,5.75,2.02,2.62,6.1,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,137fef737a82bc36ead5fb9442f68eaf,Getafe,Valencia,2026-01-18T13:00:00Z,2026-01-16T11:55:37Z,3.54,1.86,4.51,3.35,1.86,4.35,3.54,1.86,4.51,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,f77163792d985cb07d9553e389cfeaa0,Parma,Genoa,2026-01-18T11:30:00Z,2026-01-16T11:55:37Z,3.77,1.93,3.88,3.65,1.9,3.75,3.64,1.94,3.68,gtbets,9
+soccer_france_ligue_one,F1,2025-26,ffe24fdea2d5ad6483292eb749b97506,Angers,Marseille,2026-01-17T20:05:00Z,2026-01-16T11:55:37Z,6.24,2.4,2.16,5.75,2.37,2.13,6.24,2.4,2.16,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,42414e1da7f830259646d76907dd1269,Real Betis,Villarreal,2026-01-17T20:00:00Z,2026-01-16T11:55:37Z,3.1,2.42,3.31,2.78,2.39,3.5,3.1,2.42,3.31,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,7cccb3c5504678aa2bbd5490aab3881f,Cagliari,Juventus,2026-01-17T19:45:00Z,2026-01-16T11:55:37Z,6.86,2.37,2.11,6.5,2.33,2.07,6.86,2.37,2.11,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,540a9a67c337cf21bee313e260efaf69,Toulouse,Nice,2026-01-17T18:00:00Z,2026-01-16T11:55:37Z,2.61,2.32,4.45,2.48,2.29,4.45,2.61,2.32,4.45,pinnacle,9
+soccer_epl,E0,2025-26,b145d15344a4fca80d42b39faa58a050,Nottingham Forest,Arsenal,2026-01-17T17:30:00Z,2026-01-16T11:55:37Z,6.41,2.42,2.12,6.25,2.37,2.08,6.41,2.42,2.12,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,a87f04984f0a2d9b361da24ff21178b8,CA Osasuna,Oviedo,2026-01-17T17:30:00Z,2026-01-16T11:55:37Z,2.47,2.13,5.98,2.42,2.09,5.75,2.47,2.13,5.98,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,e0532a11798c2e3bbe0e20c889cde2d7,RB Leipzig,Bayern Munich,2026-01-17T17:30:00Z,2026-01-16T11:55:37Z,4.87,2.93,2.02,4.45,2.74,2.12,4.87,2.93,2.02,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,2e402618e8f128fd17ac85c1075dc642,Napoli,Sassuolo,2026-01-17T17:00:00Z,2026-01-16T11:55:37Z,1.99,2.41,8.03,1.95,2.37,7.75,1.99,2.41,8.03,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,7c31284c2c36f12fd3cdce8b23ac9ee2,RC Lens,Auxerre,2026-01-17T16:00:00Z,2026-01-16T11:55:37Z,1.97,2.59,6.82,1.94,2.53,6.5,1.97,2.59,6.82,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,81eeaa276b0f874eee70a3cc0e2c039a,Mallorca,Athletic Bilbao,2026-01-17T15:15:00Z,2026-01-16T11:55:37Z,4.63,2.0,3.09,4.4,2.02,2.93,4.4,2.02,2.93,bovada,8
+soccer_epl,E0,2025-26,876bd00ab1c4cff1c6635a8ac7f93d75,Chelsea,Brentford,2026-01-17T15:00:00Z,2026-01-16T11:55:37Z,2.24,2.53,5.02,2.16,2.48,5.1,2.24,2.53,5.02,pinnacle,9
+soccer_epl,E0,2025-26,80cf233ec08173f3d8cf4645b687589d,Liverpool,Burnley,2026-01-17T15:00:00Z,2026-01-16T11:55:37Z,1.59,3.06,10.56,1.53,3.2,10.5,1.53,3.2,10.5,bovada,9
+soccer_epl,E0,2025-26,aa16a48d5e016963e076f7f5ecfc2f68,Sunderland,Crystal Palace,2026-01-17T15:00:00Z,2026-01-16T11:55:37Z,3.47,2.15,3.51,3.35,2.11,3.4,3.47,2.15,3.51,pinnacle,10
+soccer_epl,E0,2025-26,86609aa022312a15ec01d5bc0c172dbc,Leeds United,Fulham,2026-01-17T15:00:00Z,2026-01-16T11:55:37Z,2.86,2.21,4.21,3.0,2.13,3.85,2.86,2.21,4.21,pinnacle,10
+soccer_epl,E0,2025-26,47e36aed7df3160f584a73fbd1fd0830,Tottenham Hotspur,West Ham United,2026-01-17T15:00:00Z,2026-01-16T11:55:37Z,2.29,2.46,5.07,2.25,2.41,4.95,2.29,2.46,5.07,pinnacle,10
+soccer_germany_bundesliga,D1,2025-26,271496e78982c89d82c981ae2e2008c7,VfL Wolfsburg,1. FC Heidenheim,2026-01-17T14:30:00Z,2026-01-16T11:55:37Z,2.11,2.63,5.4,2.07,2.58,5.25,2.11,2.63,5.4,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,16cfa9455a9796f667118f6450024757,1. FC Köln,FSV Mainz 05,2026-01-17T14:30:00Z,2026-01-16T11:55:37Z,2.8,2.4,3.76,2.8,2.36,3.55,2.8,2.4,3.76,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,3334b9a452b572ca5f136d524bba816e,TSG Hoffenheim,Bayer Leverkusen,2026-01-17T14:30:00Z,2026-01-16T11:55:37Z,2.8,2.65,3.28,3.0,2.51,2.95,2.8,2.65,3.28,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,d0a6a8a3647b5bb5198ccd43cc6114ea,Borussia Dortmund,FC St. Pauli,2026-01-17T14:30:00Z,2026-01-16T11:55:37Z,1.75,2.76,9.14,1.72,2.71,8.75,1.75,2.76,9.14,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,497ef12ef1554f6ca4015fbded78b264,Hamburger SV,Borussia Monchengladbach,2026-01-17T14:30:00Z,2026-01-16T11:55:37Z,3.12,2.38,3.36,2.95,2.33,3.35,3.12,2.38,3.36,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,98e958a4d4d6c144732a0a32d2ab77de,Udinese,Inter Milan,2026-01-17T14:00:00Z,2026-01-16T11:55:37Z,7.17,2.58,1.94,6.75,2.53,1.91,7.17,2.58,1.94,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,794960888cc173eb96cc55dad0dd8d2a,Real Madrid,Levante,2026-01-17T13:00:00Z,2026-01-16T11:55:37Z,1.48,3.55,10.94,1.43,3.65,11.0,1.5,4.2,5.0,draftkings,8
+soccer_epl,E0,2025-26,3fd1e970c718bfc0f99a7e4575e46f49,Manchester United,Manchester City,2026-01-17T12:30:00Z,2026-01-16T11:55:37Z,4.0,2.62,2.45,3.9,2.57,2.4,4.0,2.62,2.45,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,92d36e6b5b03266bf386354eb489ad97,Espanyol,Girona,2026-01-16T20:00:00Z,2026-01-16T11:55:37Z,2.65,2.2,4.95,2.44,2.22,4.9,2.44,2.22,4.9,bovada,8
+soccer_france_ligue_one,F1,2025-26,81c8d8f5a9c64d4f79302689372beb61,Paris Saint Germain,Lille,2026-01-16T20:00:00Z,2026-01-16T11:55:37Z,1.75,2.97,7.74,1.71,2.9,7.25,1.75,2.97,7.74,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,09a25c81cc9c0d2ee95a39858526b187,Pisa,Atalanta BC,2026-01-16T19:45:00Z,2026-01-16T11:55:37Z,6.4,2.37,2.18,6.0,2.32,2.13,5.75,2.4,2.0,betrivers,10
+soccer_germany_bundesliga,D1,2025-26,d5dc97aab1d29cfc809130fe57a2db14,Werder Bremen,Eintracht Frankfurt,2026-01-16T19:30:00Z,2026-01-16T11:55:37Z,3.31,2.46,3.08,3.05,2.47,3.0,3.05,2.47,3.0,bovada,9
+soccer_france_ligue_one,F1,2025-26,8db02bc3086459d6f01e3fae5eebde04,AS Monaco,Lorient,2026-01-16T18:00:00Z,2026-01-16T11:55:37Z,2.18,2.64,5.05,2.14,2.57,4.85,2.18,2.64,5.05,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,66d10c2bf3c84eb7b4a95106e3866fb3,Como,AC Milan,2026-01-15T19:45:00Z,2026-01-09T11:55:37Z,3.52,2.19,3.18,,,,3.52,2.19,3.18,pinnacle,7
+soccer_germany_bundesliga,D1,2025-26,dd9ffe0d93fe6332658ea6eba405e5e8,Augsburg,Union Berlin,2026-01-15T19:30:00Z,2026-01-09T11:55:37Z,3.12,2.1,3.83,3.1,2.09,3.8,3.12,2.1,3.83,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,794a31fcf8a1cfd751fdd44106dbc566,Hellas Verona,Bologna,2026-01-15T17:30:00Z,2026-01-09T11:55:37Z,4.53,2.12,2.76,,,,4.53,2.12,2.76,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,e7daba0dd26708794465d3c177510f1c,Inter Milan,Lecce,2026-01-14T19:45:00Z,2026-01-09T11:55:37Z,1.53,2.95,13.45,,,,1.53,2.95,13.45,pinnacle,7
+soccer_germany_bundesliga,D1,2025-26,4881e0d69bec69bababecaa1e98b5dad,1. FC Köln,Bayern Munich,2026-01-14T19:30:00Z,2026-01-09T11:55:37Z,7.3,3.28,1.6,7.25,3.3,1.61,7.25,3.3,1.61,bovada,9
+soccer_germany_bundesliga,D1,2025-26,61e314c2c7412ea1f19409f119f1e29d,TSG Hoffenheim,Borussia Monchengladbach,2026-01-14T19:30:00Z,2026-01-09T11:55:37Z,2.39,2.48,4.28,2.38,2.46,4.25,2.39,2.48,4.28,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,51b47d6f758ef44421a635cfe2bd27da,RB Leipzig,SC Freiburg,2026-01-14T19:30:00Z,2026-01-09T11:55:37Z,2.3,2.51,4.48,2.29,2.5,4.45,2.3,2.51,4.48,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,147176b65eecb7ca66d162dd93c39e12,VfL Wolfsburg,FC St. Pauli,2026-01-14T17:30:00Z,2026-01-09T11:55:37Z,2.47,2.3,4.63,2.46,2.29,4.6,2.38,2.33,4.1,betrivers,9
+soccer_italy_serie_a,I1,2025-26,64aa45d8f1fafe5542e892cf20fc98ec,Napoli,Parma,2026-01-14T17:30:00Z,2026-01-09T11:55:37Z,1.78,2.54,9.48,,,,1.78,2.54,9.48,pinnacle,7
+soccer_germany_bundesliga,D1,2025-26,c5bb74a25b74b505afda307b2c243469,FSV Mainz 05,1. FC Heidenheim,2026-01-13T19:30:00Z,2026-01-09T11:55:37Z,2.36,2.27,5.18,2.35,2.26,5.15,2.2,2.32,4.9,betrivers,9
+soccer_germany_bundesliga,D1,2025-26,3a298098241a4bfbf4eda0929537f063,Hamburger SV,Bayer Leverkusen,2026-01-13T19:30:00Z,2026-01-09T11:55:37Z,3.89,2.44,2.57,3.85,2.43,2.56,3.6,2.48,2.45,betrivers,9
+soccer_germany_bundesliga,D1,2025-26,a97c467e9ff379af06f972ec25ddc407,Borussia Dortmund,Werder Bremen,2026-01-13T19:30:00Z,2026-01-09T11:55:37Z,1.74,2.9,7.08,1.74,2.9,7.0,1.74,2.9,7.08,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,3937edff29d08a26dccdd8abb5030d89,VfB Stuttgart,Eintracht Frankfurt,2026-01-13T17:30:00Z,2026-01-09T11:55:37Z,2.41,2.49,4.2,2.39,2.47,4.15,2.41,2.49,4.2,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,30f6f08d42940047b836af2153d681bd,Sevilla,Celta Vigo,2026-01-12T20:00:00Z,2026-01-09T11:55:37Z,3.32,2.24,3.44,3.2,2.19,3.35,3.32,2.24,3.44,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,daa2bb9fe4c0697c33a13df8bdf388d2,Juventus,Cremonese,2026-01-12T19:45:00Z,2026-01-09T11:55:37Z,1.66,2.83,10.48,1.65,2.8,10.0,1.66,2.83,10.48,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,d66ea58ddb00d545b4d31988f2632b84,Genoa,Cagliari,2026-01-12T17:30:00Z,2026-01-09T11:55:37Z,2.79,2.05,5.15,2.73,2.01,5.0,2.79,2.05,5.15,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,36412b11274ae69ce0b6b60075df28b3,Inter Milan,Napoli,2026-01-11T19:45:00Z,2026-01-09T11:55:37Z,2.36,2.27,5.71,2.31,2.22,5.5,2.36,2.27,5.71,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,7cdfdb81a5bdb695c97d08daf34478b7,Athletic Bilbao,Real Madrid,2026-01-11T18:00:00Z,2026-01-02T11:55:37Z,4.14,2.36,2.57,,,,4.14,2.36,2.57,pinnacle,1
+soccer_spain_la_liga,SP1,2025-26,95909c45c3ee5420fe50e8f035167bc9,Barcelona,Atlético Madrid,2026-01-11T18:00:00Z,2026-01-02T11:55:37Z,2.01,2.79,4.93,,,,2.01,2.79,4.93,pinnacle,1
+soccer_italy_serie_a,I1,2025-26,5be8dbb3ee9d2c2d09a813a73fe73a34,Hellas Verona,Lazio,2026-01-11T17:00:00Z,2026-01-09T11:55:37Z,4.27,2.03,3.18,4.15,1.99,3.12,4.27,2.03,3.18,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,3c7382bf19aacbed0fa1ea5c53769be4,Bayern Munich,VfL Wolfsburg,2026-01-11T16:30:00Z,2026-01-09T11:55:37Z,1.36,4.12,12.3,1.36,4.05,11.0,1.36,4.12,12.3,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,cd15bfc6667962f56247207f3abd6291,Levante,Espanyol,2026-01-11T15:15:00Z,2026-01-09T11:55:37Z,3.73,2.21,3.14,3.6,2.17,3.05,3.73,2.21,3.14,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,cdfb82b9061320bd6a62a98be790b34a,Borussia Monchengladbach,Augsburg,2026-01-11T14:30:00Z,2026-01-09T11:55:37Z,2.56,2.37,4.41,2.51,2.32,4.3,2.56,2.37,4.41,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,32a86b2b69ba8c8749861199a8fdc52a,Fiorentina,AC Milan,2026-01-11T14:00:00Z,2026-01-09T11:55:37Z,4.52,2.27,2.65,4.4,2.22,2.59,4.52,2.27,2.65,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,8ecd2a8b4db1916e9aa1fff560810fa8,Rayo Vallecano,Mallorca,2026-01-11T13:00:00Z,2026-01-09T11:55:37Z,2.67,2.08,5.41,2.62,2.04,5.25,2.67,2.08,5.41,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,d3b1c2fe05ddcffc704a6495d8268971,Lecce,Parma,2026-01-11T11:30:00Z,2026-01-09T11:55:37Z,3.56,2.0,3.85,3.45,1.96,3.75,3.56,2.0,3.85,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,ac7fdf3f88257521894bf1895af2fc3e,Valencia,Elche CF,2026-01-10T20:00:00Z,2026-01-09T11:55:37Z,2.92,2.12,4.44,2.85,2.08,4.3,2.92,2.12,4.44,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,c886a9c8d2c702269e9f17b6d7469977,Atalanta BC,Torino,2026-01-10T19:45:00Z,2026-01-09T11:55:37Z,2.1,2.46,6.31,2.06,2.41,6.0,2.1,2.46,6.31,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,e2fa0c69e407576a1beac74b13074ec2,Girona,CA Osasuna,2026-01-10T17:30:00Z,2026-01-09T11:55:37Z,3.02,2.2,3.94,2.95,2.16,3.85,3.02,2.2,3.94,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,fdaabc51d35000ac2c9c867a7a2d3b5d,Bayer Leverkusen,VfB Stuttgart,2026-01-10T17:30:00Z,2026-01-09T11:55:37Z,2.51,2.61,3.89,2.46,2.55,3.8,2.51,2.61,3.89,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,8a8c6213efddb8a91e079cfbbe47813c,AS Roma,Sassuolo,2026-01-10T17:00:00Z,2026-01-09T11:55:37Z,2.1,2.37,6.97,2.06,2.33,6.75,2.1,2.37,6.97,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,33adb7f62df9e1843f4c64c960d9c895,Villarreal,Alavés,2026-01-10T15:15:00Z,2026-01-09T11:55:37Z,2.05,2.45,6.91,2.01,2.4,6.5,2.05,2.45,6.91,pinnacle,7
+soccer_germany_bundesliga,D1,2025-26,b8f9ad43df5e196ff495e727278f2d0e,1. FC Heidenheim,1. FC Köln,2026-01-10T14:30:00Z,2026-01-09T11:55:37Z,3.5,2.37,3.02,3.4,2.32,2.95,3.5,2.37,3.02,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,89477275520541dc360c144b21984d12,FC St. Pauli,RB Leipzig,2026-01-10T14:30:00Z,2026-01-09T11:55:37Z,4.69,2.4,2.44,4.55,2.35,2.39,4.69,2.4,2.44,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,c9d652b759ac3be46550709fa7b7055e,Union Berlin,FSV Mainz 05,2026-01-10T14:30:00Z,2026-01-09T11:55:37Z,2.8,2.16,4.55,2.74,2.12,4.4,2.8,2.16,4.55,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,1bb8919c9b52a970dc7fa1cbd394cfe1,SC Freiburg,Hamburger SV,2026-01-10T14:30:00Z,2026-01-09T11:55:37Z,2.38,2.4,4.92,2.33,2.35,4.8,2.38,2.4,4.92,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,ffbb747d1852f1c638ef4b248edec557,Werder Bremen,TSG Hoffenheim,2026-01-10T14:30:00Z,2026-01-09T11:55:37Z,3.4,2.49,2.91,3.3,2.44,2.85,3.4,2.49,2.91,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,0b55d463b885859c77825781292237d2,Como,Bologna,2026-01-10T14:00:00Z,2026-01-09T11:55:37Z,2.65,2.23,4.68,2.6,2.19,4.55,2.65,2.23,4.68,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,697869ca5876855cf7a185f7dad738ef,Udinese,Pisa,2026-01-10T14:00:00Z,2026-01-09T11:55:37Z,2.52,2.17,5.45,2.47,2.13,5.3,2.52,2.17,5.45,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,ae717a6e4141ae3cc154c976538cc78a,Oviedo,Real Betis,2026-01-10T13:00:00Z,2026-01-09T11:55:37Z,4.59,2.24,2.66,4.45,2.2,2.61,4.59,2.24,2.66,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,6d0ae596c4bec15e99e4e791aeb8c503,Getafe,Real Sociedad,2026-01-09T20:00:00Z,2026-01-09T11:55:37Z,4.71,1.85,3.55,4.55,1.81,3.45,4.71,1.85,3.55,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,d4675c9f1cfcd20cf9b1d9365d76498f,Eintracht Frankfurt,Borussia Dortmund,2026-01-09T19:30:00Z,2026-01-09T11:55:37Z,3.96,2.51,2.61,3.8,2.44,2.57,3.96,2.51,2.61,pinnacle,9
+soccer_epl,E0,2025-26,a6c0bc6a4f6e057c0775ee57f36ed679,Arsenal,Liverpool,2026-01-08T20:00:00Z,2026-01-02T11:55:37Z,2.17,2.43,5.4,2.16,2.42,5.35,2.17,2.43,5.4,pinnacle,10
+soccer_italy_serie_a,I1,2025-26,52353b6172b3b45e014a449098fea935,AC Milan,Genoa,2026-01-08T19:45:00Z,2026-01-02T11:55:37Z,1.98,2.35,7.81,1.97,2.34,7.75,1.98,2.35,7.81,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,49de426e3e52510371c75329757210a4,Cremonese,Cagliari,2026-01-08T17:30:00Z,2026-01-02T11:55:37Z,2.93,2.12,4.1,2.9,2.11,4.05,2.93,2.12,4.1,pinnacle,9
+soccer_epl,E0,2025-26,aa95c1a94f6a92f52335db7a98f008e5,Burnley,Manchester United,2026-01-07T20:15:00Z,2026-01-02T11:55:37Z,4.92,2.44,2.25,4.9,2.43,2.24,4.7,2.45,2.15,betrivers,10
+soccer_epl,E0,2025-26,0296fdce51c7a30498c51a7d11a920f9,Newcastle United,Leeds United,2026-01-07T20:15:00Z,2026-01-02T11:55:37Z,2.18,2.39,5.49,2.17,2.38,5.45,2.18,2.39,5.49,pinnacle,10
+soccer_italy_serie_a,I1,2025-26,1911775aa84bf778126a7a6a1c61a188,Lazio,Fiorentina,2026-01-07T19:45:00Z,2026-01-02T11:55:37Z,2.75,2.15,4.38,2.74,2.14,4.35,2.75,2.15,4.38,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,494261cb09d86dfd909684a93847faf3,Parma,Inter Milan,2026-01-07T19:45:00Z,2026-01-02T11:55:37Z,7.34,2.63,1.84,7.25,2.63,1.83,6.4,2.7,1.76,betrivers,9
+soccer_italy_serie_a,I1,2025-26,103fb449c751da1dea5d42fc8a45b94d,Torino,Udinese,2026-01-07T19:45:00Z,2026-01-02T11:55:37Z,2.98,2.09,4.13,2.95,2.08,4.1,2.98,2.09,4.13,pinnacle,9
+soccer_epl,E0,2025-26,0046d433de17c04fda742abb44115cc5,Crystal Palace,Aston Villa,2026-01-07T19:30:00Z,2026-01-02T11:55:37Z,3.13,2.26,3.42,3.12,2.24,3.35,3.13,2.26,3.42,pinnacle,10
+soccer_epl,E0,2025-26,ee1c8cb920aaccb5b8633c1439a80c9f,Bournemouth,Tottenham Hotspur,2026-01-07T19:30:00Z,2026-01-02T11:55:37Z,2.6,2.41,3.92,2.58,2.39,3.85,2.6,2.41,3.92,pinnacle,10
+soccer_epl,E0,2025-26,7aad89e786152573dbae24579424d5a4,Brentford,Sunderland,2026-01-07T19:30:00Z,2026-01-02T11:55:37Z,2.43,2.27,4.86,2.42,2.26,4.8,2.43,2.27,4.86,pinnacle,10
+soccer_epl,E0,2025-26,414d33bfae971dcca5cc1dc88cf3d39e,Manchester City,Brighton and Hove Albion,2026-01-07T19:30:00Z,2026-01-02T11:55:37Z,1.81,2.84,6.41,1.81,2.83,6.25,1.81,2.84,6.41,pinnacle,10
+soccer_epl,E0,2025-26,defce9389e30580564673598c7dfe2bd,Fulham,Chelsea,2026-01-07T19:30:00Z,2026-01-02T11:55:37Z,3.95,2.34,2.67,3.9,2.33,2.65,3.95,2.34,2.67,pinnacle,10
+soccer_epl,E0,2025-26,fe8ff2153a8750e71031c5d1926733b6,Everton,Wolverhampton Wanderers,2026-01-07T19:30:00Z,2026-01-02T11:55:37Z,2.28,2.25,5.71,2.24,2.25,5.75,2.28,2.25,5.71,pinnacle,10
+soccer_italy_serie_a,I1,2025-26,bb851b5abe60d9906ee775bd4f682ace,Bologna,Atalanta BC,2026-01-07T17:30:00Z,2026-01-02T11:55:37Z,3.32,2.23,3.27,3.3,2.22,3.25,3.32,2.23,3.27,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,3d7c371529e9be91f6d5cc1d2bc73d0a,Napoli,Hellas Verona,2026-01-07T17:30:00Z,2026-01-02T11:55:37Z,2.0,2.29,8.07,2.0,2.29,8.0,1.89,2.33,7.5,betrivers,9
+soccer_epl,E0,2025-26,0eceedf0cb9a125174e2637be71b5b5e,West Ham United,Nottingham Forest,2026-01-06T20:00:00Z,2026-01-02T11:55:37Z,3.56,2.25,3.03,3.5,2.24,3.0,3.4,2.28,2.8,betrivers,10
+soccer_italy_serie_a,I1,2025-26,a344837a502a1079b9b86ef01cefd1c3,Sassuolo,Juventus,2026-01-06T19:45:00Z,2026-01-02T11:55:37Z,5.02,2.26,2.4,5.0,2.25,2.39,4.8,2.28,2.25,betrivers,9
+soccer_italy_serie_a,I1,2025-26,9314be4eb0a4f1a1094d4d19ce6f3658,Lecce,AS Roma,2026-01-06T17:00:00Z,2026-01-02T11:55:37Z,5.96,2.13,2.38,5.75,2.12,2.37,5.96,2.13,2.38,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,3ef452727d1dbb6295a27d1b76eab880,Pisa,Como,2026-01-06T14:00:00Z,2026-01-02T11:55:37Z,5.28,2.23,2.39,5.25,2.22,2.37,5.28,2.23,2.39,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,87610f91e341dcfd2487d7609208b633,Real Sociedad,Atlético Madrid,2026-01-04T20:00:00Z,2026-01-02T11:55:37Z,4.52,2.25,2.68,4.4,2.2,2.62,4.52,2.25,2.68,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,8b034e2eba4bb0170b1579ffcb2f0e65,Inter Milan,Bologna,2026-01-04T19:45:00Z,2026-01-02T11:55:37Z,1.92,2.56,7.62,1.88,2.52,7.25,1.92,2.56,7.62,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,05dce73db8ddec80e833832df1425e57,Paris Saint Germain,Paris FC,2026-01-04T19:45:00Z,2026-01-02T11:55:37Z,1.55,3.27,10.14,1.56,3.15,9.25,1.55,3.27,10.14,pinnacle,9
+soccer_epl,E0,2025-26,3df0c39ee041a9f6aa78fa66ed05b38f,Manchester City,Chelsea,2026-01-04T17:30:00Z,2026-01-02T11:55:37Z,2.23,2.63,4.71,2.19,2.58,4.6,2.04,2.63,4.5,betrivers,9
+soccer_spain_la_liga,SP1,2025-26,101e3ed874173cf19146ddc5b569500b,Alavés,Oviedo,2026-01-04T17:30:00Z,2026-01-02T11:55:37Z,2.75,1.97,5.86,2.7,1.93,5.6,2.75,1.97,5.86,pinnacle,7
+soccer_spain_la_liga,SP1,2025-26,fa7fe17e03f49aa86cbf75ac720f7ded,Mallorca,Girona,2026-01-04T17:30:00Z,2026-01-02T11:55:37Z,2.99,2.14,4.21,2.93,2.1,4.1,2.99,2.14,4.21,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,502d5b37d57fbde9e6f098fe40550262,Hellas Verona,Torino,2026-01-04T17:00:00Z,2026-01-02T11:55:37Z,3.42,2.05,3.84,3.35,2.01,3.7,3.42,2.05,3.84,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,32000299c7428556982002f99e48c66a,Le Havre,Angers,2026-01-04T16:15:00Z,2026-01-02T11:55:37Z,2.76,2.17,4.61,2.7,2.13,4.5,2.76,2.17,4.61,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,aca3bd59cfaba5ec17559d10df8d9917,Brest,Auxerre,2026-01-04T16:15:00Z,2026-01-02T11:55:37Z,2.53,2.28,4.88,2.48,2.23,4.75,2.53,2.28,4.88,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,55a5faa0107c5e1f842a7aaf57fd10b6,Lorient,Metz,2026-01-04T16:15:00Z,2026-01-02T11:55:37Z,2.37,2.37,5.09,2.32,2.32,4.95,2.37,2.37,5.09,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,4cc9478826dabe3b58fd4d51d5efc3f6,Real Madrid,Real Betis,2026-01-04T15:15:00Z,2026-01-02T11:55:37Z,1.91,2.8,6.21,1.83,2.85,6.0,1.83,2.85,6.0,bovada,8
+soccer_epl,E0,2025-26,b82564b1b4c38fbfa3d5a23213c33a0b,Everton,Brentford,2026-01-04T15:00:00Z,2026-01-02T11:55:37Z,3.1,2.16,3.94,3.0,2.12,3.85,3.1,2.16,3.94,pinnacle,10
+soccer_epl,E0,2025-26,33e174d56928e320b3fdbac2510a1003,Newcastle United,Crystal Palace,2026-01-04T15:00:00Z,2026-01-02T11:55:37Z,2.33,2.44,4.97,2.28,2.39,4.85,2.12,2.45,4.75,betrivers,10
+soccer_epl,E0,2025-26,2cc637ccc2afe9fe4d335a36e9f3b284,Fulham,Liverpool,2026-01-04T15:00:00Z,2026-01-02T11:55:37Z,4.23,2.39,2.6,4.1,2.32,2.57,4.23,2.39,2.6,pinnacle,10
+soccer_epl,E0,2025-26,88e36c01b6995b8ce39bde84a2f90fff,Tottenham Hotspur,Sunderland,2026-01-04T15:00:00Z,2026-01-02T11:55:37Z,2.56,2.23,4.98,2.51,2.19,4.85,2.35,2.23,4.5,betrivers,10
+soccer_italy_serie_a,I1,2025-26,fbcdf6d351b7db4c595b9f58def36613,Fiorentina,Cremonese,2026-01-04T14:00:00Z,2026-01-02T11:55:37Z,2.41,2.28,5.33,2.36,2.24,5.2,2.41,2.28,5.33,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,154535112b2bfc394f4e9eb3a36ddf90,Marseille,Nantes,2026-01-04T14:00:00Z,2026-01-02T11:55:37Z,1.62,3.03,9.92,1.6,2.95,9.5,1.62,3.03,9.92,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,2458cbd77b28efe6311a4819377e7ebe,Sevilla,Levante,2026-01-04T13:00:00Z,2026-01-02T11:55:37Z,2.4,2.33,5.19,2.35,2.28,5.05,2.4,2.33,5.19,pinnacle,7
+soccer_epl,E0,2025-26,765de6e3204e70fb923dec0163cf513a,Leeds United,Manchester United,2026-01-04T12:30:00Z,2026-01-02T11:55:37Z,3.36,2.3,3.26,3.15,2.3,3.2,3.15,2.3,2.95,betrivers,10
+soccer_italy_serie_a,I1,2025-26,e9eff9b9406b79de7d2fc06a6eb1bf4f,Lazio,Napoli,2026-01-04T11:30:00Z,2026-01-02T11:55:37Z,4.31,2.02,3.19,4.2,1.98,3.12,4.31,2.02,3.19,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,002dd130b61480a22861fa67dcbec408,Lille,Rennes,2026-01-03T20:05:00Z,2026-01-02T11:55:37Z,2.39,2.48,4.59,2.35,2.43,4.45,2.39,2.48,4.59,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,e47132a3b5a35235ab8fea1dd64e2189,Espanyol,Barcelona,2026-01-03T20:00:00Z,2026-01-02T11:55:37Z,5.26,2.73,2.07,5.1,2.67,2.03,5.26,2.73,2.07,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,880d8a227739e3348f6fffe775054852,Atalanta BC,AS Roma,2026-01-03T19:45:00Z,2026-01-02T11:55:37Z,2.93,2.21,4.07,2.85,2.17,3.95,2.93,2.21,4.07,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,d1d3191d030fe0f7ff91ec1765b66b31,Nice,Strasbourg,2026-01-03T18:00:00Z,2026-01-02T11:55:37Z,3.43,2.36,3.1,3.35,2.31,3.0,3.43,2.36,3.1,pinnacle,9
+soccer_epl,E0,2025-26,fafed94acfa689bc28911f792f4f2969,Bournemouth,Arsenal,2026-01-03T17:30:00Z,2026-01-02T11:55:37Z,6.15,2.59,2.03,5.75,2.55,1.99,6.15,2.59,2.03,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,5e1c0d22fcfa9000c6cee06383a7e6d6,Elche CF,Villarreal,2026-01-03T17:30:00Z,2026-01-02T11:55:37Z,3.87,2.37,2.8,3.75,2.32,2.74,3.87,2.37,2.8,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,07d992fc9817e0b8bd4d3a90709abae4,Juventus,Lecce,2026-01-03T17:00:00Z,2026-01-02T11:55:37Z,1.74,2.66,10.97,1.71,2.61,10.5,1.74,2.66,10.97,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,c70cf5875117320a2dc853b2f4c53f53,AS Monaco,Lyon,2026-01-03T16:00:00Z,2026-01-02T11:55:37Z,2.54,2.55,3.94,2.49,2.5,3.85,2.54,2.55,3.94,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,d18b1e775c1c749b16a15da111db0636,CA Osasuna,Athletic Bilbao,2026-01-03T15:15:00Z,2026-01-02T11:55:37Z,3.81,2.08,3.38,3.7,2.04,3.3,3.81,2.08,3.38,pinnacle,8
+soccer_epl,E0,2025-26,77e2a1a9c947b7a77dcd8bfd70e3c4af,Brighton and Hove Albion,Burnley,2026-01-03T15:00:00Z,2026-01-02T11:55:37Z,2.0,2.54,6.71,1.97,2.5,6.5,2.0,2.54,6.71,pinnacle,10
+soccer_epl,E0,2025-26,17636c8f4de22b85b819971461b91013,Wolverhampton Wanderers,West Ham United,2026-01-03T15:00:00Z,2026-01-02T11:55:37Z,3.15,2.26,3.58,3.05,2.21,3.5,3.15,2.26,3.58,pinnacle,10
+soccer_italy_serie_a,I1,2025-26,616bf5829bd49ea9c3150596515369ad,Genoa,Pisa,2026-01-03T14:00:00Z,2026-01-02T11:55:37Z,2.62,2.06,5.74,2.57,2.02,5.6,2.62,2.06,5.74,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,204633cbc6f1aad036913e7380f74702,Sassuolo,Parma,2026-01-03T14:00:00Z,2026-01-02T11:55:37Z,2.54,2.23,5.05,2.48,2.2,4.9,2.54,2.23,5.05,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,691cd767b631199392b972a4870d77fe,Celta Vigo,Valencia,2026-01-03T13:00:00Z,2026-01-02T11:55:37Z,2.6,2.24,4.78,2.55,2.2,4.65,2.6,2.24,4.78,pinnacle,8
+soccer_epl,E0,2025-26,a40e631c634842e80f05ef44c374c45d,Aston Villa,Nottingham Forest,2026-01-03T12:30:00Z,2026-01-02T11:55:37Z,2.49,2.35,4.68,2.44,2.31,4.55,2.25,2.38,4.5,betrivers,10
+soccer_italy_serie_a,I1,2025-26,1910284c44dd8157621a1fdb5f9ddb38,Como,Udinese,2026-01-03T11:30:00Z,2026-01-02T11:55:37Z,2.38,2.27,5.57,2.35,2.22,5.35,2.38,2.27,5.57,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,c1cef082530d156e4cdd5584f8cc5f15,Rayo Vallecano,Getafe,2026-01-02T20:00:00Z,2026-01-02T11:55:37Z,2.95,1.85,5.54,2.93,1.85,5.5,2.8,1.87,5.0,betrivers,8
+soccer_italy_serie_a,I1,2025-26,c4a6fcc303c95fbd25352b5df36a283a,Cagliari,AC Milan,2026-01-02T19:45:00Z,2026-01-02T11:55:37Z,6.64,2.33,2.2,6.25,2.27,2.15,6.64,2.33,2.2,pinnacle,10
+soccer_france_ligue_one,F1,2025-26,1d65f2b6c7ea368eaf0a20b7c83ee668,Toulouse,RC Lens,2026-01-02T19:45:00Z,2026-01-02T11:55:37Z,3.24,2.26,3.54,3.15,2.21,3.4,3.24,2.26,3.54,pinnacle,9
+soccer_epl,E0,2025-26,85b782095a211e2b622f5f9a4d7c4eab,Brentford,Tottenham Hotspur,2026-01-01T20:00:00Z,2025-12-26T11:55:38Z,2.9,2.25,3.77,2.88,2.23,3.7,2.75,2.25,3.45,betrivers,10
+soccer_epl,E0,2025-26,4ba999c8e49f3425a61c9ba2058e45d8,Sunderland,Manchester City,2026-01-01T20:00:00Z,2025-12-26T11:55:38Z,6.0,2.6,1.97,5.75,2.59,1.96,6.0,2.6,1.97,pinnacle,10
+soccer_epl,E0,2025-26,7abc36182b313c505fcdb6e1bd124ced,Crystal Palace,Fulham,2026-01-01T17:30:00Z,2025-12-26T11:55:38Z,2.71,2.24,4.15,2.7,2.23,4.1,2.63,2.25,3.75,betrivers,10
+soccer_epl,E0,2025-26,bb59e483696f64601c76f17a8bf4dc97,Liverpool,Leeds United,2026-01-01T17:30:00Z,2025-12-26T11:55:38Z,1.93,2.61,6.36,1.92,2.61,6.25,1.93,2.61,6.36,pinnacle,10
+soccer_epl,E0,2025-26,b02b1c116085fe3f86ac2b4df3e050cc,Arsenal,Aston Villa,2025-12-30T20:15:00Z,2025-12-26T11:55:38Z,2.14,2.35,6.0,2.09,2.37,6.0,2.0,2.38,5.8,betrivers,10
+soccer_epl,E0,2025-26,ba1fb8080f8d1106954d5757fcbc0606,Manchester United,Wolverhampton Wanderers,2025-12-30T20:15:00Z,2025-12-26T11:55:38Z,1.75,2.78,7.72,1.75,2.78,7.5,1.71,2.8,6.5,betrivers,9
+soccer_epl,E0,2025-26,7e69d81e8d2d7742886b6e099ad677e1,Chelsea,Bournemouth,2025-12-30T19:30:00Z,2025-12-26T11:55:38Z,2.05,2.6,5.36,2.04,2.59,5.35,2.0,2.6,4.8,betrivers,10
+soccer_epl,E0,2025-26,3073d86cbe29a64178657c40446c6883,West Ham United,Brighton and Hove Albion,2025-12-30T19:30:00Z,2025-12-26T11:55:38Z,3.7,2.35,2.78,3.65,2.34,2.76,3.7,2.35,2.78,pinnacle,10
+soccer_epl,E0,2025-26,bc400a7bd298858f9717a8ebc83b176a,Burnley,Newcastle United,2025-12-30T19:30:00Z,2025-12-26T11:55:38Z,5.23,2.39,2.24,5.2,2.38,2.23,5.23,2.39,2.24,pinnacle,10
+soccer_epl,E0,2025-26,07e4f09b99310af1f361bd9b87aa76ed,Nottingham Forest,Everton,2025-12-30T19:30:00Z,2025-12-26T11:55:38Z,3.04,2.14,3.84,3.0,2.15,3.75,3.0,2.15,3.75,bovada,10
+soccer_italy_serie_a,I1,2025-26,942486f31d318619301607694540dd1f,AS Roma,Genoa,2025-12-29T19:45:00Z,2025-12-26T11:55:38Z,2.28,2.15,7.18,2.24,2.11,7.0,2.28,2.15,7.18,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,6c0da471fd8f605e4f8dfe4a78f5d3fa,Atalanta BC,Inter Milan,2025-12-28T19:45:00Z,2025-12-26T11:55:38Z,4.14,2.39,2.64,4.0,2.33,2.61,4.14,2.39,2.64,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,fc0ddc4a4702d0342a950f604fe78724,Bologna,Sassuolo,2025-12-28T17:00:00Z,2025-12-26T11:55:38Z,2.45,2.26,5.27,2.4,2.22,5.1,2.45,2.26,5.27,pinnacle,9
+soccer_epl,E0,2025-26,141b909c4eb6e7888228e2186f6e7cff,Crystal Palace,Tottenham Hotspur,2025-12-28T16:30:00Z,2025-12-26T11:55:38Z,3.06,2.23,3.8,2.95,2.18,3.7,3.06,2.23,3.8,pinnacle,9
+soccer_epl,E0,2025-26,b758b9af08d4e838e151bb8048d7fa33,Sunderland,Leeds United,2025-12-28T14:00:00Z,2025-12-26T11:55:38Z,3.42,2.14,3.57,3.3,2.1,3.5,3.42,2.14,3.57,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,7983d49e7e5d485fbb9d78d1cbb7ccfc,Cremonese,Napoli,2025-12-28T14:00:00Z,2025-12-26T11:55:38Z,6.44,2.24,2.27,6.25,2.2,2.23,5.75,2.25,2.1,betrivers,9
+soccer_italy_serie_a,I1,2025-26,165e61e1090ba87ea4f25df528ab0752,AC Milan,Hellas Verona,2025-12-28T11:30:00Z,2025-12-26T11:55:38Z,1.86,2.56,8.68,1.83,2.52,8.25,1.86,2.56,8.68,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,5b659f96cb676f68903d7e5e9edc4d24,Pisa,Juventus,2025-12-27T19:45:00Z,2025-12-26T11:55:38Z,7.48,2.42,2.02,7.0,2.37,2.0,7.48,2.42,2.02,pinnacle,9
+soccer_epl,E0,2025-26,f7869479783e6523a293d99247272a7f,Chelsea,Aston Villa,2025-12-27T17:30:00Z,2025-12-26T11:55:38Z,2.45,2.44,4.52,2.47,2.35,4.3,2.45,2.44,4.52,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,1f7e4c2f3ddf09db03f25bcc9a74b94e,Udinese,Lazio,2025-12-27T17:00:00Z,2025-12-26T11:55:38Z,3.89,2.08,3.31,3.8,2.04,3.25,3.89,2.08,3.31,pinnacle,9
+soccer_epl,E0,2025-26,5813bdf6902fff6e70cc44155c9df8c3,Arsenal,Brighton and Hove Albion,2025-12-27T15:00:00Z,2025-12-26T11:55:38Z,1.92,2.58,7.51,1.88,2.53,7.25,1.78,2.65,6.4,betrivers,9
+soccer_epl,E0,2025-26,cc9998775391cda9fac606119083be36,Brentford,Bournemouth,2025-12-27T15:00:00Z,2025-12-26T11:55:38Z,2.84,2.38,3.75,2.78,2.33,3.65,2.84,2.38,3.75,pinnacle,10
+soccer_epl,E0,2025-26,0253542678427574399a1b171d973166,Burnley,Everton,2025-12-27T15:00:00Z,2025-12-26T11:55:38Z,4.78,2.18,2.69,4.65,2.14,2.63,4.78,2.18,2.69,pinnacle,10
+soccer_epl,E0,2025-26,0159f231871e4d728a241b707fab0317,West Ham United,Fulham,2025-12-27T15:00:00Z,2025-12-26T11:55:38Z,3.3,2.32,3.28,3.25,2.26,3.2,3.3,2.32,3.28,pinnacle,10
+soccer_epl,E0,2025-26,2df38eeb9b11cdeddfe05c1cf6866ac7,Liverpool,Wolverhampton Wanderers,2025-12-27T15:00:00Z,2025-12-26T11:55:38Z,1.61,3.04,9.93,1.59,3.0,9.75,1.59,3.05,7.0,draftkings,9
+soccer_italy_serie_a,I1,2025-26,b5a3897244c6472d9c17f25cd9d2eaa4,Torino,Cagliari,2025-12-27T14:00:00Z,2025-12-26T11:55:38Z,2.66,2.17,4.91,2.59,2.15,4.75,2.66,2.17,4.91,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,f80c0cb5dd1963cb1d0cb7888432c841,Lecce,Como,2025-12-27T14:00:00Z,2025-12-26T11:55:38Z,5.52,2.13,2.56,5.4,2.07,2.53,4.9,2.15,2.38,betrivers,9
+soccer_epl,E0,2025-26,2ea0d1f7b3be353799b0c4bf131ebdd7,Nottingham Forest,Manchester City,2025-12-27T12:30:00Z,2025-12-26T11:55:38Z,5.52,2.6,2.1,5.35,2.55,2.06,5.0,2.65,1.93,betrivers,9
+soccer_italy_serie_a,I1,2025-26,4211f09d677e4569007a65b1e79a0d69,Parma,Fiorentina,2025-12-27T11:30:00Z,2025-12-26T11:55:38Z,4.1,2.11,3.11,4.0,2.07,3.0,4.1,2.11,3.11,pinnacle,9
+soccer_epl,E0,2025-26,849f38bfc756120e7767b02260cc75a7,Manchester United,Newcastle United,2025-12-26T20:00:00Z,2025-12-26T11:55:38Z,3.15,2.47,3.22,2.95,2.39,3.2,3.15,2.47,3.22,pinnacle,9
+soccer_epl,E0,2025-26,58f7104696091ba9cc1fc4aca45678c8,Fulham,Nottingham Forest,2025-12-22T20:00:00Z,2025-12-19T11:55:37Z,3.13,2.2,3.79,2.85,2.17,3.95,3.13,2.2,3.79,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,962d07fc72a42f1ee266a16726c8ae1a,Athletic Bilbao,Espanyol,2025-12-22T20:00:00Z,2025-12-19T11:55:37Z,2.49,2.16,5.66,2.44,2.12,5.5,2.49,2.16,5.66,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,e6375080e951c2d6673b2a38ac7a1acb,Real Betis,Getafe,2025-12-21T20:00:00Z,2025-12-19T11:55:37Z,2.39,2.15,6.32,2.32,2.13,6.0,2.39,2.15,6.32,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,beda1811bfcd23e67a975eb53451bf74,Genoa,Atalanta BC,2025-12-21T19:45:00Z,2025-12-19T11:55:37Z,4.61,2.2,2.72,4.5,2.15,2.67,4.61,2.2,2.72,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,d1d2546c5bb9416d19d3bda0b7f407fa,Elche CF,Rayo Vallecano,2025-12-21T17:30:00Z,2025-12-19T11:55:37Z,3.23,2.07,4.05,3.15,2.03,3.95,3.23,2.07,4.05,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,5d3e11f022c8d9da6618d2fc574562cf,Fiorentina,Udinese,2025-12-21T17:00:00Z,2025-12-19T11:55:37Z,2.9,2.2,4.19,2.8,2.16,4.15,2.9,2.2,4.19,pinnacle,9
+soccer_epl,E0,2025-26,33f374e93829406cbca914eca9fcceec,Aston Villa,Manchester United,2025-12-21T16:30:00Z,2025-12-19T11:55:37Z,2.77,2.47,3.66,2.76,2.41,3.45,2.77,2.47,3.66,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,0386c1c31f5f2057029fcdfeb6b56688,1. FC Heidenheim,Bayern Munich,2025-12-21T16:30:00Z,2025-12-19T11:55:37Z,11.54,3.84,1.42,11.0,3.75,1.41,9.5,3.85,1.38,betrivers,9
+soccer_spain_la_liga,SP1,2025-26,22920c0020c5951e82b30986aee8a730,Villarreal,Barcelona,2025-12-21T15:15:00Z,2025-12-19T11:55:37Z,3.8,2.9,2.32,3.6,2.8,2.32,3.8,2.9,2.32,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,25abc64c8064c9f52c6bb107e935a0f9,FSV Mainz 05,FC St. Pauli,2025-12-21T14:30:00Z,2025-12-19T11:55:37Z,2.8,2.18,4.45,2.74,2.14,4.35,2.8,2.18,4.45,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,656ea0785000f25066300411f0d055a7,Sassuolo,Torino,2025-12-21T14:00:00Z,2025-12-19T11:55:37Z,3.03,2.15,4.11,2.95,2.11,4.0,3.03,2.15,4.11,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,5291acffdae1fbf86921de99e561e156,Girona,Atlético Madrid,2025-12-21T13:00:00Z,2025-12-19T11:55:37Z,5.1,2.44,2.3,5.0,2.4,2.24,5.1,2.44,2.3,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,d039995d6f967b3f74eb71ae41345755,Cagliari,Pisa,2025-12-21T11:30:00Z,2025-12-19T11:55:37Z,2.96,2.09,4.47,2.9,2.05,4.35,2.96,2.09,4.47,pinnacle,9
+soccer_epl,E0,2025-26,89be633a184e46227a76f4c62a900eb7,Everton,Arsenal,2025-12-20T20:00:00Z,2025-12-19T11:55:37Z,5.9,2.25,2.34,5.5,2.2,2.35,5.9,2.25,2.34,pinnacle,9
+soccer_epl,E0,2025-26,631c14b5ded4a622bc669656a3179c8d,Leeds United,Crystal Palace,2025-12-20T20:00:00Z,2025-12-19T11:55:37Z,3.39,2.2,3.45,3.3,2.16,3.35,3.39,2.2,3.45,pinnacle,10
+soccer_spain_la_liga,SP1,2025-26,7d1896ee286a41af58b2accb75fbd20f,Real Madrid,Sevilla,2025-12-20T20:00:00Z,2025-12-19T11:55:37Z,1.55,3.28,10.04,1.54,3.2,9.75,1.51,3.3,7.5,betrivers,8
+soccer_italy_serie_a,I1,2025-26,6ec516673090fa0d554d1bac294723cf,Juventus,AS Roma,2025-12-20T19:45:00Z,2025-12-19T11:55:37Z,2.74,2.1,4.98,2.69,2.06,4.85,2.74,2.1,4.98,pinnacle,9
+soccer_epl,E0,2025-26,e0572b6cbaa789f29170642cd1f5b578,Tottenham Hotspur,Liverpool,2025-12-20T17:30:00Z,2025-12-19T11:55:37Z,3.83,2.52,2.62,3.7,2.47,2.57,3.83,2.52,2.62,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,d19bed6a0818cdfb4169ada628361cee,CA Osasuna,Alavés,2025-12-20T17:30:00Z,2025-12-19T11:55:37Z,3.0,2.02,4.7,3.0,1.97,4.45,3.0,2.02,4.7,pinnacle,7
+soccer_germany_bundesliga,D1,2025-26,3c95a7574b9661c6ea2f94b457d4027d,RB Leipzig,Bayer Leverkusen,2025-12-20T17:30:00Z,2025-12-19T11:55:37Z,2.62,2.57,3.74,2.56,2.51,3.65,2.62,2.57,3.74,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,43cdbcfa873145c696a3a655805d9e39,Lazio,Cremonese,2025-12-20T17:00:00Z,2025-12-19T11:55:37Z,2.31,2.27,5.96,2.27,2.23,5.75,2.15,2.3,5.25,betrivers,8
+soccer_spain_la_liga,SP1,2025-26,8732e01a126a504c6fa4e8518e50be20,Levante,Real Sociedad,2025-12-20T15:15:00Z,2025-12-19T11:55:37Z,3.98,2.3,2.84,3.85,2.25,2.78,3.98,2.3,2.84,pinnacle,8
+soccer_epl,E0,2025-26,796da52182daea1fe28085fe20a2c206,Bournemouth,Burnley,2025-12-20T15:00:00Z,2025-12-19T11:55:37Z,1.98,2.59,6.66,1.94,2.53,6.5,1.98,2.59,6.66,pinnacle,10
+soccer_epl,E0,2025-26,ef3767fbd071fe7a30a4a4ff691b7fc5,Wolverhampton Wanderers,Brentford,2025-12-20T15:00:00Z,2025-12-19T11:55:37Z,4.21,2.27,2.76,4.1,2.23,2.7,4.0,2.28,2.5,betrivers,10
+soccer_epl,E0,2025-26,01b17ea1b82bf2a86d41c4d518e1ca27,Brighton and Hove Albion,Sunderland,2025-12-20T15:00:00Z,2025-12-19T11:55:37Z,2.31,2.42,5.19,2.26,2.37,5.05,2.31,2.42,5.19,pinnacle,9
+soccer_epl,E0,2025-26,6ceace099eb1f4d78af11cc212c2823c,Manchester City,West Ham United,2025-12-20T15:00:00Z,2025-12-19T11:55:37Z,1.55,3.29,9.79,1.53,3.25,9.5,1.5,3.3,8.0,betrivers,9
+soccer_germany_bundesliga,D1,2025-26,421d47cdb82f2ac7820b0441230d9c65,1. FC Köln,Union Berlin,2025-12-20T14:30:00Z,2025-12-19T11:55:37Z,3.0,2.26,3.81,2.95,2.2,3.65,3.0,2.26,3.81,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,04c066e15a36c8db01e7dbcc69d3fc46,Augsburg,Werder Bremen,2025-12-20T14:30:00Z,2025-12-19T11:55:37Z,2.84,2.38,3.75,2.78,2.33,3.65,2.7,2.4,3.3,betrivers,9
+soccer_germany_bundesliga,D1,2025-26,b8cc87f70b3d9a67a1921d7032a58c12,Hamburger SV,Eintracht Frankfurt,2025-12-20T14:30:00Z,2025-12-19T11:55:37Z,3.24,2.44,3.12,3.15,2.39,3.05,3.24,2.44,3.12,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,ef08e38966a36c67778974cb40f99e28,VfL Wolfsburg,SC Freiburg,2025-12-20T14:30:00Z,2025-12-19T11:55:37Z,3.25,2.35,3.27,3.2,2.29,3.2,3.25,2.35,3.27,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,801c48571fe4760b1ed8bdc21953b8d6,VfB Stuttgart,TSG Hoffenheim,2025-12-20T14:30:00Z,2025-12-19T11:55:37Z,2.54,2.61,3.83,2.48,2.55,3.7,2.54,2.61,3.83,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,727545e2a1f2a812d3bc70a4af1a4b5f,Oviedo,Celta Vigo,2025-12-20T13:00:00Z,2025-12-19T11:55:37Z,4.43,2.16,2.85,4.35,2.12,2.76,4.43,2.16,2.85,pinnacle,8
+soccer_epl,E0,2025-26,7867392310794b77294b542fcf6940cf,Newcastle United,Chelsea,2025-12-20T12:30:00Z,2025-12-19T11:55:37Z,3.23,2.41,3.17,3.12,2.38,3.12,3.15,2.43,2.75,betrivers,9
+soccer_spain_la_liga,SP1,2025-26,2e7c6ba5e55c917c70b0bd53f85ebe21,Valencia,Mallorca,2025-12-19T20:00:00Z,2025-12-19T11:55:37Z,2.69,2.15,5.06,2.66,2.1,4.75,2.69,2.15,5.06,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,afc3b5e66e8309223cc2f30677fc5572,Borussia Dortmund,Borussia Monchengladbach,2025-12-19T19:30:00Z,2025-12-19T11:55:37Z,2.08,2.72,5.36,2.01,2.66,5.25,2.08,2.72,5.36,pinnacle,9
+soccer_epl,E0,2025-26,da97163cda7b411e5e82540bbbc4a40b,Manchester United,Bournemouth,2025-12-15T20:00:00Z,2025-12-12T11:55:37Z,2.38,2.57,4.36,2.33,2.52,4.25,2.38,2.57,4.36,pinnacle,10
+soccer_spain_la_liga,SP1,2025-26,ba4c0d80b2691c9211580abf8f21a6f4,Rayo Vallecano,Real Betis,2025-12-15T20:00:00Z,2025-12-12T11:55:37Z,3.25,2.26,3.45,3.15,2.22,3.35,3.25,2.26,3.45,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,78880e1302d1010e4bd20edea67875e0,AS Roma,Como,2025-12-15T19:45:00Z,2025-12-12T11:55:37Z,2.86,2.13,4.53,2.73,2.1,4.55,2.86,2.13,4.53,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,40c7bedf322a0b66a9712d8b121f8e76,Alavés,Real Madrid,2025-12-14T20:00:00Z,2025-12-12T11:55:37Z,6.01,2.47,2.13,5.75,2.42,2.09,6.01,2.47,2.13,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,0e53bbe562711eb350109efe691acfba,Bologna,Juventus,2025-12-14T19:45:00Z,2025-12-12T11:55:37Z,3.72,2.12,3.34,3.6,2.08,3.25,3.72,2.12,3.34,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,918462f4b6835b70b44993181b52d03c,Marseille,AS Monaco,2025-12-14T19:45:00Z,2025-12-12T11:55:37Z,2.51,2.6,3.9,2.46,2.55,3.8,2.51,2.6,3.9,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,9004673b66e1b46a88dda8d2b16fda49,Werder Bremen,VfB Stuttgart,2025-12-14T18:30:00Z,2025-12-12T11:55:37Z,3.34,2.56,2.87,3.25,2.5,2.78,3.34,2.56,2.87,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,aa747ad6d66a5907bdd1fa254ae3730f,Levante,Villarreal,2025-12-14T17:30:00Z,2025-12-12T11:55:37Z,4.81,2.55,2.27,4.7,2.5,2.23,4.81,2.55,2.27,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,c16306c3ebe9cc1e2a12178231239c0b,Genoa,Inter Milan,2025-12-14T17:00:00Z,2025-12-12T11:55:37Z,6.31,2.32,2.21,6.0,2.28,2.17,6.31,2.32,2.21,pinnacle,9
+soccer_epl,E0,2025-26,6bdd456f3fcc2cfb6d2f5a45fa7562ce,Brentford,Leeds United,2025-12-14T16:30:00Z,2025-12-12T11:55:37Z,2.59,2.33,4.48,2.53,2.28,4.35,2.59,2.33,4.48,pinnacle,10
+soccer_germany_bundesliga,D1,2025-26,a48e4ff77f2aec7494593ad0ead98be2,Bayern Munich,FSV Mainz 05,2025-12-14T16:30:00Z,2025-12-12T11:55:37Z,1.38,3.95,12.77,1.37,3.9,12.0,1.3,4.2,11.5,betrivers,9
+soccer_france_ligue_one,F1,2025-26,cdec177dd6fedfd7b3843813f7ea4901,Auxerre,Lille,2025-12-14T16:15:00Z,2025-12-12T11:55:37Z,5.14,2.29,2.45,5.0,2.24,2.4,4.4,2.3,2.25,betrivers,9
+soccer_france_ligue_one,F1,2025-26,78412d00dab7df20cd6fd7fb646cebb3,Strasbourg,Lorient,2025-12-14T16:15:00Z,2025-12-12T11:55:37Z,2.3,2.41,5.23,2.26,2.36,5.1,2.3,2.41,5.23,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,3b5bd671f2eee2287f20955ff3a27a38,RC Lens,Nice,2025-12-14T16:15:00Z,2025-12-12T11:55:37Z,1.99,2.72,5.83,1.95,2.67,5.6,1.99,2.72,5.83,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,b54d5a0638739c3df4e0dd3e580599dd,Celta Vigo,Athletic Bilbao,2025-12-14T15:15:00Z,2025-12-12T11:55:37Z,3.36,2.18,3.54,3.25,2.13,3.45,3.36,2.18,3.54,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,7a54be070973bd95f4e68afcea4e5c8a,SC Freiburg,Borussia Dortmund,2025-12-14T14:30:00Z,2025-12-12T11:55:37Z,3.89,2.36,2.79,3.8,2.31,2.73,3.89,2.36,2.79,pinnacle,9
+soccer_epl,E0,2025-26,603a2d778259f1a4c1c6dc8b05e1cc27,West Ham United,Aston Villa,2025-12-14T14:00:00Z,2025-12-12T11:55:37Z,4.29,2.3,2.69,4.15,2.25,2.63,3.95,2.32,2.45,betrivers,10
+soccer_epl,E0,2025-26,300cabfaf591a6b4120512f8e4ef39e1,Crystal Palace,Manchester City,2025-12-14T14:00:00Z,2025-12-12T11:55:37Z,4.51,2.44,2.45,4.4,2.39,2.4,4.51,2.44,2.45,pinnacle,10
+soccer_epl,E0,2025-26,578057346228ecc12e58e96b14700f67,Sunderland,Newcastle United,2025-12-14T14:00:00Z,2025-12-12T11:55:37Z,4.09,2.2,2.93,4.0,2.16,2.85,3.6,2.23,2.75,betrivers,10
+soccer_epl,E0,2025-26,697898e315188bf88b66c2bace43700f,Nottingham Forest,Tottenham Hotspur,2025-12-14T14:00:00Z,2025-12-12T11:55:37Z,3.23,2.23,3.56,3.15,2.18,3.45,3.23,2.23,3.56,pinnacle,10
+soccer_italy_serie_a,I1,2025-26,650e44128d89d6178ce33152cbc48ec7,Fiorentina,Hellas Verona,2025-12-14T14:00:00Z,2025-12-12T11:55:37Z,2.48,2.19,5.54,2.46,2.14,5.3,2.48,2.19,5.54,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,613e0146bfd8f0a3a9daffe0cde3dc6f,Udinese,Napoli,2025-12-14T14:00:00Z,2025-12-12T11:55:37Z,5.29,2.14,2.6,5.15,2.1,2.55,5.29,2.14,2.6,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,dec7720e6d683b375c63b4dc50bfbe25,Lyon,Le Havre,2025-12-14T14:00:00Z,2025-12-12T11:55:37Z,2.16,2.39,6.25,2.12,2.35,6.0,2.16,2.39,6.25,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,a9c476298d4b57ccc9720a9300efe785,Sevilla,Oviedo,2025-12-14T13:00:00Z,2025-12-12T11:55:37Z,2.59,2.18,5.13,2.54,2.14,5.0,2.59,2.18,5.13,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,1b14aa84023faa35ff3ac56906f5756f,AC Milan,Sassuolo,2025-12-14T11:30:00Z,2025-12-12T11:55:37Z,1.91,2.54,8.12,1.88,2.49,7.75,1.85,2.55,6.25,betrivers,9
+soccer_france_ligue_one,F1,2025-26,6fc08a441d5c40eb7ef61f193dedb6a1,Paris FC,Toulouse,2025-12-13T20:05:00Z,2025-12-12T11:55:37Z,3.1,2.24,3.69,3.0,2.2,3.6,3.1,2.24,3.69,pinnacle,9
+soccer_epl,E0,2025-26,ef0252b916fd7bcba28068a6377cef95,Arsenal,Wolverhampton Wanderers,2025-12-13T20:00:00Z,2025-12-12T11:55:37Z,1.51,3.12,15.52,1.49,3.05,15.0,1.4,3.2,17.0,fanduel,10
+soccer_spain_la_liga,SP1,2025-26,628adb0fd892fbd983f145c1ecf7a6f7,Getafe,Espanyol,2025-12-13T20:00:00Z,2025-12-12T11:55:37Z,3.54,1.88,4.4,3.45,1.85,4.3,3.25,1.91,3.8,betrivers,8
+soccer_italy_serie_a,I1,2025-26,7ea41144445f7993c936e72a23743adc,Atalanta BC,Cagliari,2025-12-13T19:45:00Z,2025-12-12T11:55:37Z,1.8,2.7,8.53,1.77,2.65,8.25,1.8,2.7,8.53,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,2f32a357dc19f8b7c3d660098be96b13,Metz,Paris Saint Germain,2025-12-13T18:00:00Z,2025-12-12T11:55:37Z,8.67,3.16,1.62,8.75,3.2,1.57,8.75,3.2,1.57,bovada,9
+soccer_epl,E0,2025-26,23a09d724c61ee341949006849fe6340,Burnley,Fulham,2025-12-13T17:30:00Z,2025-12-12T11:55:37Z,4.63,2.23,2.66,4.5,2.19,2.61,4.63,2.23,2.66,pinnacle,10
+soccer_spain_la_liga,SP1,2025-26,a278bebb3f57f198ef778d573867d2b0,Barcelona,CA Osasuna,2025-12-13T17:30:00Z,2025-12-12T11:55:37Z,1.52,3.54,9.32,1.5,3.45,9.0,1.52,3.54,9.32,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,b95a2946df6e4220162e02781eb0f4e9,Bayer Leverkusen,1. FC Köln,2025-12-13T17:30:00Z,2025-12-12T11:55:37Z,2.11,2.64,5.34,2.07,2.59,5.2,2.11,2.64,5.34,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,6d4b0a9ef31757e4a45543aa69017fa2,Parma,Lazio,2025-12-13T17:00:00Z,2025-12-12T11:55:37Z,4.55,2.13,2.85,4.4,2.09,2.78,4.55,2.13,2.85,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,17fdd403ac67f09d01e4f518d951e552,Rennes,Brest,2025-12-13T16:00:00Z,2025-12-12T11:55:37Z,2.38,2.46,4.69,2.33,2.41,4.55,2.38,2.46,4.69,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,b494969f6300844a80566aa3f6bb03e7,Mallorca,Elche CF,2025-12-13T15:15:00Z,2025-12-12T11:55:37Z,3.18,2.09,4.06,3.1,2.05,3.95,3.18,2.09,4.06,pinnacle,8
+soccer_epl,E0,2025-26,4fa7538be1341f8e01bbc1103fecf02f,Liverpool,Brighton and Hove Albion,2025-12-13T15:00:00Z,2025-12-12T11:55:37Z,2.2,2.65,4.81,2.16,2.6,4.65,2.2,2.65,4.81,pinnacle,10
+soccer_epl,E0,2025-26,773898723dc311de64748d0c4236b425,Chelsea,Everton,2025-12-13T15:00:00Z,2025-12-12T11:55:37Z,2.25,2.4,5.59,2.21,2.35,5.45,2.25,2.4,5.59,pinnacle,10
+soccer_germany_bundesliga,D1,2025-26,f4e96250066c03f8777d5b23305ffc45,FC St. Pauli,1. FC Heidenheim,2025-12-13T14:30:00Z,2025-12-12T11:55:37Z,2.67,2.21,4.7,2.62,2.17,4.55,2.67,2.21,4.7,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,549978e8db8b1a3d3bfbb10c0bc4fa06,Eintracht Frankfurt,Augsburg,2025-12-13T14:30:00Z,2025-12-12T11:55:37Z,2.26,2.57,4.81,2.18,2.52,4.85,2.26,2.57,4.81,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,1c8a23724a4eaa88d98eb5a27739f213,Borussia Monchengladbach,VfL Wolfsburg,2025-12-13T14:30:00Z,2025-12-12T11:55:37Z,2.55,2.53,3.98,2.5,2.48,3.85,2.55,2.53,3.98,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,c9b02aceb847201529f44e4fd977533c,TSG Hoffenheim,Hamburger SV,2025-12-13T14:30:00Z,2025-12-12T11:55:37Z,2.24,2.66,4.6,2.2,2.61,4.45,2.24,2.66,4.6,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,9ad8d73b0dba55d9d6e9be8112d6a830,Torino,Cremonese,2025-12-13T14:00:00Z,2025-12-12T11:55:37Z,2.67,2.17,4.87,2.62,2.13,4.75,2.67,2.17,4.87,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,6a6cfcaad9834bb3a0d630997cdc25ae,Atlético Madrid,Valencia,2025-12-13T13:00:00Z,2025-12-12T11:55:37Z,1.8,2.6,9.68,1.77,2.56,9.25,1.7,2.65,8.0,betrivers,8
+soccer_spain_la_liga,SP1,2025-26,7f9c22ff6618f8dd279397b5874202ac,Real Sociedad,Girona,2025-12-12T20:00:00Z,2025-12-12T11:55:37Z,2.45,2.31,5.15,2.39,2.25,5.0,2.45,2.31,5.15,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,1597143ad36d006bb6fc9d56eb0cd2bd,Lecce,Pisa,2025-12-12T19:45:00Z,2025-12-12T11:55:37Z,3.42,1.94,4.38,3.3,1.9,4.25,3.42,1.94,4.38,pinnacle,10
+soccer_france_ligue_one,F1,2025-26,3c52299c6c025c4793f7c1792779deef,Angers,Nantes,2025-12-12T19:45:00Z,2025-12-12T11:55:37Z,2.96,2.13,4.4,2.88,2.08,4.25,2.96,2.13,4.4,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,e7804ef1a07d1256a927ecb9da925fc1,Union Berlin,RB Leipzig,2025-12-12T19:30:00Z,2025-12-12T11:55:37Z,3.72,2.3,3.04,3.6,2.24,2.95,3.72,2.3,3.04,pinnacle,9
+soccer_epl,E0,2025-26,f76065e501bbcb2a542d14cb90f3501e,Wolverhampton Wanderers,Manchester United,2025-12-08T20:00:00Z,2025-12-05T11:55:38Z,4.73,2.46,2.37,4.6,2.41,2.32,4.73,2.46,2.37,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,cbe6cfeabbb9a2e1fb92e74feed99c6e,CA Osasuna,Levante,2025-12-08T20:00:00Z,2025-12-05T11:55:38Z,2.59,2.23,4.86,2.54,2.19,4.75,2.35,2.25,4.5,betrivers,7
+soccer_italy_serie_a,I1,2025-26,9f62adccdb2bfb063d34ccf6ec114317,Torino,AC Milan,2025-12-08T19:45:00Z,2025-12-05T11:55:38Z,5.22,2.25,2.48,5.05,2.2,2.43,5.22,2.25,2.48,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,c7960ae0b59191ed0e8852ce6ee67e89,Udinese,Genoa,2025-12-08T17:00:00Z,2025-12-05T11:55:38Z,3.25,2.05,4.09,3.15,2.01,4.0,3.25,2.05,4.09,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,deb51578021ab2df134bd4a348cb93b4,Pisa,Parma,2025-12-08T14:00:00Z,2025-12-05T11:55:38Z,3.2,2.05,4.17,3.12,2.01,4.05,3.2,2.05,4.17,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,455b0f7b15e72d76b2ac52346c51ad13,Real Madrid,Celta Vigo,2025-12-07T20:00:00Z,2025-12-05T11:55:38Z,1.68,3.11,7.52,1.67,3.05,7.25,1.68,3.11,7.52,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,125be0a1615b0c35816486bd3c8138e2,Napoli,Juventus,2025-12-07T19:45:00Z,2025-12-05T11:55:38Z,3.26,2.04,4.13,3.15,2.0,4.0,3.26,2.04,4.13,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,8fa316f29bcb710daba94cd47111843c,Lorient,Lyon,2025-12-07T19:45:00Z,2025-12-05T11:55:38Z,3.87,2.28,2.92,3.75,2.23,2.85,3.87,2.28,2.92,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,689a39492818bab6a5ba5b38cce834a6,Espanyol,Rayo Vallecano,2025-12-07T17:30:00Z,2025-12-05T11:55:38Z,3.14,2.15,3.92,3.05,2.11,3.8,3.14,2.15,3.92,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,e2b5b2b5a86377af6fcc08c8cd61d081,Lazio,Bologna,2025-12-07T17:00:00Z,2025-12-05T11:55:38Z,3.48,2.04,3.82,3.4,2.0,3.7,3.48,2.04,3.82,pinnacle,8
+soccer_epl,E0,2025-26,0fba6ece55ab484332f4b6b038adcb03,Fulham,Crystal Palace,2025-12-07T16:30:00Z,2025-12-05T11:55:38Z,3.33,2.14,3.67,3.25,2.1,3.55,3.1,2.17,3.25,betrivers,8
+soccer_germany_bundesliga,D1,2025-26,bbcad65af53ca42d5dbc3b06e88847af,Borussia Dortmund,TSG Hoffenheim,2025-12-07T16:30:00Z,2025-12-05T11:55:38Z,2.1,2.7,5.13,2.06,2.65,5.0,2.1,2.7,5.13,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,a0064b3147eee6539d3666c1ebedfc9a,Auxerre,Metz,2025-12-07T16:15:00Z,2025-12-05T11:55:38Z,2.62,2.27,4.6,2.57,2.22,4.45,2.62,2.27,4.6,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,942182a0bf5b7b3b0a54d01ddb307be2,Le Havre,Paris FC,2025-12-07T16:15:00Z,2025-12-05T11:55:38Z,3.37,2.23,3.4,3.3,2.19,3.3,3.37,2.23,3.4,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,1c76cb0899e4abe6765ba2a4d2788677,Valencia,Sevilla,2025-12-07T15:15:00Z,2025-12-05T11:55:38Z,2.88,2.2,4.2,2.8,2.16,4.1,2.88,2.2,4.2,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,bada71fdb0ee787b69cc613aee1da7e3,Hamburger SV,Werder Bremen,2025-12-07T14:30:00Z,2025-12-05T11:55:38Z,2.84,2.45,3.61,2.76,2.4,3.5,2.84,2.45,3.61,pinnacle,8
+soccer_epl,E0,2025-26,5f337cba08bfc0eb55d2240a2a514dc4,Brighton and Hove Albion,West Ham United,2025-12-07T14:00:00Z,2025-12-05T11:55:38Z,2.08,2.65,5.5,2.04,2.6,5.35,2.08,2.65,5.5,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,c26159f12de12a59c30e4c1c94c86495,Cagliari,AS Roma,2025-12-07T14:00:00Z,2025-12-05T11:55:38Z,6.07,2.22,2.34,5.75,2.18,2.3,5.0,2.23,2.25,betrivers,8
+soccer_france_ligue_one,F1,2025-26,c4448ef9ff13c4c56888e88dce795519,Nice,Angers,2025-12-07T14:00:00Z,2025-12-05T11:55:38Z,2.63,2.29,4.52,2.57,2.24,4.4,2.38,2.3,4.1,betrivers,8
+soccer_spain_la_liga,SP1,2025-26,dc48cf72f6dde7edfea5811280378243,Elche CF,Girona,2025-12-07T13:00:00Z,2025-12-05T11:55:38Z,2.8,2.3,4.04,2.74,2.25,3.95,2.8,2.3,4.04,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,621f7e62b4c5abf661896ef6f1e5ebc5,Cremonese,Lecce,2025-12-07T11:30:00Z,2025-12-05T11:55:38Z,3.36,2.03,4.01,3.25,1.99,3.9,3.36,2.03,4.01,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,5d26bb48dd4bbb386f48e67bec033aa6,Paris Saint Germain,Rennes,2025-12-06T20:05:00Z,2025-12-05T11:55:38Z,1.69,3.04,7.83,1.67,3.0,7.5,1.69,3.04,7.83,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,0de1bf34dcc85b0e90eef6dd1555f713,Athletic Bilbao,Atlético Madrid,2025-12-06T20:00:00Z,2025-12-05T11:55:38Z,4.08,2.13,3.07,3.95,2.09,3.0,3.85,2.17,2.7,betrivers,8
+soccer_italy_serie_a,I1,2025-26,4eaceaf4d31417bf385582a5d9fdaf72,Hellas Verona,Atalanta BC,2025-12-06T19:45:00Z,2025-12-05T11:55:38Z,5.49,2.3,2.36,5.35,2.26,2.31,5.1,2.32,2.14,betrivers,8
+soccer_france_ligue_one,F1,2025-26,be798881e213898e8a45a835e9a75836,Toulouse,Strasbourg,2025-12-06T18:00:00Z,2025-12-05T11:55:38Z,3.18,2.28,3.49,3.1,2.23,3.4,3.18,2.28,3.49,pinnacle,8
+soccer_epl,E0,2025-26,657bbb74e5be068fc1298b3cdd0c6c2a,Leeds United,Liverpool,2025-12-06T17:30:00Z,2025-12-05T11:55:38Z,4.41,2.48,2.45,4.3,2.43,2.4,4.41,2.48,2.45,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,d243724e3b0ad374de4f2f636bd4487f,Real Betis,Barcelona,2025-12-06T17:30:00Z,2025-12-05T11:55:38Z,4.2,2.78,2.26,4.1,2.72,2.22,4.2,2.78,2.26,pinnacle,7
+soccer_germany_bundesliga,D1,2025-26,530219b031d0a2f95f8bd435ea6221b0,RB Leipzig,Eintracht Frankfurt,2025-12-06T17:30:00Z,2025-12-05T11:55:38Z,2.41,2.53,4.34,2.36,2.48,4.2,2.2,2.65,3.85,betrivers,8
+soccer_italy_serie_a,I1,2025-26,4c9f3ce33da277b2e8830f22af05b7cd,Inter Milan,Como,2025-12-06T17:00:00Z,2025-12-05T11:55:38Z,2.08,2.45,6.59,2.04,2.4,6.25,2.08,2.45,6.59,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,7264d3fef455a44375b163c9864b5bad,Nantes,RC Lens,2025-12-06T16:00:00Z,2025-12-05T11:55:38Z,5.35,2.48,2.22,5.2,2.43,2.18,5.35,2.48,2.22,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,eaa6a26451dd8694e01092d304c5926f,Alavés,Real Sociedad,2025-12-06T15:15:00Z,2025-12-05T11:55:38Z,3.59,2.02,3.75,3.5,1.98,3.65,3.59,2.02,3.75,pinnacle,7
+soccer_epl,E0,2025-26,7e99696bef694600ec9beff2dc1d553e,Bournemouth,Chelsea,2025-12-06T15:00:00Z,2025-12-05T11:55:38Z,3.71,2.49,2.72,3.6,2.44,2.66,3.71,2.49,2.72,pinnacle,8
+soccer_epl,E0,2025-26,30f3359d3b1c53c67138b3e1144900b8,Tottenham Hotspur,Brentford,2025-12-06T15:00:00Z,2025-12-05T11:55:38Z,2.9,2.38,3.64,2.83,2.33,3.55,2.9,2.38,3.64,pinnacle,9
+soccer_epl,E0,2025-26,dcafed81f9b2b895db5594b0b22eb960,Newcastle United,Burnley,2025-12-06T15:00:00Z,2025-12-05T11:55:38Z,1.69,2.89,9.41,1.67,2.83,9.0,1.69,2.89,9.41,pinnacle,9
+soccer_epl,E0,2025-26,ac244701b261d595e121deb1884df161,Everton,Nottingham Forest,2025-12-06T15:00:00Z,2025-12-05T11:55:38Z,2.87,2.19,4.27,2.8,2.15,4.15,2.87,2.19,4.27,pinnacle,9
+soccer_epl,E0,2025-26,a7a986b5dc6379c1a2a3bf338c9d9ab5,Manchester City,Sunderland,2025-12-06T15:00:00Z,2025-12-05T11:55:38Z,1.64,3.0,9.4,1.62,2.95,9.0,1.64,3.0,9.4,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,ed1e9ffa1c651328eaa7141972daede1,1. FC Heidenheim,SC Freiburg,2025-12-06T14:30:00Z,2025-12-05T11:55:38Z,4.63,2.33,2.53,4.45,2.29,2.49,4.63,2.33,2.53,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,beb75d58b3d5e13861b9e6f05079b6df,1. FC Köln,FC St. Pauli,2025-12-06T14:30:00Z,2025-12-05T11:55:38Z,2.57,2.35,4.44,2.52,2.3,4.3,2.57,2.35,4.44,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,32436f40d509a3f830314a275c06cc9b,Augsburg,Bayer Leverkusen,2025-12-06T14:30:00Z,2025-12-05T11:55:38Z,4.28,2.51,2.45,4.15,2.46,2.4,4.28,2.51,2.45,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,7bbbe43ae7df7daa171784d48547d64c,VfB Stuttgart,Bayern Munich,2025-12-06T14:30:00Z,2025-12-05T11:55:38Z,5.08,2.95,1.98,4.95,2.88,1.94,5.08,2.95,1.98,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,364102cb4d6768b6b88f1683ab4e2621,VfL Wolfsburg,Union Berlin,2025-12-06T14:30:00Z,2025-12-05T11:55:38Z,2.74,2.31,4.13,2.68,2.26,4.0,2.74,2.31,4.13,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,950f1144359a4910281baa2809eb20f0,Sassuolo,Fiorentina,2025-12-06T14:00:00Z,2025-12-05T11:55:38Z,3.6,2.19,3.29,3.5,2.14,3.2,3.6,2.19,3.29,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,0a25130d562fb58c682ed8e292126c62,Villarreal,Getafe,2025-12-06T13:00:00Z,2025-12-05T11:55:38Z,2.17,2.29,6.98,2.13,2.25,6.75,2.17,2.29,6.98,pinnacle,8
+soccer_epl,E0,2025-26,e0a497396f4ca83b09eb070b819790fd,Aston Villa,Arsenal,2025-12-06T12:30:00Z,2025-12-05T11:55:38Z,4.67,2.24,2.63,4.55,2.2,2.58,4.67,2.24,2.63,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,9f928d9f5c8d410525d6dadd6e8c5340,Oviedo,Mallorca,2025-12-05T20:00:00Z,2025-12-05T11:55:38Z,3.45,2.04,3.95,3.35,1.99,3.8,3.45,2.04,3.95,pinnacle,7
+soccer_france_ligue_one,F1,2025-26,7ccafbf8b72a56feb8ab813ef06bc39b,Lille,Marseille,2025-12-05T20:00:00Z,2025-12-05T11:55:38Z,3.04,2.4,3.46,2.95,2.34,3.35,3.04,2.4,3.46,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,c7d96de0b9e06434fdfede8a75e723c6,FSV Mainz 05,Borussia Monchengladbach,2025-12-05T19:30:00Z,2025-12-05T11:55:38Z,3.25,2.42,3.21,3.15,2.36,3.12,3.25,2.42,3.21,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,3c83f4ae6760fe5fe6c5a0852d6555fb,Brest,AS Monaco,2025-12-05T18:00:00Z,2025-12-05T11:55:38Z,3.8,2.63,2.57,3.65,2.55,2.51,3.8,2.63,2.57,pinnacle,8
+soccer_epl,E0,2025-26,829c33f27898d96c181850b3e01e936d,Manchester United,West Ham United,2025-12-04T20:00:00Z,2025-11-28T11:55:37Z,1.83,2.77,6.48,1.83,2.76,6.5,1.83,2.77,6.48,pinnacle,7
+soccer_epl,E0,2025-26,5b79d1ed999818f6e8a58d95a0468804,Leeds United,Chelsea,2025-12-03T20:15:00Z,2025-11-28T11:55:37Z,4.55,2.36,2.43,4.5,2.34,2.41,4.35,2.38,2.28,betrivers,7
+soccer_epl,E0,2025-26,aae6efdb1e421bc3c94e2b9635853e21,Liverpool,Sunderland,2025-12-03T20:15:00Z,2025-11-28T11:55:37Z,1.81,2.77,6.86,1.8,2.76,6.75,1.81,2.77,6.86,pinnacle,7
+soccer_epl,E0,2025-26,8c2dd4688aa09a78ab09931b177d48ca,Arsenal,Brentford,2025-12-03T19:30:00Z,2025-11-28T11:55:37Z,1.73,2.7,8.88,1.72,2.7,9.0,1.68,2.75,7.5,betrivers,7
+soccer_epl,E0,2025-26,92a343316916b520fd018e0008093e2d,Brighton and Hove Albion,Aston Villa,2025-12-03T19:30:00Z,2025-11-28T11:55:37Z,2.73,2.34,3.83,2.71,2.32,3.8,2.73,2.34,3.83,pinnacle,7
+soccer_epl,E0,2025-26,eda63e202713a053c34a4cca584b37bd,Burnley,Crystal Palace,2025-12-03T19:30:00Z,2025-11-28T11:55:37Z,5.08,2.28,2.37,5.05,2.27,2.36,5.08,2.28,2.37,pinnacle,7
+soccer_epl,E0,2025-26,ba8f89df5d05bacfaad76adfcf2c3608,Wolverhampton Wanderers,Nottingham Forest,2025-12-03T19:30:00Z,2025-11-28T11:55:37Z,3.83,2.18,2.98,3.8,2.16,2.95,3.65,2.2,2.75,betrivers,7
+soccer_spain_la_liga,SP1,2025-26,374d16246b6d1336f5fa6a9a171bf9d7,Athletic Bilbao,Real Madrid,2025-12-03T18:00:00Z,2025-11-28T11:55:37Z,4.23,2.34,2.55,4.2,2.32,2.54,4.25,2.38,2.3,betrivers,8
+soccer_epl,E0,2025-26,5c802f90c860b03d3ab259237d2b9867,Newcastle United,Tottenham Hotspur,2025-12-02T20:15:00Z,2025-11-28T11:55:37Z,2.31,2.43,4.71,2.28,2.42,4.75,2.31,2.43,4.71,pinnacle,7
+soccer_spain_la_liga,SP1,2025-26,42bdb04e5b87b0cc8e89ee0137469616,Barcelona,Atlético Madrid,2025-12-02T20:00:00Z,2025-11-28T11:55:37Z,2.23,2.68,4.26,2.21,2.67,4.25,2.23,2.68,4.26,pinnacle,8
+soccer_epl,E0,2025-26,6b4b4bc11193310fdc12f84267d4196d,Bournemouth,Everton,2025-12-02T19:30:00Z,2025-11-28T11:55:37Z,2.59,2.26,4.38,2.58,2.24,4.35,2.59,2.26,4.38,pinnacle,7
+soccer_epl,E0,2025-26,fc303e7b30ea1b0e2fa51bcdda1b221e,Fulham,Manchester City,2025-12-02T19:30:00Z,2025-11-28T11:55:37Z,5.21,2.5,2.14,5.2,2.49,2.13,5.21,2.5,2.14,pinnacle,7
+soccer_spain_la_liga,SP1,2025-26,9b55f146c24d7a8216acf1a953ddfaee,Rayo Vallecano,Valencia,2025-12-01T20:00:00Z,2025-11-28T11:55:37Z,2.66,2.2,4.76,2.61,2.15,4.65,2.66,2.2,4.76,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,b9aa270332a686385631824d477fd3b5,Bologna,Cremonese,2025-12-01T19:45:00Z,2025-11-28T11:55:37Z,2.04,2.36,7.8,2.0,2.31,7.5,2.04,2.36,7.8,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,85538e012d0c33cce14cffd0798a3fb6,Girona,Real Madrid,2025-11-30T20:00:00Z,2025-11-28T11:55:37Z,6.08,2.89,1.88,5.75,2.83,1.85,6.08,2.89,1.88,pinnacle,7
+soccer_italy_serie_a,I1,2025-26,670d6bb943c212949589c0ac5cd36d44,AS Roma,Napoli,2025-11-30T19:45:00Z,2025-11-28T11:55:37Z,3.41,2.05,3.87,3.3,2.01,3.75,3.41,2.05,3.87,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,fa7c429435c34ca451b44a635c5bc702,Lyon,Nantes,2025-11-30T19:45:00Z,2025-11-28T11:55:37Z,1.93,2.61,7.01,1.89,2.57,6.75,1.93,2.61,7.01,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,9d261bb4385f0d0c80816f7526e02bb9,SC Freiburg,FSV Mainz 05,2025-11-30T18:30:00Z,2025-11-28T11:55:37Z,2.61,2.28,4.58,2.56,2.23,4.45,2.61,2.28,4.58,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,4bb712ce44c867ca62ededadba47f5b3,Celta Vigo,Espanyol,2025-11-30T17:30:00Z,2025-11-28T11:55:37Z,2.57,2.33,4.51,2.52,2.28,4.4,2.57,2.33,4.51,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,5309a833a2e46b52af9f721ff1df6fb1,Atalanta BC,Fiorentina,2025-11-30T17:00:00Z,2025-11-28T11:55:37Z,2.33,2.39,5.21,2.28,2.34,5.1,2.33,2.39,5.21,pinnacle,8
+soccer_epl,E0,2025-26,06b4a94dad33597579c30e6901e2c008,Chelsea,Arsenal,2025-11-30T16:30:00Z,2025-11-28T11:55:37Z,3.96,2.27,2.89,3.85,2.22,2.83,3.96,2.27,2.89,pinnacle,9
+soccer_germany_bundesliga,D1,2025-26,5e4994e9a06e54e72fc1047aa80a5208,Eintracht Frankfurt,VfL Wolfsburg,2025-11-30T16:30:00Z,2025-11-28T11:55:37Z,2.25,2.63,4.64,2.2,2.58,4.55,2.25,2.63,4.64,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,dde8e94537bb059303fc53fad9de6205,Angers,RC Lens,2025-11-30T16:15:00Z,2025-11-28T11:55:37Z,5.21,2.37,2.34,5.1,2.32,2.29,5.21,2.37,2.34,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,4629cbf86f179824c91a17949f10cd3f,Le Havre,Lille,2025-11-30T16:15:00Z,2025-11-28T11:55:37Z,4.81,2.32,2.49,4.7,2.27,2.44,4.81,2.32,2.49,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,0272777b517a43da3f38356679b0b4ec,Lorient,Nice,2025-11-30T16:15:00Z,2025-11-28T11:55:37Z,3.03,2.34,3.57,2.95,2.28,3.45,3.03,2.34,3.57,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,c316347d6f800924c5515608955d6658,Sevilla,Real Betis,2025-11-30T15:15:00Z,2025-11-28T11:55:37Z,3.58,2.23,3.21,3.5,2.18,3.12,3.58,2.23,3.21,pinnacle,8
+soccer_germany_bundesliga,D1,2025-26,eb44b5eb6750f8aa145ab49b9f22159e,Hamburger SV,VfB Stuttgart,2025-11-30T14:30:00Z,2025-11-28T11:55:37Z,3.64,2.57,2.67,3.55,2.52,2.61,3.64,2.57,2.67,pinnacle,9
+soccer_epl,E0,2025-26,22273cac8d549daacd616fb5f88c46de,Aston Villa,Wolverhampton Wanderers,2025-11-30T14:05:00Z,2025-11-28T11:55:37Z,2.12,2.38,6.75,2.07,2.33,6.5,1.95,2.48,5.6,betrivers,10
+soccer_epl,E0,2025-26,6c548b72cfa9aaf88eab8c2dba215c14,Nottingham Forest,Brighton and Hove Albion,2025-11-30T14:05:00Z,2025-11-28T11:55:37Z,3.38,2.29,3.26,3.3,2.24,3.2,3.38,2.29,3.26,pinnacle,10
+soccer_epl,E0,2025-26,b37d89515348a998944587dd33865308,West Ham United,Liverpool,2025-11-30T14:05:00Z,2025-11-28T11:55:37Z,4.64,2.59,2.28,4.55,2.54,2.23,4.64,2.59,2.28,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,db65766fb0c3be7114b9c4c3fd339634,Pisa,Inter Milan,2025-11-30T14:00:00Z,2025-11-28T11:55:37Z,8.69,2.62,1.83,8.5,2.58,1.79,8.69,2.62,1.83,pinnacle,8
+soccer_france_ligue_one,F1,2025-26,2f96d1f76d1738a34a2a3318b10134d9,Strasbourg,Brest,2025-11-30T14:00:00Z,2025-11-28T11:55:37Z,2.56,2.26,4.84,2.51,2.21,4.75,2.3,2.35,4.0,betrivers,9
+soccer_spain_la_liga,SP1,2025-26,6fe8ce1d4e0130d48486283ca9930d15,Real Sociedad,Villarreal,2025-11-30T13:00:00Z,2025-11-28T11:55:37Z,3.44,2.32,3.16,3.35,2.27,3.1,3.44,2.32,3.16,pinnacle,8
+soccer_epl,E0,2025-26,04a7592aee6053a0cc6034d8c87e38e2,Crystal Palace,Manchester United,2025-11-30T12:00:00Z,2025-11-28T11:55:37Z,2.93,2.38,3.61,2.85,2.33,3.5,2.93,2.38,3.61,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,337aa015370bfbd6eeb0e2bcf3555fbb,Lecce,Torino,2025-11-30T11:30:00Z,2025-11-28T11:55:37Z,3.86,2.0,3.56,3.75,1.96,3.45,3.86,2.0,3.56,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,1418a00299f7720b2f3a5bd20b205865,Marseille,Toulouse,2025-11-29T20:05:00Z,2025-11-28T11:55:37Z,2.14,2.46,6.02,2.09,2.41,5.75,2.14,2.46,6.02,pinnacle,9
+soccer_epl,E0,2025-26,dc1ba74350071be58d2265b6060619f9,Tottenham Hotspur,Fulham,2025-11-29T20:00:00Z,2025-11-28T11:55:37Z,2.82,2.3,3.99,2.76,2.25,3.9,2.82,2.3,3.99,pinnacle,9
+soccer_spain_la_liga,SP1,2025-26,22751f66e7e09e6d2cb8a3f186d0e73e,Atlético Madrid,Oviedo,2025-11-29T20:00:00Z,2025-11-28T11:55:37Z,1.63,2.83,12.13,1.61,2.8,12.0,1.63,2.83,12.13,pinnacle,8
+soccer_italy_serie_a,I1,2025-26,645d2cf5db38023af89901db7a370ffc,AC Milan,Lazio,2025-11-29T19:45:00Z,2025-11-28T11:55:37Z,2.23,2.3,6.29,2.19,2.26,6.0,2.23,2.3,6.29,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,c8060f10136bf4e60cb5bb444edb26aa,Paris FC,Auxerre,2025-11-29T18:00:00Z,2025-11-28T11:55:37Z,2.41,2.36,4.94,2.36,2.31,4.85,2.41,2.36,4.94,pinnacle,9
+soccer_epl,E0,2025-26,4a5da60e08a50de268435d74d4eae61e,Everton,Newcastle United,2025-11-29T17:30:00Z,2025-11-28T11:55:37Z,3.51,2.24,3.25,3.4,2.19,3.15,3.51,2.24,3.25,pinnacle,8
+soccer_spain_la_liga,SP1,2025-26,c797aa79920004f08d195f8cbf680ed5,Levante,Athletic Bilbao,2025-11-29T17:30:00Z,2025-11-28T11:55:37Z,4.22,2.21,2.85,4.15,2.16,2.78,4.22,2.21,2.85,pinnacle,7
+soccer_germany_bundesliga,D1,2025-26,dc587c30662bd2a40b3deffeb0842225,Bayer Leverkusen,Borussia Dortmund,2025-11-29T17:30:00Z,2025-11-28T11:55:37Z,3.07,2.53,3.15,3.0,2.47,3.05,3.07,2.53,3.15,pinnacle,9
+soccer_italy_serie_a,I1,2025-26,55408311835a986d203d6f2c620812a9,Juventus,Cagliari,2025-11-29T17:00:00Z,2025-11-28T11:55:37Z,1.83,2.55,9.7,1.79,2.51,9.5,1.83,2.55,9.7,pinnacle,9
+soccer_france_ligue_one,F1,2025-26,46309b9de2dd98aa11f71d0f346d3472,AS Monaco,Paris Saint Germain,2025-11-29T16:00:00Z,2025-11-28T11:55:37Z,5.23,2.79,2.04,5.1,2.73,2.0,4.6,2.8,1.88,betrivers,9
+soccer_spain_la_liga,SP1,2025-26,92c437c8a72fd4e0e231ef1ea6e361a4,Barcelona,Alavés,2025-11-29T15:15:00Z,2025-11-28T11:55:37Z,1.55,3.26,10.3,1.53,3.2,10.0,1.55,3.26,10.3,pinnacle,7
+soccer_epl,E0,2025-26,4ba22059a9913039d2f57229dc72f4ea,Sunderland,Bournemouth,2025-11-29T15:00:00Z,2025-11-28T11:55:37Z,3.77,2.27,3.0,3.65,2.22,2.93,3.77,2.27,3.0,pinnacle,9
+soccer_epl,E0,2025-26,08b50ad69ab9749cae69599e701880dd,Brentford,Burnley,2025-11-29T15:00:00Z,2025-11-28T11:55:37Z,1.98,2.56,6.88,1.93,2.51,6.75,1.98,2.56,6.88,pinnacle,10

@@ -38,7 +38,15 @@
   "league_ht_draw_rate_historical": 0.4248385202583676,
   "league_encoded": 9.0,
   "country_encoded": 3.0,
-  "dc_draw_prob": 0.3862148439988022,
-  "elo_draw_prob": 0.4333762111549605,
+  "home_xg_r5": 1.2044873999999999,
+  "home_xga_r5": 1.2863042,
+  "home_xg_diff_r5": -0.10470399999999969,
+  "away_xg_r5": 1.2488966000000001,
+  "away_xga_r5": 1.2516245999999998,
+  "away_xg_diff_r5": -0.00719919999999985,
+  "home_goals_minus_xg_r5": 0.025746900000000038,
+  "away_goals_minus_xg_r5": 0.030515999999999988,
+  "dc_draw_prob": 0.4247065844440024,
+  "elo_draw_prob": 0.4360362425539721,
   "referee_adj": 1.0
 }
